@@ -328,9 +328,10 @@ if (trueSidebar) {
 // ==============================================
 
 const sectionTabs = document.querySelector('.tabs')
-const tableTab = sectionTabs.getElementsByTagName('table')
 
-    if(tableTab.length > 0) {
+
+if(sectionTabs) {
+    const tableTab = sectionTabs.getElementsByTagName('table')
        for (const table of tableTab) {
            table.setAttribute('data-horizontal', '')
        }
@@ -359,6 +360,38 @@ function initTargets () {
 
 
 
+// ==============================================
+// Загрузка стороннего материала на сайт
+// ==============================================
 
+const placeholder = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+
+const targetsIframe = document.querySelectorAll('[data-src-iframe]')
+targetsIframe.forEach(function (target) {
+    target.src = placeholder
+})
+
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.9,
+}
+
+const loadIframe = function (entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting && entry.target.parentNode.classList.contains('loading')) {
+            entry.target.src = entry.target.getAttribute('data-src-iframe')
+            entry.target.onload = () => {
+                entry.target.parentNode.classList.remove('loading')
+                entry.target.removeAttribute('data-src-iframe')
+            }
+        }
+    })
+}
+
+const observer = new IntersectionObserver(loadIframe, options)
+targetsIframe.forEach(targetIframe => {
+    observer.observe(targetIframe)
+})
 
 
