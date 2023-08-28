@@ -1,0 +1,193 @@
+.products
+  @include section-indent
+  &__title
+    @include section-title
+
+  &__wrapper
+    display: flex
+    align-items: flex-start
+    gap: 0 20px
+
+  &__sidebar-wrapper
+    display: flex
+    flex-direction: column
+    max-width: 330px
+    top: 20px
+    @media #{$tablet-small}
+      display: none
+
+  &__sidebar
+    display: flex
+    flex-direction: column
+    padding: 24px 20px
+    border-radius: 10px
+    border: 1px solid rgba(40, 40, 40, 0.15)
+    background: #F9F9F9
+    overflow: hidden
+    @media #{$notebook-small}
+      padding: 18px
+
+
+  &__sidebar-title
+    position: relative
+    font-size: 24px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.72px
+    text-transform: uppercase
+    background: linear-gradient(224deg, #007DB7 6.77%, #00A4EF 100%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    margin-bottom: 24px
+    &:before
+      position: absolute
+      content: ''
+      bottom: -24px
+      left: -20px
+      width: calc(100% + 40px)
+      height: 1px
+      background: rgba(73, 73, 73, 0.10)
+
+  &__sidebar__list
+    position: relative
+    padding: 24px 0
+
+  &__sidebar-item
+    position: relative
+    padding-bottom: 24px
+    &:before
+      position: absolute
+      content: ''
+      bottom: 0
+      left: -20px
+      width: calc(100% + 40px)
+      height: 1px
+      background: rgba(73, 73, 73, 0.10)
+    @media #{$notebook-small}
+      padding-bottom: 18px
+    &:not(:last-child)
+      margin-bottom: 24px
+      @media #{$notebook-small}
+        margin-bottom: 18px
+
+  &__sidebar-item-inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+
+  &__sidebar-link
+    color: #282828
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    @media #{$notebook-small}
+      font-size: 14px
+
+  &__more-icon
+    cursor: pointer
+    width: 12px
+    height: 12px
+    box-sizing: content-box
+    padding: 6px 0 6px 24px
+
+  &__sidebar-list-hidden
+    display: none
+    margin-top: 12px
+    &--show
+      display: block
+
+  &__sidebar-item-hidden
+    position: relative
+    display: flex
+    align-items: center
+    &:after
+      content: ''
+      position: absolute
+      left: -20px
+      top: 0
+      pointer-events: none
+      width: calc(100% + 40px)
+      height: 100%
+    &--active
+      &:after
+        background: #008CCC
+      & .products__sidebar-link-hidden
+        color: white
+        padding-top: 12px
+
+  &__sidebar-link-hidden
+    display: block
+    position: relative
+    padding: 0 12px 12px 12px
+    font-size: 14px
+    line-height: 24px
+    font-weight: 400
+    z-index: 1
+    color: #494949
+    @media #{$notebook-small}
+      font-size: 12px
+    &:before
+      z-index: 1
+      position: absolute
+      content: '-'
+      left: 0
+
+  &__stocks
+    display: flex
+    flex-direction: column
+    padding: 24px 20px
+    border-radius: 10px
+    border: 1px solid rgba(40, 40, 40, 0.15)
+    background: #F9F9F9
+    margin-top: 24px
+    @media #{$notebook-small}
+      padding: 18px
+
+  &__stocks-img-inner
+    overflow: hidden
+    border-radius: 10px
+    max-width: 288px
+    max-height: 144px
+    margin-bottom: 24px
+
+  &__stocks-title
+    color: #282828
+    font-size: 24px
+    font-weight: 400
+    line-height: 24px
+    text-transform: uppercase
+    margin-bottom: 24px
+    @media #{$notebook-small}
+      font-size: 20px
+      margin-bottom: 18px
+
+  &__stocks-text
+    color: #494949
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px 
+    letter-spacing: 0.42px
+    margin-bottom: 24px
+    @media #{$notebook-small}
+      margin-bottom: 18px
+
+  &__stocks-link
+    font-size: 16px
+    font-weight: 500
+    line-height: 24px
+    letter-spacing: 1.28px
+    background: linear-gradient(224deg, #007DB7 6.77%, #00A4EF 100%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+
+    
+
+@import "../catalog-section/catalog-common/catalog-common"
+    
+
+
+

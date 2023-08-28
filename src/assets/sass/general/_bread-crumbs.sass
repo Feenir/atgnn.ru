@@ -1,0 +1,44 @@
+.bread-crumbs
+  display: flex
+  align-self: center
+  justify-content: flex-start
+  margin: 48px 0
+  flex-wrap: wrap
+  @media #{$notebook}
+    margin: 40px 0
+  @media #{$notebook-small}
+    margin: 32px 0
+  @media #{$tablet}
+    margin: 26px 0
+  @media #{$tablet-small}
+    margin: 18px 0
+
+  &__item
+    position: relative
+    color: #494949
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.42px
+    margin-right: 10px
+    @media #{$notebook-small}
+      margin-right: 6px
+    &:not(:first-child)
+      &:before
+        margin-right: 10px
+        content: '-'
+        @media #{$notebook-small}
+          margin-right: 6px
+
+    & .bread-crumbs__text
+      color: #008CCC
+      white-space: nowrap
+      @media #{$tablet}
+        font-size: 12px
+      @media #{$tablet-small}
+        font-size: 12px
+    & > .bread-crumbs__link
+      font-size: inherit
+      color: #494949
+      & > .bread-crumbs__text
+        color: #494949

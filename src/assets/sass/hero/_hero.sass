@@ -1,0 +1,303 @@
+.hero
+  @include section-indent
+  & .swiper
+    margin-left: 0
+    margin-right: 0
+  &__swiper
+    max-width: 60%
+    @media #{$tablet}
+      max-width: 100%
+  &--main
+    margin-top: -150px
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 1500px
+    margin-left: max(15px, calc((100% - 1400px)/2))
+    padding-top: 100px
+    max-height: 700px
+    @media (max-width: 1640px)
+      margin-right: 40px
+    @media #{$notebook-small}
+      padding-top: 150px
+    @media #{$tablet}
+      flex-direction: column
+      align-items: flex-start
+      margin-right: 15px
+      max-height: 780px
+      padding-top: 186px
+
+
+  &__swiper-container
+    position: relative
+    transform: translateY(-28%)
+    min-width: 0
+    align-self: flex-end
+    @media #{$notebook-small}
+      align-self: flex-start
+    @media #{$tablet}
+      max-width: 280px
+    @media #{$tablet}
+      transform: translate(calc(73vw - 30px), -150px)
+    @media #{$mobile}
+      transform: translate(calc(55vw - 30px), -150px)
+    @media (max-width: 430px)
+      transform: translate(calc(45vw - 30px), -150px)
+    &:before
+      position: absolute
+      content: ''
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='994' height='1082' viewBox='0 0 994 1082' fill='none'%3E%3Cg filter='url(%23filter0_f_369_17071)'%3E%3Cpath d='M737 530.596C737 654.463 625.265 825 501.187 825C63.5674 724.268 456.031 712.342 456.031 588.475C456.031 464.607 163.595 254 287.673 254C411.751 254 737 406.728 737 530.596Z' fill='%233DB7EF'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_369_17071' x='0' y='-3' width='994' height='1085' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='128.5' result='effect1_foregroundBlur_369_17071'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E")
+      width: 994px
+      height: 1082px
+      background-size: cover
+      right: -235px
+      bottom: -410px
+      pointer-events: none
+      @media #{$tablet}
+        top: calc(-40vmax + 120px)
+        left: -40vmax
+        height: 100vmax
+        width: 100vmax
+
+
+  &__img-slide
+    position: relative
+    max-width: 560px
+    @media #{$tablet}
+      max-width: 280px
+
+  &__circle-position
+    position: absolute
+    left: -240px
+    top: 4vw
+    @media #{$notebook}
+      top: 2vw
+    @media(max-width: 1240px)
+      top: 7vw
+      left: -7vw
+    @media #{$tablet}
+      top: -3vw
+      left: calc(-17vw - 10px)
+    @media #{$mobile}
+      left: calc(-17vw - 50px)
+  &__circle
+    width: 900px
+    height: 900px
+    @media #{$notebook}
+      width: 760px
+      height: 760px
+    @media (max-width: 1240px)
+      width: 560px
+      height: 560px
+
+
+  &__circle-inner
+    position: relative
+
+  &__circle-small
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+  &__title
+    margin-bottom: 24px
+    @media #{$tablet-small}
+      margin-bottom: 18px
+
+  &__title-color
+    color: #008CCC
+    margin-bottom: 24px
+
+  &__text
+    color: #494949
+    font-size: 18px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.54px
+    margin-bottom: 48px
+    @media #{$tablet-small}
+      font-size: 16px
+      line-height: 20px
+      margin-bottom: 18px
+
+  &__button
+    display: flex
+    align-items: center
+    justify-content: center
+    text-transform: uppercase
+    @include button-fill
+
+
+
+
+
+  &__info-title
+    display: flex
+    align-items: center
+    color: #282828
+    @include normal-title-font
+    font-weight: 400
+    margin-bottom: 8px
+    @media #{$mobile}
+      flex-direction: column
+    &:before
+      content: ''
+      margin-right: 6px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Crect x='2.40039' y='15.2001' width='4.8' height='4.8' rx='1' fill='%2300B0FF'/%3E%3Cpath d='M2.80078 12.0001C5.33411 11.4668 11.7608 9.0401 17.2008 3.6001' stroke='%2300B0FF' stroke-width='0.8' stroke-linecap='round'/%3E%3Crect x='8.80078' y='11.2001' width='4.8' height='8.8' rx='1' fill='%2300B0FF'/%3E%3Crect x='15.2002' y='6.40002' width='4.8' height='13.6' rx='1' fill='%2300B0FF'/%3E%3Cpath d='M17.8314 2.45045C18.2052 2.35885 18.538 2.70629 18.4305 3.07585L17.9463 4.73886C17.8387 5.10841 17.3714 5.22291 17.1051 4.94496L15.907 3.69416C15.6408 3.4162 15.7753 2.95426 16.1491 2.86266L17.8314 2.45045Z' fill='%2300B0FF'/%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: cover
+      width: 24px
+      height: 24px
+      @media #{$mobile}
+        margin-right: 0
+        margin-bottom: 18px
+        width: 90px
+        height: 90px
+    
+  &__subtitle
+    color: #494949
+    font-size: 14px
+    font-weight: 300
+    line-height: 24px
+    letter-spacing: 0.42px
+    @media #{$mobile}
+      text-align: center
+
+  &__info-inner
+    display: flex
+    align-items: center
+    border-radius: 10px
+    border: 1px solid rgba(191, 216, 255, 0.32)
+    background: rgba(219, 233, 255, 0.25)
+    backdrop-filter: blur(29px)
+    padding-right: 16px
+    overflow: hidden
+    max-width: 966px
+    margin: 0 auto
+    @media #{$tablet}
+      max-width: 100%
+      overflow: visible
+      align-items: stretch
+      border: none
+      background: none
+      backdrop-filter: none
+
+  &__info-item
+    position: relative
+    display: flex
+    align-items: center
+    flex-direction: column
+    width: 25%
+    @media #{$tablet}
+      height: auto
+      justify-content: center
+      border-radius: 10px
+      border: 1px solid rgba(191, 216, 255, 0.32)
+      background: rgba(219, 233, 255, 0.25) !important
+    &--first
+      align-items: flex-start
+      background-color: white
+      padding: 24px 16px
+      width: 30%
+      @media #{$tablet}
+        padding: 24px
+        border-radius: 10px
+      @media #{$tablet-small}
+        width: 100%
+        background-color: inherit
+      @media #{$mobile}
+        align-items: center
+      &:before
+        position: absolute
+        content: ''
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='2' viewBox='0 0 160 2' fill='none'%3E%3Cpath d='M0.313477 0H160V2H5.50018C5.50018 2 4.45472 2 3.00018 1.5C1.5 1 0.313477 0 0.313477 0Z' fill='%233DB7EF'/%3E%3C/svg%3E")
+        background-size: cover
+        background-position: center
+        background-repeat: no-repeat
+        left: 0
+        bottom: 0
+        width: 160px
+        height: 2px
+    &--other
+      @media #{$tablet}
+        width: 100%
+        padding: 24px
+    &:not(:last-child)
+      &:before
+        position: absolute
+        content: ''
+        width: 1px
+        height: 100%
+        background: rgba(61, 183, 239, 0.15)
+        right: 0
+
+
+  &__info-svg-wrapper
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    background-color: white
+    margin-bottom: 24px
+
+  &__info-svg
+    max-width: 26px
+    max-height: 26px
+
+  &__swiper-control-inner
+    position: relative
+    display: flex
+    flex-direction: column
+    align-items: center
+    transform: translateY(-100%)
+    @media #{$tablet}
+      flex-direction: row
+      align-items: flex-start
+      margin-left: auto
+      margin-right: 15px
+      gap: 0 16px
+      transform: translateY(-110px)
+
+  &__swiper-button
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    border: 1px solid rgba(40, 40, 40, 0.30)
+    background-position: center
+    background-size: 12px
+    background-repeat: no-repeat
+    &--next
+      margin-bottom: 16px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 13 8' fill='none'%3E%3Cpath d='M12.2454 4.35355C12.4407 4.15829 12.4407 3.84171 12.2454 3.64645L9.06347 0.464466C8.8682 0.269204 8.55162 0.269204 8.35636 0.464466C8.1611 0.659728 8.1611 0.976311 8.35636 1.17157L11.1848 4L8.35636 6.82843C8.1611 7.02369 8.1611 7.34027 8.35636 7.53553C8.55162 7.7308 8.8682 7.7308 9.06347 7.53553L12.2454 4.35355ZM0 4.5L11.8919 4.5V3.5L0 3.5L0 4.5Z' fill='%23282828'/%3E%3C/svg%3E")
+      @media #{$tablet}
+        order: 2
+    &--prev
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 13 8' fill='none'%3E%3Cpath d='M0.646155 3.64645C0.450893 3.84171 0.450893 4.15829 0.646155 4.35355L3.82814 7.53553C4.0234 7.7308 4.33998 7.7308 4.53524 7.53553C4.7305 7.34027 4.7305 7.02369 4.53524 6.82843L1.70682 4L4.53524 1.17157C4.73051 0.97631 4.73051 0.659728 4.53524 0.464465C4.33998 0.269203 4.0234 0.269203 3.82814 0.464465L0.646155 3.64645ZM12.8916 3.5L0.999709 3.5L0.999709 4.5L12.8916 4.5L12.8916 3.5Z' fill='%23282828' fill-opacity='0.3'/%3E%3C/svg%3E")
+      @media #{$tablet}
+        order: 1
+
+  &__autoplay
+    width: 40px
+    height: 40px
+    right: 0
+    bottom: 0
+    & svg
+      stroke-width: 1.5px
+      stroke: #282828
+
+
+
+
+
+
+
+

@@ -1,0 +1,81 @@
+<section class="tabs tabs--three" data-tabs>
+
+  <div class="tabs__trigger-inner">
+    <button class="tabs__trigger tabs-active" data-tabs-btn type="button">Описание</button>
+    <button class="tabs__trigger" data-tabs-btn type="button">Характеристики</button>
+    <button class="tabs__trigger" data-tabs-btn type="button">Схема подключения</button>
+    <button class="tabs__trigger" data-tabs-btn type="button">Фото и видео</button>
+    <button class="tabs__trigger" data-tabs-btn type="button">Отзывы</button>
+  </div>
+  <div class="container">
+    <div class="tabs__content-inner tabs__content-inner--description tabs-pane-show" data-tabs-pane>
+      <p>С целью обеспечения помещений принудительным воздухообменом в зданиях разного назначения используется радиальный вентилятор низкого давления. Устройство активно применяется при установке вентиляции в общественном, производственном, административном, складском или другом виде зданий. Часто используется в качестве компонентов вытяжных или приточных канальных и бесканальных систем вентиляции. В компании Аэротехногрупп Вы можете заказать вентиляторы низкого давления под любой выпускаемой маркировкой: ВЦ 4-75, 4-70, ВР 80-75, ВР 86-77.</p>
+      <h3>Применение вентиляторов низкого давления</h3>
+      <p>Использование данного вентиляционного оборудования одностороннего всасывания возможно при условии наличия нормальной рабочей атмосферы. Она считается таковой, если воздух был предварительно очищен, или газовоздушные смеси с температурой не выше +80°С без взрывоопасных, пожароопасных составляющих, химических веществ с агрессивными свойствами. При невозможности соблюдения таких условий оптимальным будет применение специальных вентиляторов. Они должны быть теплостойкими, защищёнными от взрывов, антикоррозийными или использоваться в комбинированных вариантах. Допустимым пределом считается наличие в воздухе пыли, взвешенных включений в количестве 0,1 г/м3.</p>
+      <h3>Конструктивные особенности вентилятора низкого давления</h3>
+      <p>Вентилятор низкого давления представляет собой сварную станину ли сборную с размещённым на ней спирально-поворотным корпусом, во внутренней части которого установлены рабочее колесо с электроприводом. Производитель предлагает покупателям данное оборудование в специальной упаковке, уже подготовленное к монтажу. Вентилятор нужно монтировать на железобетонном основании либо металлической конструкции перекрытия, так как требуется жёсткий фундамент с оптимальной несущей способностью. В качестве элементов крепления используется анкерный крепёж. Чтобы снизить вибрации, которые производит работающий агрегат, специалисты советуют пользоваться виброизоляционными опорами (в базовой комплектации они отсутствуют). Для удобства установку спирально-поворотного корпуса следует выполнять таким образом, чтобы он встал под 45-градусным углом по отношению к выходному воздуховоду. К корпусу воздуховоды подсоединяются с помощью фланцев с отверстиями.</p>
+      <h3>Условия эксплуатации</h3>
+      <p>Устройства данного вида предназначены для использования при температуре -40°С – +40°С в местах, где климат умеренный. При этом должны применяться вторая и третья категория размещения. Возможно функционирование вентилятора и по первой категории, если обеспечена защита привода от негативных атмосферных явлений (дождь, снег, прямое действие ультрафиолета). Существуют 10 типоразмеров данных агрегатов. Для их изготовления в базовой комплектации используется конструкционная низкоуглеродистая сталь. <br>К вентиляторам специального исполнения относятся следующие виды: <br> · теплостойкие (с рабочей температурой в пределах +200°С); <br> · взрывозащитные; <br> · коррозионностойкие; <br> · имеющие комбинацию вышеперечисленных исполнений.
+      </p>
+      <h3>Заказывайте вентиляторы низкого давления у нас</h3>
+      <p>Предлагаем купить вентиляторы низкого давления любого типа в нашей компании по доступной цене. Обращайтесь!</p>
+    </div>
+
+    <div class="tabs__content-inner tabs__content-inner--specifications" data-tabs-pane>
+      {{> table-specifications}}
+    </div>
+
+    <div class="tabs__content-inner tabs__content-inner--connection" data-tabs-pane data-horizontal="">
+      <img src="./assets/images/tabs/tabs-connection.png" alt="Схема" width="786" height="282">
+      <ul>
+        <li>М1 — вентилятор, питание 380 В;</li>
+        <li>ТК — термоконтакты двигателя (биметаллические или позисторные), могут отсутствовать.</li>
+        <li>Если их нет, то реле защиты ТР220 переводится в режим ВМ, а между контактами 18 и 19 устанавливается перемычка.</li>
+        <li>При срабатывании реле защиты ТР220 (перегрев обмоток двигателя) или автоматического выключателя NS 2-25 (перегрузка по току) вентилятор отключается и подается сигнал 220 В на клемму 10.</li>
+      </ul>
+      <h3>Подводимые провода</h3>
+      {{> table-connection}}
+    </div>
+
+    <div class="tabs__content-inner tabs__content-inner--photo" data-tabs-pane>
+      <div class="tabs__photo-slider swiper" data-tabs-photo>
+        <div class="tabs__photo-slider-wrapper swiper-wrapper">
+          <div class="tabs__content tabs__content--photo swiper-slide">
+            <a data-fancybox="tabs-photo" data-src="./assets/images/tabs/page-0001.jpg"> <img src="./assets/images/tabs/tabs-photo.jpg" alt="Слайд" width="264" height="374"> </a>
+          </div>
+          <div class="tabs__content tabs__content--video swiper-slide">
+            <a data-fancybox="tabs-video" data-src="https://youtu.be/bENTGtS9ogU"> <img src="./assets/images/tabs/tabs-photo.jpg" alt="Слайд" width="264" height="374"> </a>
+          </div>
+          <div class="tabs__content tabs__content--photo swiper-slide">
+            <a data-fancybox="tabs-photo" data-src="./assets/images/tabs/page-0001.jpg"> <img src="./assets/images/tabs/tabs-photo.jpg" alt="Слайд" width="264" height="374"> </a>
+          </div>
+          <div class="tabs__content tabs__content--video swiper-slide">
+            <a data-fancybox="tabs-video" data-src="./assets/images/tabs/page-0002.jpg"> <img src="./assets/images/tabs/tabs-photo.jpg" alt="Слайд" width="264" height="374"> </a>
+          </div>
+        </div>
+      </div>
+      <div class="tabs__swiper-control" data-photo-control>
+        <div class="tabs__button tabs__button--prev" data-photo-prev></div>
+        <div class="tabs__swiper-number">
+          <div class="tabs__number tabs__number--current" data-photo-current></div>
+          <div class="tabs__number-separator"></div>
+          <div class="tabs__number tabs__number--total" data-photo-total></div>
+        </div>
+        <div class="card__button card__button--next" data-photo-next></div>
+      </div>
+    </div>
+
+    <div class="tabs__content-inner tabs__content-inner--reviews" data-tabs-pane>
+      <p class="tabs__content-reviews">
+        На данный товар пока нет отзывов
+      </p>
+      <!--
+      <div class="tabs__reviews-tabs" style="width:560px;height:800px;overflow:hidden;position:relative;">
+        <iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/1891947544?comments">
+        </iframe>
+        <a href="https://yandex.ru/maps/org/aerotekhnogrupp/1891947544/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">Аэротехногрупп на карте Нижнего Новгорода — Яндекс Карты</a></div>
+      -->
+    </div>
+
+  </div>
+</section>

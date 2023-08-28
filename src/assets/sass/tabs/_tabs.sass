@@ -1,0 +1,294 @@
+.tabs
+
+  @include section-indent
+  &__trigger-inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 1400px
+    margin: 0 auto 20px auto
+    @media (max-width: 1440px)
+      padding: 0 15px 0 15px
+    @media #{$notebook-small}
+      margin-bottom: 16px
+    @media #{$tablet}
+      margin-bottom: 0
+    @media #{$tablet-small}
+      overflow: auto
+  &__trigger
+    position: relative
+    font-family: 'BebasNeue' , sans-serif
+    color: #282828
+    font-size: 36px
+    font-weight: 400
+    line-height: 36px
+    letter-spacing: 2.34px
+    text-transform: uppercase
+    opacity: .2
+    margin-bottom: 24px
+    transition: opacity .4s
+    white-space: nowrap
+    @media #{$notebook-small}
+      font-size: 30px
+    @media #{$tablet}
+      font-size: 24px
+      margin-bottom: 18px
+    &:before
+      content: ''
+      position: absolute
+      width: 0
+      height: 2px
+      background-color: #008CCC
+      left: 0
+      bottom: -10px
+      transition: width .4s
+      @media #{$notebook-small}
+        bottom: -6px
+      @media #{$tablet}
+        bottom: 0
+    &.tabs-active
+      opacity: 1
+      &:before
+        width: 100%
+    &:not(:last-child)
+      margin-right: 24px
+
+  &__content-inner
+    top: 0
+    position: fixed
+    opacity: 0
+    visibility: hidden
+    z-index: -1
+    height: 1px
+    width: 1px
+    transition: opacity .4s
+    pointer-events: none
+    &--description, &--build
+      & h3
+        color: #494949
+        font-size: 24px
+        font-weight: 400
+        line-height: 24px
+        letter-spacing: 0.72px
+        margin-bottom: 6px
+        @media #{$notebook-small}
+          font-size: 22px
+          line-height: 22px
+        @media #{$tablet}
+          font-size: 18px
+          line-height: 18px
+      & a
+        display: block
+        max-width: fit-content
+        padding: 16px 30px
+        margin-bottom: 24px
+        @include button-gradient
+        @media #{$tablet}
+          font-size: 14px
+          padding: 12px 24px
+        &:before
+          display: none
+
+
+    &.tabs-pane-show
+      top: unset
+      display: block
+      position: relative
+      z-index: 1
+      opacity: 1
+      visibility: visible
+      height: 100%
+      width: 100%
+      pointer-events: auto
+    & span, & li, & p
+      color: #494949
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+      letter-spacing: 0.48px
+      @media #{$tablet}
+        font-size: 14px
+    & h4
+      font-family: 'Manrope', sans-serif
+      color: #282828
+      margin-bottom: 24px
+      @media #{$notebook-small}
+        font-size: 22px
+        line-height: 22px
+      @media #{$tablet}
+        font-size: 18px
+        line-height: 18px
+    & h3
+      font-size: 24px
+      margin-bottom: 12px
+      @media #{$notebook-small}
+        font-size: 22px
+        line-height: 22px
+      @media #{$tablet}
+        font-size: 18px
+        line-height: 18px
+    & p
+      @media #{$tablet}
+        font-size: 14px
+      &:not(:last-child)
+        margin-bottom: 24px
+    & ul
+      margin-bottom: 24px
+      & li
+        @media #{$tablet}
+          font-size: 14px
+        &:before
+          content: '-'
+          margin-right: 4px
+    & .tabs__content-reviews
+      color: rgba(73, 73, 73, 0.35)
+      font-size: 36px
+      font-weight: 400
+      line-height: 48px
+      letter-spacing: 1.08px
+      text-align: center
+      @media #{$notebook}
+        font-size: 30px
+      @media #{$notebook-small}
+        font-size: 24px
+      @media #{$tablet}
+        font-size: 18px
+    &--build
+      & div
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        gap: 20px
+        margin-bottom: 24px
+        & > *
+          width: 33.33%
+          @media #{$tablet}
+            width: calc(50% - 10px)
+        & picture
+          overflow: hidden
+          border-radius: 10px
+          max-width: 335px
+          max-height: 192px
+    &--certificates
+      @media #{$tablet-small}
+        margin-bottom: 120px
+      & div
+        margin-bottom: 0
+        & picture
+          max-height: unset
+          max-width: unset
+      & .swiper-slide
+        cursor: pointer
+    &--connection
+      & picture
+        margin-bottom: 24px
+        max-width: 786px
+      & ul
+        & li
+          &:before
+            display: none
+
+  &__plane-img
+    max-height: 645px
+    max-width: 910px
+    cursor: pointer
+
+  &__swiper-control
+    @extend .card__swiper-control
+
+  &__swiper-number
+    @extend .card__swiper-number
+
+  &__number-separator
+    @extend .card__number-separator
+
+  &__number
+    @extend .card__number
+    &--current
+      @extend .card__number--current
+
+  &__button
+    @extend .blog__swiper-button
+    &--prev
+      @extend .blog__swiper-button--prev
+
+  &--two
+    & h3
+      color: #494949
+      font-size: 24px
+      font-weight: 400
+      line-height: 24px
+      letter-spacing: 0.72px
+      margin-bottom: 12px
+    & p:not(:last-child)
+      margin-bottom: 48px
+    & .tabs__content-inner--sizes
+      div
+        display: flex
+        margin-bottom: 24px
+        & picture
+          max-width: 254px
+          max-height: 264px
+      & h3
+        color: #282828
+        font-size: 24px
+        font-weight: 400
+        line-height: 24px 
+        letter-spacing: 1.56px
+        text-transform: uppercase
+        margin-bottom: 24px
+
+  &__photo-slider
+    overflow: visible
+
+  &__photo-slider-wrapper
+    margin-bottom: 32px
+
+  &__content
+    position: relative
+    border-radius: 10px
+    overflow: hidden
+    cursor: pointer
+    &:before, &:after
+      position: absolute
+      content: ''
+      background-size: contain
+      background-position: center
+      background-repeat: no-repeat
+      opacity: 0
+      transition: opacity .4s
+      pointer-events: none
+    &:before
+      inset: 0
+    &:after
+      width: 76px
+      height: 76px
+      border-radius: 50%
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+    &:hover
+      &:before, &:after
+        opacity: 1
+      &:before
+        background: rgba(66, 66, 66, 0.50)
+    &--photo
+      overflow: hidden
+      &:hover:after
+        backdrop-filter: blur(8.5px)
+        background-color: rgba(255, 255, 255, 0.25)
+        background-size: 36px
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36' fill='none'%3E%3Cpath d='M16.5 28.5C23.1274 28.5 28.5 23.1274 28.5 16.5C28.5 9.87258 23.1274 4.5 16.5 4.5C9.87258 4.5 4.5 9.87258 4.5 16.5C4.5 23.1274 9.87258 28.5 16.5 28.5Z' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M31.4996 31.5001L24.9746 24.9751' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    &--video
+      &:hover:after
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='239' height='239' viewBox='0 0 239 239' fill='none'%3E%3Cpath d='M36.5008 119.635C36.5853 100.317 43.3654 81.6257 55.6859 66.7463C68.0065 51.867 85.105 41.7198 104.068 38.034C123.032 34.3481 142.686 37.3515 159.683 46.5324C176.68 55.7134 189.968 70.5038 197.283 88.3837C204.598 106.263 205.486 126.126 199.798 144.588C194.109 163.05 182.195 178.968 166.086 189.63C149.977 200.292 130.669 205.039 111.452 203.061C92.2355 201.084 74.299 192.504 60.6989 178.785' stroke='white' stroke-opacity='0.3'/%3E%3Cpath d='M238.266 126.967C236.583 153.733 225.908 179.145 207.973 199.084C190.037 219.023 165.892 232.318 139.453 236.815C113.014 241.312 85.8317 236.746 62.3128 223.858C38.794 210.97 20.3181 190.515 9.88118 165.811C-0.555781 141.107 -2.34187 113.601 4.81254 87.7543C11.9669 61.9076 27.6423 39.2354 49.2969 23.414C70.9515 7.59254 97.3155 -0.450345 124.114 0.589481C150.912 1.62931 176.574 11.6909 196.937 29.1427' stroke='white' stroke-opacity='0.15'/%3E%3Cg filter='url(%23filter0_b_349_8711)'%3E%3Ccircle cx='120' cy='120' r='36' fill='white' fill-opacity='0.2'/%3E%3Ccircle cx='120' cy='120' r='35.5' stroke='white' stroke-opacity='0.25'/%3E%3C/g%3E%3Cpath d='M129.451 119.128C130.13 119.511 130.13 120.489 129.451 120.872L116.49 128.162C115.824 128.537 115 128.055 115 127.29L115 112.71C115 111.945 115.824 111.463 116.49 111.838L129.451 119.128Z' fill='white'/%3E%3Cdefs%3E%3Cfilter id='filter0_b_349_8711' x='67' y='67' width='106' height='106' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeGaussianBlur in='BackgroundImageFix' stdDeviation='8.5'/%3E%3CfeComposite in2='SourceAlpha' operator='in' result='effect1_backgroundBlur_349_8711'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='effect1_backgroundBlur_349_8711' result='shape'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E")
+        background-size: 240px
+
+  &--three
+  @media #{$tablet-small}
+    margin-bottom: 140px
+
+
+
+
+

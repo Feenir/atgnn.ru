@@ -1,0 +1,135 @@
+.stages
+  @include section-indent
+  &__title
+    @include section-title
+
+  &__inner
+    display: flex
+    flex-wrap: wrap
+    align-items: stretch
+    gap: 20px
+    counter-reset: stages-count
+    @media #{$tablet}
+      flex-wrap: nowrap
+      gap: 0
+
+  &__item
+    position: relative
+    border-radius: 10px
+    border: 1px solid rgba(40, 40, 40, 0.15)
+    background-color: #F9F9F9
+    padding: 28px 20px 200px 36px
+    width: calc(33.33% - 14px)
+    background-position: right 24px bottom 12px
+    background-size: auto 180px
+    background-repeat: no-repeat
+    overflow: hidden
+    &:after
+      display: none
+      position: absolute
+      content: ''
+      bottom: 0
+      left: 0
+      width: 114px
+      height: 2px
+      background-color: #008CCC
+      @media #{$tablet}
+        display: block
+    @media #{$tablet}
+      background-position: center bottom 120px
+      padding: 42px 18px 342px 18px
+      height: auto
+    &:nth-child(1)
+      background-image: url("../images/stages/1.svg")
+    &:nth-child(2)
+      background-image: url("../images/stages/2.svg")
+    &:nth-child(3)
+      background-image: url("../images/stages/3.svg")
+    &:nth-child(4)
+      background-image: url("../images/stages/4.svg")
+    &:nth-child(5)
+      background-image: url("../images/stages/5.svg")
+    &:last-child
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      align-items: flex-start
+      padding-bottom: 36px
+
+  &__count
+    display: flex
+    align-items: flex-end
+    margin-bottom: 12px
+    &:before
+      display: block
+      counter-increment: stages-count
+      content: '0' counter(stages-count)
+      color: #008CCC
+      font-size: 24px
+      font-weight: 400
+      line-height: 24px
+      letter-spacing: 0.72px
+    &:after
+      display: none
+      position: relative
+      content: '/06'
+      font-size: 14px
+      line-height: 1.2
+      @media #{$tablet}
+        display: block
+
+  &__text
+    color: #333
+    font-size: 18px
+    font-weight: 400
+    line-height: 24px 
+    letter-spacing: 0.54px
+    @media #{$tablet}
+      font-size: 16px
+
+  &__text-hidden
+    display: none
+    margin-top: 10px
+    color: #494949
+    font-size: 14px
+    font-weight: 400
+    line-height: 18px
+    letter-spacing: 0.42px
+    @media #{$tablet}
+      display: block
+
+  &__button
+    @include button-fill
+    margin-top: auto
+    @media #{$tablet}
+      margin-bottom: 40px
+
+  &__control-inner
+    display: flex
+    z-index: 10
+    position: absolute
+    bottom: 36px
+    left: 18px
+
+  &__control-button
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath d='M2.25 9L15.75 9' stroke='url(%23paint0_linear_356_16199)' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M10.8672 3.84961L16.1172 9.09961L10.8672 14.3496' stroke='url(%23paint1_linear_356_16199)' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_356_16199' x1='15.4112' y1='9' x2='8.77712' y2='16.0993' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0677083' stop-color='%23007DB7'/%3E%3Cstop offset='1' stop-color='%2300A4EF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_356_16199' x1='15.9854' y1='3.84961' x2='10.4597' y2='4.06862' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0677083' stop-color='%23007DB7'/%3E%3Cstop offset='1' stop-color='%2300A4EF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E")
+    cursor: pointer
+    width: 18px
+    height: 18px
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
+    transition: opacity .4s
+    &--next
+      margin-left: 8px
+    &--prev
+      transform: rotate(180deg)
+
+
+  &__control-button.swiper-button-disabled
+    opacity: .3
+
+  &__control-button--next.swiper-button-disabled
+    transform: rotateX(180deg)
+
+

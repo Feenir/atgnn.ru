@@ -1,0 +1,154 @@
+.catalog 
+  @include section-indent
+  @media #{$tablet}
+    margin-bottom: 30px
+  &__title   
+    @include section-title
+  &__wrapper
+    display: grid
+    grid-template-columns: 304px 304px 360px 370px
+    grid-template-rows: 306px 40px 132px 34px 140px 90px
+    grid-gap: 20px
+    @media #{$notebook}
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(2, 1fr)
+    @media #{$tablet}
+      grid-gap: 10px
+    @media (max-width: 400px)
+      grid-template-columns: 1fr
+  &__item
+    position: relative
+    padding: 28px
+    border-radius: 5px
+    background-color: #F4F4F4
+    box-shadow: 0 4px 31px 0 rgba(0, 0, 0, 0.07)
+    background-position: bottom 35px center
+    background-repeat: no-repeat
+    &:before
+      position: absolute
+      content: ''
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='39' height='24' viewBox='0 0 39 24' fill='none'%3E%3Cpath d='M4 12L34 12' stroke='url(%23paint0_linear_224_4458)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M27.4902 5.13281L34.4902 12.1328L27.4902 19.1328' stroke='url(%23paint1_linear_224_4458)' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_224_4458' x1='33.2471' y1='12' x2='28.4952' y2='23.3004' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0677083' stop-color='%23007DB7'/%3E%3Cstop offset='1' stop-color='%2300A4EF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_224_4458' x1='34.3146' y1='5.13281' x2='26.9469' y2='5.42483' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0677083' stop-color='%23007DB7'/%3E%3Cstop offset='1' stop-color='%2300A4EF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      width: 40px
+      height: 24px
+      right: 18px
+      bottom: 18px
+    &:nth-child(1)
+      grid-column: 1 / 3
+      grid-row: 1 / 4
+      background-image: url("../images/catalog/1.png")
+      background-size: 55%
+      @supports (background-image: url("../images/catalog/1.webp"))
+        background-image: url("../images/catalog/1.webp")
+      & .catalog__item-title
+        font-size: 36px
+    &:nth-child(2)
+      grid-column: 3 / 4
+      grid-row: 1 / 2
+      background-image: url("../images/catalog/3.png")
+      background-size: 40%
+      @supports (background-image: url("../images/catalog/3.webp"))
+        background-image: url("../images/catalog/3.webp")
+    &:nth-child(3)
+      grid-column: 4 / -1
+      grid-row: 1 / 3
+      background-size: 65%
+      background-image: url("../images/catalog/1.png")
+      @supports (background-image: url("../images/catalog/1.webp"))
+        background-image: url("../images/catalog/1.webp")
+    &:nth-child(4)
+      grid-column: 1 / 2
+      grid-row: 4 / -1
+      background-image: url("../images/catalog/2.png")
+      background-size: 40%
+      @supports (background-image: url("../images/catalog/2.webp"))
+        background-image: url("../images/catalog/2.webp")
+    &:nth-child(5)
+      grid-column: 2 / 3
+      grid-row: 4 / -1
+      background-image: url("../images/catalog/3.png")
+      background-size: 50%
+      @supports (background-image: url("../images/catalog/3.webp"))
+        background-image: url("../images/catalog/3.webp")
+    &:nth-child(6)
+      grid-column: 3 / 4
+      grid-row: 2 / -1
+      background-image: url("../images/catalog/3.png")
+      background-size: 70%
+      @supports (background-image: url("../images/catalog/3.webp"))
+        background-image: url("../images/catalog/3.webp")
+      background-position: top  150px center
+    &:nth-child(7)
+      grid-column: 4 / -1
+      grid-row: 3 / 6
+      background-image: url("../images/catalog/2.png")
+      background-size: 35%
+      @supports (background-image: url("../images/catalog/2.webp"))
+        background-image: url("../images/catalog/2.webp")
+    &:nth-child(8)
+      display: flex
+      justify-content: center
+      align-items: center
+      grid-column: 4 / -1
+      grid-row: 6 / -1
+      box-shadow: none
+      @include button-gradient
+      &:before
+        right: 48px
+    &:not(:last-child)
+      @media #{$notebook}
+        padding: 20px 20px 180px 20px
+      @media #{$tablet}
+        padding: 16px 16px 180px 16px
+    &:nth-child(n)
+      @media #{$notebook}
+        grid-column: auto
+        grid-row: auto
+        background-size: 120px
+        background-position: bottom
+        font-size: 14px
+        &:before
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='16' viewBox='0 0 26 16' fill='none'%3E%3Cpath d='M2.66699 8L22.667 8' stroke='url(%23paint0_linear_369_18756)' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.3271 3.42188L22.9938 8.08854L18.3271 12.7552' stroke='url(%23paint1_linear_369_18756)' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_369_18756' x1='22.1651' y1='8' x2='16.1643' y2='17.5136' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0677083' stop-color='%23007DB7'/%3E%3Cstop offset='1' stop-color='%2300A4EF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_369_18756' x1='22.8767' y1='3.42188' x2='17.9649' y2='3.61655' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0677083' stop-color='%23007DB7'/%3E%3Cstop offset='1' stop-color='%2300A4EF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E")
+          width: 26px
+          height: 16px
+          right: 10px
+        & .catalog__item-title
+          font-size: 24px
+      @media #{$tablet}
+        & .catalog__item-title
+          font-size: 20px
+      @media #{$tablet-small}
+        & .catalog__item-title
+          font-size: 16px
+      @media #{$mobile}
+        & .catalog__item-title
+          font-size: 14px
+    &:last-child
+      @media #{$notebook}
+        padding: 20px
+      @media #{$tablet}
+        padding: 16px
+      @media #{$mobile}
+        white-space: nowrap
+        &:before
+          top: calc(50% + 16px)
+          right: auto
+          left: auto
+          @media (max-width: 400px)
+            display: none
+
+
+  &__item-title
+    font-family: 'Manrope' , sans-serif
+    font-size: 24px
+
+
+
+
+  
+
+
+
+
+
+

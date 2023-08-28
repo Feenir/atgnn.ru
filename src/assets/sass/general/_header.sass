@@ -1,0 +1,160 @@
+.header
+  position: relative
+  z-index: 100
+  &__top
+    background-color: #EBEBEB
+
+  &__top-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 12px 0
+    @media #{$tablet}
+      display: none
+
+  &__top-list
+    display: flex
+    align-items: center
+
+  &__top-item
+    &:not(:last-child)
+      margin-right: 45px
+
+  &__top-city
+    letter-spacing: 0.56px
+
+  &__top-link
+    font-size: 14px
+    padding: 12px 0 12px 0
+    letter-spacing: 0.42px
+
+  &__main
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05)
+    background: rgba(255, 255, 255, 0.02)
+    backdrop-filter: blur(16.5px)
+
+  &__main-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 20px 0
+
+  &__logo-picture
+    max-width: 240px
+    max-height: 100px
+    @media #{$notebook-small}
+      max-width: 200px
+      max-height: 80px
+    @media #{$mobile}
+      margin-right: 14px
+
+  &__search-inner
+    display: flex
+    align-items: center
+    @media #{$tablet}
+      display: none
+
+  &__catalog
+    display: flex
+    align-items: center
+    margin-right: 50px
+    letter-spacing: 0.48px
+
+  &__catalog-icon
+    max-width: 30px
+    max-height: 30px
+    margin-right: 6px
+
+  &__search-label
+    display: flex
+    align-items: center
+    border-radius: 5px
+    border: 1px solid rgba(0, 0, 0, 0.10)
+    overflow: hidden
+    opacity: .45
+
+  &__search
+    width: 474px
+    padding-left: 10px
+    @media #{$notebook}
+      width: 100%
+    &::placeholder
+      letter-spacing: 0.42px
+
+  &__search-button
+    width: 36px
+    height: 36px
+    background-color: #008CCC
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='15' viewBox='0 0 15 15' fill='none'%3E%3Cpath d='M6.875 11.875C9.63642 11.875 11.875 9.63642 11.875 6.875C11.875 4.11358 9.63642 1.875 6.875 1.875C4.11358 1.875 1.875 4.11358 1.875 6.875C1.875 9.63642 4.11358 11.875 6.875 11.875Z' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.126 13.1245L10.4072 10.4057' stroke='white' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 16px 16px
+
+  &__info-inner
+    display: flex
+    align-items: center
+    @media #{$tablet}
+      display: none
+
+  &__info-item
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    gap: 6px
+    &:not(:last-child)
+      margin-right: 40px
+
+  &__info-button
+    display: flex
+    align-items: center
+    color: #282828
+    font-size: 10px
+    font-weight: 400
+    line-height: 12px
+    letter-spacing: 0.3px
+    text-decoration-line: underline
+    opacity: .6
+    &:before
+      content: ''
+      display: block
+      width: 10px
+      height: 10px
+      margin-right: 6px
+      background-repeat: no-repeat
+      background-size: 10px 10px
+      background-position: center
+    &--mail
+      &:before
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M10 4.5H5.5C4.94772 4.5 4.5 4.94772 4.5 5.5V10C4.5 10.5523 4.94772 11 5.5 11H10C10.5523 11 11 10.5523 11 10V5.5C11 4.94772 10.5523 4.5 10 4.5Z' stroke='%23282828' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M2.5 7.5H2C1.73478 7.5 1.48043 7.39464 1.29289 7.20711C1.10536 7.01957 1 6.76522 1 6.5V2C1 1.73478 1.10536 1.48043 1.29289 1.29289C1.48043 1.10536 1.73478 1 2 1H6.5C6.76522 1 7.01957 1.10536 7.20711 1.29289C7.39464 1.48043 7.5 1.73478 7.5 2V2.5' stroke='%23282828' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    &--phone
+      &:before
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11Z' stroke='%23282828' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 3V6L8 7' stroke='%23282828' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+
+  &__mobile-menu
+    display: none
+    align-items: center
+    gap: 10px
+    @media #{$tablet}
+      display: flex
+        
+  &__mobile-item
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 8px
+    border-radius: 5px
+    background: #F4F4F4
+    box-shadow: 0 4px 30px 0 rgba(0, 0, 0, 0.07)
+
+  &__mobile-icon
+    max-width: 28px
+    max-height: 28px
+    &--small
+      max-width: 20px
+      max-height: 20px
+
+  &__mobile-link
+    display: flex
+        
+
+

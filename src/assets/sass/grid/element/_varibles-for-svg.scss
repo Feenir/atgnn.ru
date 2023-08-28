@@ -1,0 +1,24 @@
+:root {
+  .stocks__close-color {
+    --main-color: #282828;
+  }
+
+  .stocks__more-color {
+    --main-color: #282828;
+  }
+
+  .header__catalog-color {
+    --main-color: #282828;
+  }
+
+  .questions__svg-fill {
+    --fill-main: #282828;
+  }
+
+.questions__quest.questions__quest--active > .questions__svg .questions__svg-fill {
+
+  --fill-main: #008CCC;
+}
+
+}
+

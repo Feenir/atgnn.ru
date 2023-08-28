@@ -1,0 +1,44 @@
+.help
+
+  &__wrapper
+    position: relative
+    display: flex
+    border-radius: 10px
+    border: 1px solid rgba(40, 40, 40, 0.15)
+
+  &__circle
+    position: absolute
+    right: -5%
+    top: -25%
+    z-index: -1
+    max-width: 790px
+    max-height: 790px
+    width: 790px
+    height: 790px
+    @media #{$tablet}
+      display: none
+
+  &__item
+    width: 50%
+    &--form
+      padding: 48px 36px
+      background-color: #F9F9F9
+      @media #{$notebook}
+        padding: 40px 42px 40px 26px
+      @media #{$tablet}
+        width: 100%
+        padding: 24px
+        margin-right: 0
+      @media #{$mobile}
+        padding: 18px
+    &--image
+      background-image: url("../images/help/help-img.jpg")
+      @supports (background-image: url("../images/help/help-img.webp"))
+        background-image: url("../images/help/help-img.webp")
+      background-position: right
+      background-repeat: no-repeat
+      background-size: cover
+      @media #{$tablet}
+        display: none
+
+

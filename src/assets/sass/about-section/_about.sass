@@ -1,0 +1,224 @@
+.about
+  background-image: url("data:image/svg+xml,%3Csvg width='462' height='1018' viewBox='0 0 462 1018' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.66'%3E%3Ccircle cx='-29.5' cy='525.501' r='265' stroke='%234990FF' stroke-opacity='0.2' stroke-width='3'/%3E%3Cpath d='M335.981 841.302C252.961 936.715 137.277 997.654 11.6353 1012.16C-114.006 1026.66 -240.531 993.677 -343.105 919.686C-445.679 845.696 -516.895 736.039 -542.773 612.239C-568.652 488.439 -547.325 359.437 -482.978 250.554C-418.631 141.671 -315.911 60.7695 -194.981 23.7296C-74.0511 -13.3104 56.3566 -3.814 170.645 50.3547C284.933 104.523 374.849 199.452 422.743 316.509C470.636 433.566 473.05 564.296 429.509 683.041' stroke='%234990FF' stroke-opacity='0.12' stroke-width='3'/%3E%3Ccircle cx='427' cy='689' r='5.5' transform='rotate(-180 427 689)' stroke='%234990FF' stroke-opacity='0.12' stroke-width='3'/%3E%3Ccircle cx='340' cy='836' r='5.5' transform='rotate(-180 340 836)' stroke='%23BFD8FF' stroke-opacity='0.03' stroke-width='3'/%3E%3Cpath d='M43.6063 912.658C-52.8421 930.87 -152.616 912.427 -236.18 860.939C-319.744 809.451 -381.081 728.627 -408.183 634.29C-435.285 539.952 -426.199 438.896 -382.704 350.907C-339.21 262.917 -264.439 194.33 -173.03 158.573C-81.6219 122.817 19.8412 122.467 111.494 157.592C203.147 192.716 278.39 260.785 322.491 348.473C366.591 436.16 376.375 537.151 349.925 631.673C323.475 726.195 262.697 807.441 179.49 859.505' stroke='%234990FF' stroke-opacity='0.24' stroke-width='3'/%3E%3Ccircle cx='50' cy='911' r='5.5' transform='rotate(-90 50 911)' stroke='%234990FF' stroke-opacity='0.24' stroke-width='3'/%3E%3Ccircle cx='174' cy='863' r='5.5' transform='rotate(-90 174 863)' stroke='%234990FF' stroke-opacity='0.24' stroke-width='3'/%3E%3C/g%3E%3C/svg%3E%0A")
+  background-repeat: no-repeat
+  background-position: left bottom
+  background-size: contain
+  padding-top: 96px
+  max-width: 1920px
+  margin: 0 auto
+  @media #{$tablet}
+    background-position: left top
+    background-size: auto
+  @include section-indent-padding
+  &__title
+    @include section-title
+
+  &__wrapper
+    display: grid
+    grid-template-rows: 1fr 192px
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 24px 20px
+    @media #{$tablet}
+      grid-template-rows: 3fr
+      grid-template-columns: 1fr
+
+  &__item
+    &--video
+      position: relative
+      background-image: url("../images/about/about-video.jpg")
+      @supports (background-image: url("../images/about/about-video.webp"))
+        background-image: url("../images/about/about-video.webp")
+      background-size: cover
+      background-position: center
+      border-radius: 10px
+      cursor: pointer
+      overflow: hidden
+      @media #{$tablet}
+        min-height: 360px
+      @media #{$mobile}
+        min-height: 240px
+      &:before
+        position: absolute
+        content: ''
+        inset: 0
+        backdrop-filter: blur(3px)
+        background-color: rgba(62, 62, 62, 0.49)
+        pointer-events: none
+    &--partners
+      padding: 24px 46px
+      grid-column: 1 / -1
+      border-radius: 10px
+      border: 1px solid #FFF
+      background: rgba(255, 255, 255, 0.24)
+      backdrop-filter: blur(7px)
+      @media #{$notebook}
+        padding: 20px 30px
+      @media #{$notebook-small}
+        padding: 18px 24px
+      @media #{$tablet}
+        padding: 18px
+
+  &__info-subtitle
+    font-size: 18px
+    line-height: 24px
+    letter-spacing: 0.54px
+    margin-bottom: 12px
+    @media #{$notebook}
+      font-size: 16px
+    @media #{$tablet}
+      font-size: 14px
+
+  &__info-text
+    color: #494949
+    font-size: 16px
+    font-weight: 300
+    line-height: 24px
+    letter-spacing: 0.64px
+    margin-bottom: 12px
+    @media #{$tablet}
+      font-size: 14px
+    
+  &__more
+    display: block
+    background: linear-gradient(224deg, #007DB7 6.77%, #00A4EF 100%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    margin-bottom: 48px
+    @media #{$notebook}
+      font-size: 16px
+
+  &__block-inner
+    display: flex
+    flex-wrap: wrap
+    gap: 32px
+    @media #{$mobile}
+      flex-direction: column
+      gap: 24px
+
+  &__block-item
+    display: flex
+    flex-direction: column
+    width: calc(50% - 16px)
+    @media #{$mobile}
+      width: 100%
+
+  &__block-title
+    color: #008CCC
+    font-size: 36px
+    font-weight: 400
+    line-height: 36px
+    letter-spacing: 2.34px
+    text-transform: uppercase
+    margin-bottom: 12px
+    
+  &__block-subtitle
+    color: #494949
+    font-size: 18px
+    font-weight: 400
+    line-height: 24px 
+    letter-spacing: 0.54px
+    @media #{$notebook}
+      font-size: 16px
+      line-height: 20px
+
+  &__video-text
+    position: absolute
+    color: #FFF
+    font-size: 14px
+    font-style: normal
+    left: 24px
+    bottom: 8px
+    font-weight: 300
+    line-height: 24px
+    letter-spacing: 0.42px
+    @media #{$mobile}
+      font-size: 12px
+    @media #{$mobile-small}
+      font-size: 10px
+
+  &__video-play
+    position: absolute
+    top: 50%
+    left: 50%
+    max-width: 240px
+    max-height: 240px
+    transform: translate(-50%, -50%)
+
+  &__partners-title
+    font-size: 24px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 1.56px
+    margin-bottom: 24px
+
+  &__partners-wrapper
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    @media #{$tablet}
+      gap: 20px 0
+      flex-wrap: wrap
+  &__partners
+    position: relative
+    width: 100%
+    background-size: contain
+    background-repeat: no-repeat
+    background-position: center
+    height: 50px
+    @media #{$tablet}
+      min-width: calc(33.33% - 40px)
+      height: 26px
+    &:nth-child(1)
+      background-image: url("../images/partners/sberbank.svg")
+      max-width: 178px
+    &:nth-child(2)
+      background-image: url("../images/partners/rosatom.svg")
+      @media #{$tablet}
+        max-width: 90px
+    &:nth-child(3)
+      background-image: url("../images/partners/gazprom.svg")
+      max-width: 100px
+      @media #{$tablet}
+        margin-right: 0
+      &:after
+        @media #{$tablet}
+          display: none
+    &:nth-child(4)
+      background-image: url("../images/partners/velstroy.svg")
+      max-width: 278px
+    &:nth-child(5)
+      background-image: url("../images/partners/ural.png")
+      @supports (background-image: url("../images/partners/ural.webp"))
+        background-image: url("../images/partners/ural.webp")
+      max-width: 64px
+    &:nth-child(6)
+      background-image: url("../images/partners/aviastar.svg")
+      max-width: 154px
+      @media #{$tablet}
+        margin-right: 0!important
+    &:not(:last-child)
+      margin-right: 80px
+      &:after
+        position: absolute
+        content: ''
+        background: rgba(40, 40, 40, 0.20)
+        height: 70px
+        width: 1px
+        top: -25%
+        right: -40px
+        @media #{$notebook-small}
+          right: -20px
+        @media #{$tablet}
+          right: -14px
+          top: -10%
+          height: 26px
+      @media #{$notebook-small}
+        margin-right: 40px
+      @media #{$tablet}
+        margin-right: 0
+    &:nth-child(n)
+      @media #{$tablet}
+        max-width: 90px
+        width: calc(33.33% - 30px)
+        margin-right: 28px

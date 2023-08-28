@@ -1,0 +1,466 @@
+.product-single
+  @include section-indent
+  &__wrapper
+    display: grid
+    grid-column-gap: 24px
+    grid-row-gap: 36px
+    grid-template-columns: 1fr minmax(max(360px,calc(100% - 946px)), min-content)
+    grid-template-rows: 1fr minmax(min-content, max-content)
+    @media #{$tablet}
+      grid-template-columns: 1fr
+      grid-row-gap: 18px
+
+  &__swiper
+    max-width: 100%
+
+  &__item
+    display: flex
+    flex-direction: column
+    min-width: 0
+    &--swiper
+      position: relative
+      max-width: 924px
+      max-height: 628px
+    &--sidebar
+      padding: 24px 118px 24px 30px
+      border-radius: 0 10px 10px 10px
+      border: 1px solid rgba(40, 40, 40, 0.15)
+      background: #F9F9F9
+      grid-column: 2 / -1
+      grid-row: 1 / -1
+      @media #{$notebook}
+        padding: 20px 90px 20px 26px
+      @media #{$notebook-small}
+        padding: 18px 50px 18px 18px
+      @media #{$tablet}
+        grid-column: auto
+        grid-row: auto
+      @media #{$tablet-small}
+        padding: 18px
+    &--sidebar-two
+      padding-right: 48px
+    &--text-block
+      padding: 24px
+      border-radius: 10px
+      border: 1px solid rgba(40, 40, 40, 0.15)
+      background: #F9F9F9
+      @media #{$notebook}
+        padding: 20px
+      @media #{$tablet-small}
+        padding: 18px
+
+  &__thumbs
+    max-width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+
+  &__text
+    color: #282828
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.48px
+    @media #{$notebook-small}
+      font-size: 14px
+      line-height: 18px
+
+  &__swiper-slide
+    cursor: zoom-in
+    & picture
+      align-items: center
+      justify-content: center
+      & img
+        max-width: 790px
+        @media #{$notebook}
+          max-width: 700px
+        @media #{$notebook-small}
+          max-width: 650px
+        @media #{$tablet}
+          max-width: 550px
+        @media #{$tablet-small}
+          max-width: 400px
+  &__thumbs-slide
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    max-width: 48px
+    width: 100%
+    min-height: 48px
+    border-radius: 5px
+    overflow: hidden
+    cursor: pointer
+    &:before
+      position: absolute
+      content: ''
+      inset: 0
+      background: rgba(0, 0, 0, 0.25)
+    &.swiper-slide-thumb-active
+      border: 2px solid #008CCC
+      &:before
+        display: none
+    & picture
+      & img
+        max-width: 40px
+        max-height: 40px
+
+  &__sale
+    position: absolute
+    top: 24px
+    left: 24px
+    z-index: 10
+    padding: 2px 5px
+    color: #FFFFFF
+    border-radius: 5px
+    background: #008CCC
+
+  &__sidebar-promo
+    display: flex
+    align-items: center
+    margin-bottom: 24px
+    @media #{$notebook-small}
+      margin-bottom: 18px
+    @media #{$tablet}
+      margin-bottom: 12px
+
+  &__promo
+    color: #FFF
+    font-size: 14px
+    font-style: normal
+    font-weight: 400
+    line-height: 18px
+    padding: 4px 10px
+    border-radius: 5px
+    background: #008CCC
+
+  &__icon
+    margin-left: 12px
+
+  &__title
+    font-size: 36px
+    line-height: 36px
+    letter-spacing: 2.34px
+    text-transform: uppercase
+    margin-bottom: 24px
+    @media #{$notebook-small}
+      font-size: 32px
+      line-height: 32px
+      margin-bottom: 18px
+
+  &__info
+    margin-bottom: 6px
+    color: #494949
+    font-size: 14px
+    font-weight: 400
+    line-height: 1
+    letter-spacing: 0.42px
+    @media #{$tablet}
+      font-size: 12px
+      margin-bottom: 6px
+    &--second
+      margin-bottom: 0
+    &--three
+      font-size: 16px
+      margin-bottom: 12px
+      @media #{$tablet}
+        font-size: 14px
+
+  &__maker-inner
+    display: flex
+    align-items: center
+    margin-bottom: 24px
+    @media #{$notebook-small}
+      margin-bottom: 18px
+    &--second
+      margin-bottom: 12px
+
+  &__maker-name
+    color: #008CCC
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.48px
+    opacity: .8
+    @media #{$tablet}
+      font-size: 14px
+      line-height: 18px
+
+  &__form
+    display: flex
+    flex-direction: column
+    &--two, &--three
+      height: 100%
+      justify-content: space-between
+      @media #{$tablet}
+        gap: 18px
+
+  &__form-inner
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin-bottom: 24px
+    gap: 10px
+
+  &__label-one
+    display: flex
+    flex-direction: column
+
+  &__parameter
+    display: flex
+    align-items: center
+    margin-bottom: 6px
+
+  &__parameter-input
+    display: block
+    min-width: 128px
+    padding: 8px
+    border-radius: 5px
+    border: 1px solid rgba(73, 73, 73, 0.50)
+    @media #{$tablet}
+      min-width: 108px
+
+  &__choose-wrapper
+    display: flex
+    align-items: center
+    margin-bottom: 24px
+    @media #{$notebook-small}
+      margin-bottom: 18px
+
+  &__choose-text
+    color: #282828
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.48px
+    @media #{$notebook-small}
+      font-size: 14px
+      line-height: 20px
+    &--second
+      margin-bottom: 24px
+
+  &__choose-input
+    position: absolute
+    width: 1px
+    height: 1px
+    opacity: 0
+    pointer-events: none
+    visibility: hidden
+    z-index: -1
+
+  &__fake-color
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 24px
+    height: 24px
+    border-radius: 6px
+    border: 2px solid
+    margin-left: 6px
+    cursor: pointer
+
+  &__fake-color-internal
+    position: absolute
+    content: ''
+    width: 18px
+    height: 18px
+    border-radius: 6px
+
+  &__checkbox-inner
+    display: flex
+    align-items: center
+    margin-bottom: 24px
+
+  &__checkbox-slide
+    @extend .product-single__choose-input
+    &:checked + .product-single__fake-checkbox:before
+      right: 1%
+      background-color: #008CCC
+
+  &__checkbox-label
+    cursor: pointer
+
+  &__fake-checkbox
+    position: relative
+    display: block
+    width: 50px
+    height: 24px
+    border-radius: 20px
+    border: 1px solid rgba(73, 73, 73, 0.50)
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      top: calc(50% - 10px)
+      right: calc(99% - 21px)
+      background-color: rgba(73, 73, 73, 0.50)
+      transition: right .4s, color .6s
+
+  &__checkbox-text
+    color: #282828
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px 
+    letter-spacing: 0.42px
+    margin-left: 12px
+
+  &__count
+    padding: 6px
+    min-width: 262px
+    border-radius: 5px
+    border: 1px solid rgba(73, 73, 73, 0.50)
+    margin-bottom: 45%
+    @media #{$notebook-small}
+      min-width: unset
+    @media #{$tablet}
+      margin-bottom: 18px
+
+  &__price
+    display: block
+    color: #282828
+    font-size: 24px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.72px
+    margin-bottom: 24px
+
+  &__button
+    @include button-fill
+    max-width: 250px
+
+  &__price-input, &__three-input
+    @extend .product-single__choose-input
+
+
+
+  &__scheme-inner
+    display: flex
+    align-items: center
+    margin-bottom: 24px
+    gap: 6px
+
+  &__scheme-radio
+    @extend .product-single__choose-input
+    &:checked + .product-single__scheme-radio-fake
+      background: #008CCC
+      color: #FFFFFF
+      opacity: 1
+
+  &__scheme-radio-fake
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 56px
+    height: 36px
+    border-radius: 5px
+    border: 1px solid rgba(73, 73, 73, 0.50)
+    opacity: 0.5
+    cursor: pointer
+    transition: color .4s, background .4s, opacity .4s
+
+  &__select
+    max-width: 290px
+    & .itc-select__toggle
+      font-size: 14px
+      font-style: normal
+      &:after
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 12.5L10 7.5L15 12.5' stroke='%23494949' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    & .itc-select__dropdown
+      top: 44px
+      max-height: 240px
+      width: calc(100% + 100px)
+
+    & .itc-select__option
+      font-size: 14px
+      line-height: 24px
+      letter-spacing: 0.42px
+      padding: 8px
+      &:not(:last-child)
+        border-bottom: 1px solid rgba(0, 0, 0, 0.10)
+    &--one
+      margin-bottom: 24px
+
+  &__three-checkbox-inner
+    display: flex
+    flex-direction: column
+    margin-bottom: 24px
+
+  &__three-label
+    color: #494949
+    font-size: 14px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.42px
+    &:not(:last-child)
+      margin-bottom: 6px
+
+  &__three-checkbox-inner
+    max-height: 140px
+    overflow: auto
+    &::-webkit-scrollbar
+      width: 3px             /* ширина scrollbar */
+      border-radius: 20px
+    &::-webkit-scrollbar-track
+      background: rgba(40, 40, 40, .15)      /* цвет дорожки */
+    &::-webkit-scrollbar-thumb
+      background-color: rgba(40, 40, 40, .5) /* цвет плашки */
+      border-radius: 20px     /* закругления плашки */
+
+  &__control-inner
+    position: absolute
+    bottom: 10px
+    right: 10px
+    z-index: 110
+    @extend .blog__button-inner
+    @media #{$mobile}
+      bottom: auto
+      top: 20px
+
+  &__swiper-button
+    @extend .blog__swiper-button
+    &.swiper-button-disabled
+      opacity: .5
+      cursor: not-allowed
+    &--prev
+      transform: rotate(180deg)
+
+  &__three-label
+    display: flex
+    align-items: center
+    cursor: pointer
+
+  &__three-fake-input
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    min-width: 16px
+    height: 16px
+    border: 1px solid #008CCC
+    border-radius: 50%
+    opacity: .5
+    margin-right: 12px
+    transition: opacity .4s
+    &:before
+      position: absolute
+      content: ''
+      min-width: 12px
+      height: 12px
+      border-radius: 50%
+      background: #008CCC
+      opacity: 0
+      transition: opacity .4s
+
+  &__three-input:checked + .product-single__three-fake-input
+    opacity: 1
+    &:before
+      opacity: 1
+
+
+
+
+

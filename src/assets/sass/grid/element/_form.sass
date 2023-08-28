@@ -1,0 +1,179 @@
+.form
+  &__inner
+    display: flex
+    flex-direction: column
+
+  &__title
+    font-family: 'BebasNeue' , sans-serif
+    color: #494949
+    font-size: 24px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 1.56px
+    margin-bottom: 24px
+
+  &__label
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    border-radius: 8px
+    border: 1px solid rgba(73, 73, 73, 0.15)
+    max-width: 312px
+    &:not(:last-of-type)
+      margin-bottom: 12px
+
+  &__input
+    color: rgba(73, 73, 73, 0.65)
+    font-size: 14px
+    font-style: normal
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.42px
+    padding: 12px
+    &::placeholder
+      font-size: inherit
+      color: inherit
+
+  &__button
+    margin: 12px 0
+    @include button-fill(24px, 30px)
+    max-width: 312px
+
+  &__politic-label
+    @extend .form-second__politic-label
+
+  &__checkbox
+    @extend .form-second__checkbox
+
+  &__fake-checkbox
+    @extend .form-second__fake-checkbox
+
+  &__politic
+    @extend .form-second__politic
+  &__politic-color
+    @extend .form-second__politic-color
+
+
+
+.form-second
+
+  &__title
+    font-size: 36px
+    margin-bottom: 12px
+    @media #{$notebook-small}
+      font-size: 30px
+    @media #{$tablet}
+      font-size: 24px
+
+  &__text
+    font-size: 16px
+    margin-bottom: 24px
+    line-height: 24px
+    letter-spacing: 0.48px
+    color: #494949
+    @media #{$tablet}
+      font-size: 14px
+      line-height: 18px
+    & br
+      @media #{$mobile}
+        display: none
+
+
+  &__inner
+    display: flex
+    align-items: flex-start
+    flex-direction: column
+    gap: 20px
+    @media #{$mobile}
+      flex-direction: column
+      align-items: flex-start
+
+  &__input
+    width: 100%
+    padding: 12px
+    &::placeholder
+      color: rgba(73, 73, 73, 0.65)
+      font-size: 14px
+      font-weight: 400
+      line-height: 24px
+      letter-spacing: 0.42px
+  &__textarea
+    height: 95px
+    line-height: 18px
+
+  &__contact-inner
+    display: flex
+    width: 100%
+    gap: 20px
+
+  &__label
+    display: block
+    border-radius: 8px
+    border: 1px solid rgba(73, 73, 73, 0.15)
+    &--input
+      width: 50%
+      @media #{$mobile}
+        width: 100%
+    &--textarea
+      width: 100%
+
+  &__button-inner
+    display: flex
+    align-items: center
+    @media (max-width: 1180px)
+      flex-direction: column
+      gap: 20px
+      align-items: flex-start
+
+  &__button
+    @include button-fill(24px, 20px)
+    margin-right: 20px
+    white-space: nowrap
+    @media #{$mobile}
+      padding: 24px 0
+      width: 100%
+      max-width: 276px
+
+  &__checkbox
+    opacity: 0
+    visibility: hidden
+    width: 1px
+    height: 1px
+
+  &__politic-label
+    display: flex
+    cursor: pointer
+
+  &__fake-checkbox
+    position: relative
+    min-width: 16px
+    height: 16px
+    border: 1px solid #494949
+    margin-right: 8px
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      inset: 0
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 512 512' style='enable-background:new 0 0 512 512' xml:space='preserve'%3E%3Cg%3E%3Cg%3E%3Cpath d='M504.502,75.496c-9.997-9.998-26.205-9.998-36.204,0L161.594,382.203L43.702,264.311c-9.997-9.998-26.205-9.997-36.204,0 c-9.998,9.997-9.998,26.205,0,36.203l135.994,135.992c9.994,9.997,26.214,9.99,36.204,0L504.502,111.7 C514.5,101.703,514.499,85.494,504.502,75.496z' fill='%23494949'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+      background-repeat: no-repeat
+      background-position: center
+      background-size: 10px
+      opacity: 0
+      transition: opacity .4s ease
+  &__politic
+    color: #494949
+    font-size: 12px
+    font-weight: 400
+    line-height: 130%
+    letter-spacing: 0.36px
+    @media #{$notebook-small}
+
+  &__politic-color
+    color: #008CCC
+    font-size: inherit
+
+.form-second__checkbox:checked + .form-second__fake-checkbox:before
+  opacity: 1
+

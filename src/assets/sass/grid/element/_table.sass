@@ -1,0 +1,33 @@
+.tabs
+  & td
+    @media #{$tablet}
+      font-size: 14px
+      padding: 6px
+  &__content-inner
+    &--sizes, &--connection
+      overflow: auto
+    &--specifications
+      & table
+        overflow-x: auto
+        display: block
+        border-radius: 10px
+        & thead
+          tr
+            &:nth-child(2)
+              & th
+                text-align: left
+
+        & td
+          vertical-align: middle
+    &--connection
+      & td
+        border: none
+      & tbody
+        border: 1px solid rgba(40, 40, 40, 0.15)
+        & tr td
+          border-right: 1px solid rgba(40, 40, 40, 0.15)
+        & td
+          vertical-align: middle
+
+
+

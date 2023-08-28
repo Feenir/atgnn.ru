@@ -1,0 +1,424 @@
+.blog
+  @include section-indent
+  &__wrapper
+    margin-left: max(15px, calc((100% - 1400px)/2))
+    & .container
+      margin-left: 0
+
+  &__title
+    @include section-title (#282828, 0)
+
+  &__swiper
+    margin-bottom: 48px
+    @media #{$notebook}
+      margin-bottom: 36px
+    @media #{$tablet}
+      margin-bottom: 24px
+    @media #{$mobile}
+      margin-bottom: 18px
+
+  &__small-wrapper
+    position: relative
+    padding: 148px 24px 28px 24px
+    @media #{$notebook}
+      padding-top: 86px
+    @media #{$notebook-small}
+      padding-top: 60px
+    @media #{$tablet}
+      padding: 24px
+    @media #{$mobile}
+      padding: 18px
+
+
+  &__slide
+    position: relative
+    max-width: 590px
+    border-radius: 10px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    overflow: hidden
+    width: 100%
+    flex-shrink: 0
+    @media #{$notebook}
+      height: auto
+      max-width: 500px
+    @media #{$notebook-small}
+      max-width: 420px
+    @media #{$tablet}
+      max-width: 360px
+    &:before
+      position: absolute
+      content: ''
+      inset: 0
+      pointer-events: none
+    &--big
+      padding: 216px 24px 48px 24px
+      background-image: url("../images/blog/blog-1.jpg")
+      @supports (background-image: url("../images/blog/blog-1.webp"))
+        background-image: url("../images/blog/blog-1.webp")
+      @media #{$notebook}
+        padding: 180px 20px 34px 20px
+      @media #{$notebook-small}
+        padding: 20px
+        width: 420px
+      &:before
+        background: linear-gradient(180deg, rgba(23, 38, 70, 0.31) 0%, rgba(23, 38, 70, 0.82) 100%)
+    &--two
+      height: auto
+      padding: 48px 24px
+      max-width: 386px
+      background-image: url("../images/blog/blog-2.jpg")
+      @supports (background-image: url("../images/blog/blog-2.webp"))
+        background-image: url("../images/blog/blog-2.webp")
+      &:before
+        background: linear-gradient(180deg, rgba(66, 66, 66, 0.14) 53.65%, rgba(66, 66, 66, 0.50) 100%)
+      @media #{$notebook-small}
+        padding: 20px
+        max-width: 336px
+      @media #{$tablet}
+        max-width: 270px
+    &--small
+      padding: 0
+      max-width: 386px
+      height: auto
+      @media #{$tablet}
+        max-width: 336px
+    &--biggest
+      max-width: 670px
+      @media #{$notebook}
+        max-width: 550px
+      @media #{$notebook-small}
+        max-width: 450px
+      @media #{$tablet}
+        max-width: 400px
+
+
+  &__item-inner
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: flex-start
+    position: relative
+    z-index: 6
+    height: 100%
+    &--horizontal
+      flex-direction: column
+      justify-content: space-between
+      gap: 20px
+
+  &__item
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    width: 100%
+    &--small-top
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      background-image: url("../images/blog/blog-3.jpg")
+      position: relative
+      overflow: hidden
+      border-radius: 10px
+      &:before
+        position: absolute
+        content: ''
+        inset: 0
+        pointer-events: none
+        background: linear-gradient(180deg, rgba(23, 38, 70, 0.31) 0%, rgba(23, 38, 70, 0.82) 100%)
+    &--small-bottom
+      border-radius: 10px
+      background-color: #F9F9F9
+      & .blog__description
+        color: #fff
+        background: #333
+      & .blog__item-title
+        color: #282828
+        text-transform: unset
+      & .blog__item-text
+        color: #494949
+      & .blog__number, .blog__date
+        color: rgba(73, 73, 73, 0.50)
+      & .blog__number--duration
+        &:before
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cg clip-path='url(%23clip0_369_17243)'%3E%3Cpath d='M6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11Z' stroke='%23494949' stroke-opacity='0.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 3V6L8 7' stroke='%23494949' stroke-opacity='0.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_369_17243'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
+      & .blog__number--view
+        &:before
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cg clip-path='url(%23clip0_369_17243)'%3E%3Cpath d='M6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11Z' stroke='%23494949' stroke-opacity='0.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 3V6L8 7' stroke='%23494949' stroke-opacity='0.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_369_17243'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
+
+  &__item-title
+    color: #F2F2F2
+    font-size: 50px
+    font-style: normal
+    font-weight: 400
+    line-height: 72px
+    letter-spacing: 3.25px
+    text-transform: uppercase
+    margin-bottom: 24px
+    @media #{$notebook}
+      font-size: 42px
+      line-height: 56px
+    @media #{$notebook-small}
+      font-size: 36px
+      line-height: 42px
+    @media #{$tablet}
+      font-size: 30px
+      line-height: 36px
+    @media #{$mobile}
+      font-size: 28px
+    &--small
+      position: relative
+      font-family: 'Manrope', sans-serif
+      font-size: 24px
+      line-height: 28px
+      letter-spacing: 0.72px
+      text-transform: capitalize
+      margin-bottom: 16px
+
+  &__item-text
+    color: #F2F2F2
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.48px
+    margin-bottom: 48px
+    @media #{$notebook-small}
+      font-size: 14px
+    &--small
+      font-size: 18px
+      margin-bottom: 16px
+      @media #{$notebook-small}
+        font-size: 16px
+      @media #{$tablet}
+        font-size: 14px
+
+  &__item-info-wrapper
+    display: flex
+    align-items: center
+    margin-bottom: 24px
+    &--small
+      margin-bottom: 10px
+
+  &__description
+    color: #2F2F2F
+    font-size: 12px
+    font-style: normal
+    font-weight: 400
+    letter-spacing: 0.36px
+    text-transform: uppercase
+    padding: 6px 16px
+    background-color: #FFFFFF
+    border-radius: 6px
+    margin-right: 24px
+    &--small
+      margin-right: 0
+
+  &__date
+    color: #F2F2F2
+    font-size: 14px
+    font-style: normal
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.42px
+
+  &__item-button-wrapper
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    width: 100%
+    @media #{$tablet}
+      align-items: center
+
+  &__item-link
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 24px 48px
+    color: #FFF
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 1.28px
+    text-transform: uppercase
+    border-radius: 10px
+    border: 1px solid #FFF
+    @media #{$notebook}
+      padding: 20px 36px
+    @media #{$tablet}
+       font-size: 16px
+       padding: 20px 30px
+
+  &__duration-wrapper
+    display: flex
+    align-items: center
+    @media #{$tablet}
+      flex-direction: column
+      justify-content: flex-end
+
+  &__number
+    display: flex
+    align-items: center
+    color: rgba(242, 242, 242, 0.50)
+    font-size: 12px
+    font-weight: 400
+    line-height: 14px
+    letter-spacing: 0.36px
+    &:before
+      content: ''
+      display: block
+      width: 12px
+      height: 12px
+      background-position: center
+      background-repeat: no-repeat
+      background-size: cover
+      margin-right: 8px
+    &--duration
+      &:before
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cg clip-path='url(%23clip0_369_17183)'%3E%3Cpath d='M6 11C8.76142 11 11 8.76142 11 6C11 3.23858 8.76142 1 6 1C3.23858 1 1 3.23858 1 6C1 8.76142 3.23858 11 6 11Z' stroke='%23F2F2F2' stroke-opacity='0.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 3V6L8 7' stroke='%23F2F2F2' stroke-opacity='0.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_369_17183'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E")
+    &--view
+      &:before
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M0.5 6C0.5 6 2.5 2 6 2C9.5 2 11.5 6 11.5 6C11.5 6 9.5 10 6 10C2.5 10 0.5 6 0.5 6Z' stroke='%23F2F2F2' stroke-opacity='0.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M6 7.5C6.82843 7.5 7.5 6.82843 7.5 6C7.5 5.17157 6.82843 4.5 6 4.5C5.17157 4.5 4.5 5.17157 4.5 6C4.5 6.82843 5.17157 7.5 6 7.5Z' stroke='%23F2F2F2' stroke-opacity='0.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    &:last-child
+      margin-left: 15px
+      @media #{$tablet}
+        margin-left: 0
+        margin-top: 8px
+
+
+  &__play
+    max-width: 72px
+    max-height: 72px
+
+  &__play-info
+    display: flex
+    align-items: flex-end
+    justify-content: space-between
+    width: 100%
+
+  &__play-text
+    color: rgba(255, 255, 255, 0.71)
+    font-size: 18px
+    font-style: normal
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 0.54px
+    @media #{$notebook-small}
+      font-size: 16px
+    @media #{$tablet}
+      font-size: 14px
+
+  &__play-time
+    color: rgba(242, 242, 242, 0.50)
+    font-size: 12px
+    font-weight: 400
+    line-height: 120%
+    letter-spacing: 0.36px
+
+  &__sale-form
+    width: 100%
+    max-width: 324px
+    @media #{$tablet}
+      max-width: unset
+  &__sale-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    @media #{$tablet-small}
+      flex-direction: column
+
+  &__sale-inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 20px 24px
+    background: #F9F9F9
+    border-radius: 10px
+    width: 100%
+    max-width: 964px
+    gap: 16px
+    @media #{$tablet}
+      flex-direction: column
+      align-items: flex-start
+    @media #{$tablet-small}
+      order: 2
+      padding: 24px 18px
+
+  &__sale-title
+    color: #282828
+    font-size: 24px
+    font-weight: 400
+    line-height: 28px 
+    letter-spacing: 1.56px
+
+  &__sale-label
+    display: flex
+    align-items: center
+    border-radius: 10px
+    border: 1px solid rgba(40, 40, 40, 0.15)
+    overflow: hidden
+
+  &__sale-search
+    display: block
+    padding-left: 10px
+    width: 100%
+
+  &__sale-button
+    margin-left: auto
+    width: 48px
+    background: #008CCC
+    height: 100%
+    padding-top: 10px
+    padding-bottom: 10px
+
+  &__sale-icon
+    max-width: 20px
+    max-height: 20px
+
+  &__sale-link
+    @include button-gradient
+    padding: 24px 64px 24px 48px
+    @media #{$notebook-small}
+      white-space: nowrap
+      flex: 1 auto
+      margin-left: 20px
+    @media #{$tablet-small}
+      margin-left: 0
+      order: 1
+      margin-bottom: 18px
+    &:before
+      right: 20px
+
+  &__title-inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 48px
+
+  &__button-inner
+    display: flex
+    align-items: center
+    gap: 16px
+
+  &__swiper-button
+    border-radius: 50%
+    min-width: 40px
+    min-height: 40px
+    border: 1px solid #282828
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 13 8' fill='none'%3E%3Cpath d='M12.2454 4.35355C12.4407 4.15829 12.4407 3.84171 12.2454 3.64645L9.06347 0.464466C8.8682 0.269204 8.55162 0.269204 8.35636 0.464466C8.1611 0.659728 8.1611 0.976311 8.35636 1.17157L11.1848 4L8.35636 6.82843C8.1611 7.02369 8.1611 7.34027 8.35636 7.53553C8.55162 7.7308 8.8682 7.7308 9.06347 7.53553L12.2454 4.35355ZM0 4.5L11.8919 4.5V3.5L0 3.5L0 4.5Z' fill='%23282828'/%3E%3C/svg%3E")
+    background-position: center
+    background-size: 12px
+    background-repeat: no-repeat
+    transition: opacity .4s
+    cursor: pointer
+    @media #{$tablet}
+      min-width: 36px
+      min-height: 36px
+    &.swiper-button-disabled
+      opacity: .5
+      cursor: not-allowed
+    &--prev
+      transform: rotate(180deg)
+
+
+
+

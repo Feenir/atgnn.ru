@@ -1,0 +1,137 @@
+<header class="header">
+  <div class="stocks">
+    <div class="container">
+      <div class="stocks__wrapper">
+        <div class="stocks__inner">
+          <div class="stocks__text">Сэкономьте до 30% запланированного бюджета</div>
+          <a class="stocks__more" href="#">Подробнее
+            <svg class="stocks__more-icon">
+              <use class="stocks__more-color" xlink:href="assets/images/svg/set.svg#stocks-more"></use>
+            </svg>
+          </a>
+        </div>
+        <svg class="stocks__close">
+          <use class="stocks__close-color" xlink:href="assets/images/svg/set.svg#stocks-close"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-wrapper">
+        <span class="header__top-city">
+          Нижний Новгород
+        </span>
+        <nav class="header__top-navigation">
+          <ul class="header__top-list">
+            <li class="header__top-item"><a class="header__top-link" href="#">О компании</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Производство</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Услуги</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Информация</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="header__main">
+    <div class="container">
+      <div class="header__main-wrapper">
+        <img class="logo" src="./assets/images/logo/logo.png" alt="Логотип" ghiw-picture-class="header__logo-picture logo-picture">
+
+        <div class="header__search-inner">
+          <button class="header__catalog" type="button">
+            <svg class="header__catalog-icon">
+              <use class="header__catalog-color" xlink:href="./assets/images/svg/set.svg#catalog-icon"></use>
+            </svg>
+            Каталог
+          </button>
+          <label class="header__search-label">
+
+            <input class="header__search" type="search" placeholder="Найти">
+            <button class="header__search-button" type="submit"></button>
+          </label>
+        </div>
+        <div class="header__info-inner">
+          <div class="header__info-item">
+            <a class="header__info-link" href="mailto:{{data.email}}" ><span data-copy-target>{{data.email}}</span></a>
+            <button class="header__info-button header__info-button--mail" data-copy-button>Скопировать почту</button>
+          </div>
+          <div class="header__info-item">
+            <a class="header__info-link" href="tel:{{data.phoneHref}}">{{data.phone}}</a>
+            <button class="header__info-button header__info-button--phone">Заказать звонок</button>
+          </div>
+        </div>
+
+        <div class="header__mobile-menu">
+          <div class="header__mobile-item">
+            <a class="header__mobile-link" href="mailto:{{data.phoneHref}}">
+              <svg class="header__mobile-icon header__mobile-icon--small header__mobile-icon--phone">
+                <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#phone"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__mobile-item">
+            <a class="header__mobile-link" href="mailto:{{data.email}}">
+              <svg class="header__mobile-icon header__mobile-icon--small header__mobile-icon--mail">
+                <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#mail"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__mobile-item" data-open-mobile-menu>
+            <svg class="header__mobile-icon">
+              <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#mobile-burger"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu__body">
+    <div class="mobile-menu__title-inner">
+      <h2 class="mobile-menu__title">меню</h2>
+      <div class="mobile-menu__close-inner" data-close-mobile-menu>
+        <svg class="mobile-menu__close">
+          <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#mobile-close"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <h3 class="mobile-menu__list-title">О компании</h3>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Общая информация </a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Организация</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Производство</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Лабаротория</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Гарантии</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Документы</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Политика компании</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <h3 class="mobile-menu__list-title">Клиентам</h3>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Прайс - лист</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Полезная информация</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Партнёрам</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Лабаротория</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <a class="mobile-menu__contacts-link" href="mailto:{{data.email}}">{{data.email}}</a>
+      <button class="mobile-menu__button mobile-menu__button--email" type="button">Скопировать почту</button>
+      <a class="mobile-menu__contacts-link" href="{{data.phoneHref}}">{{data.phone}}</a>
+      <button class="mobile-menu__button mobile-menu__button--email" type="button">Заказать звонок</button>
+      <p class="mobile-menu__city">Нижний Новгород</p>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <p class="mobile-menu__work-hours">Производим 24/365 <br> Продаём с 08:00 до 18:00 с Пн. по Пт.</p>
+      <button class="mobile-menu__callback-button" type="button">перезвоните мне</button>
+    </div>
+  </div>
+</div>
+

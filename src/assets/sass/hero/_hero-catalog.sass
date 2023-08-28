@@ -1,0 +1,85 @@
+.hero-catalog
+  @include section-indent
+
+  &__swiper
+    position: relative
+
+  &__swiper-wrapper
+    display: flex
+    align-items: center
+    justify-content: flex-start
+
+  &__slide
+    border-radius: 10px
+    padding: 144px 120px
+    background-image: url("../images/hero/hero-catalog.png")
+    background-size: cover
+    background-repeat: no-repeat
+    @supports (background-image: url("../images/hero/hero-catalog.webp"))
+      background-image: url("../images/hero/hero-catalog.webp")
+    @media #{$notebook}
+      padding: 100px  80px
+    @media #{$notebook-small}
+      padding: 70px 50px
+    @media #{$tablet}
+      padding: 38px 24px 300px 24px
+
+
+  &__title
+    color: #FFFFFF
+    margin-bottom: 24px
+    @media #{$tablet}
+      margin-bottom: 18px
+
+  &__text
+    color: #F2F2F2
+    margin-bottom: 48px
+    @media #{$notebook}
+      margin-bottom: 40px
+    @media #{$notebook-small}
+      margin-bottom: 24px
+    @media #{$tablet}
+      margin-bottom: 18px
+
+  &__link
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: 24px 48px
+    border: 1px solid #FFF
+    color: #FFFFFF
+    text-transform: uppercase
+    border-radius: 10px
+    max-width: max-content
+
+  &__swiper-control-inner
+    display: flex
+    gap: 16px
+    z-index: 10000
+    position: absolute
+    bottom: 48px
+    right: 48px
+
+  &__swiper-button
+    width: 40px
+    height: 40px
+    border-radius: 50%
+    border: 1px solid rgba(255, 255, 255, .4)
+    background-position: center
+    background-size: 12px
+    background-repeat: no-repeat
+    &--next
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 13 8' fill='none'%3E%3Cpath d='M12.2454 4.35355C12.4407 4.15829 12.4407 3.84171 12.2454 3.64645L9.06347 0.464466C8.8682 0.269204 8.55162 0.269204 8.35636 0.464466C8.1611 0.659728 8.1611 0.976311 8.35636 1.17157L11.1848 4L8.35636 6.82843C8.1611 7.02369 8.1611 7.34027 8.35636 7.53553C8.55162 7.7308 8.8682 7.7308 9.06347 7.53553L12.2454 4.35355ZM0 4.5L11.8919 4.5V3.5L0 3.5L0 4.5Z' fill='%23282828'/%3E%3C/svg%3E")
+      &.autoplay-progress
+        right: 0
+        bottom: 0
+        & svg
+          stroke: #FFFFFF
+          stroke-width: 1px
+    &--prev
+      transform: rotate(180deg)
+      position: absolute
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='8' viewBox='0 0 13 8' fill='none'%3E%3Cpath d='M12.2454 4.35355C12.4407 4.15829 12.4407 3.84171 12.2454 3.64645L9.06347 0.464466C8.8682 0.269204 8.55162 0.269204 8.35636 0.464466C8.1611 0.659728 8.1611 0.976311 8.35636 1.17157L11.1848 4L8.35636 6.82843C8.1611 7.02369 8.1611 7.34027 8.35636 7.53553C8.55162 7.7308 8.8682 7.7308 9.06347 7.53553L12.2454 4.35355ZM0 4.5L11.8919 4.5V3.5L0 3.5L0 4.5Z' fill='%23282828'/%3E%3C/svg%3E")
+      right: 52px
+      bottom: 0
+

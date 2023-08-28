@@ -1,0 +1,90 @@
+.catalog-common
+  position: sticky
+  top: 40px
+  display: flex
+  flex-direction: column
+  flex-grow: 1
+
+  &__inner
+    display: flex
+    flex-wrap: wrap
+    align-items: stretch
+    gap: 20px
+
+  &__item
+    width: calc(33.33% - 14px)
+    border-radius: 10px
+    border: 1px solid rgba(40, 40, 40, 0.15)
+    overflow: hidden
+    @media #{$notebook-small}
+      width: calc(50% - 10px)
+    @media #{$tablet}
+      width: 100%
+    @media #{$tablet-small}
+      width: calc(50% - 10px)
+    @media #{$mobile-small}
+      width: 100%
+    &.product
+      @media #{$notebook-small}
+        max-width: unset
+
+  &__pagination
+    display: flex
+    margin-top: 36px
+
+  &__pagination-item
+    padding: 8px 10px
+    color: #494949
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    letter-spacing: 1.28px
+    text-transform: uppercase
+    border-radius: 5px
+    border: 1px solid rgba(40, 40, 40, 0.15)
+    background: #F9F9F9
+    max-width: 36px
+    &:not(:last-child)
+      margin-right: 6px
+    &--active
+      color: #008CCC
+      padding: 8px 20px
+      max-width: fit-content
+
+  &__pagination-arrow
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 30px 24px
+    &--prev
+      margin-left: 18px
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='24' viewBox='0 0 29 24' fill='none'%3E%3Cpath d='M26 12L5 12' stroke='%23282828' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M11.5098 5.13281L4.50977 12.1328L11.5098 19.1328' stroke='%23282828' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+      width: 36px
+    &--next
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29' height='24' viewBox='0 0 29 24' fill='none'%3E%3Cpath d='M3 12L24 12' stroke='%23282828' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M17.4902 5.13281L24.4902 12.1328L17.4902 19.1328' stroke='%23282828' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+      min-width: 48px
+
+
+  &__mobile-catalog
+    display: none
+    font-size: 16px
+    font-weight: 400
+    line-height: 18px
+    letter-spacing: 0.48px
+    text-transform: uppercase
+    margin-bottom: 18px
+    background: linear-gradient(224deg, #007DB7 6.77%, #00A4EF 100%)
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+    @media #{$tablet-small}
+      display: flex
+
+  &__icon
+    max-width: 18px
+    max-height: 18px
+    margin-right: 6px
+
+
+
+
+

@@ -1,0 +1,343 @@
+/* <--Строковые переменные для медиа-запросов--> */
+$notebook: '(max-width: 1540px)'
+$notebook-small: '(max-width: 1290px)'
+$tablet: '(max-width: 991px)'
+$tablet-small: '(max-width: 768px)'
+$mobile: '(max-width: 560px)'
+$mobile-big: '(max-width: 480px)'
+$mobile-small: '(max-width: 370px)'
+
+$html-font-size: 16px
+
+html
+  margin-right: calc(-1 * (100vw - 100%))
+  box-sizing: border-box
+  font-family: 'Manrope', sans-serif
+  overflow-x: hidden
+body
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  font-weight: 400
+  font-size: $html-font-size
+  line-height: 1.3
+  box-sizing: border-box
+  background-color: #FFF
+
+html, body
+  min-height: 100vh
+  margin: 0
+  padding: 0
+
+h1, h2 ,h3 , h4 , h5 ,h6
+  font-family: 'BebasNeue' , sans-serif
+  color: #282828
+
+p, a ,button, li
+  color: #282828
+
+
+@mixin section-indent($margin-bottom: 96px)
+  margin-bottom: $margin-bottom
+  @media #{$notebook}
+    margin-bottom: $margin-bottom - 16
+  @media #{$tablet}
+    margin-bottom: $margin-bottom - 24
+
+
+@mixin section-indent-padding ($padding-bottom: 96px)
+  padding-bottom: $padding-bottom
+  @media #{$notebook}
+    margin-bottom: $padding-bottom - 16
+  @media #{$tablet}
+    margin-bottom: $padding-bottom - 24
+
+@mixin section-title ($color: #282828, $margin: 48px)
+  color: $color
+  margin-bottom: $margin
+  font-weight: 500
+  text-transform: uppercase
+  @media #{$notebook}
+    margin-bottom: $margin - 16
+  @media #{$notebook-small}
+    margin-bottom: $margin - 24
+  @media #{$tablet}
+    margin-bottom: $margin - 28
+  @media #{$tablet-small}
+    margin-bottom: $margin - 30
+
+*
+  box-sizing: border-box
+
+.container
+  max-width: 1400px
+  margin: 0 auto
+  @media (max-width: 1440px)
+    padding: 0 15px 0 15px
+
+h1
+  $font-size: 64px
+  font-weight: 400
+  font-size: $font-size
+  line-height: $font-size + 8
+  letter-spacing: 4.16px
+  text-transform: uppercase
+  @media #{$notebook}
+    font-size: $font-size - 8
+    line-height: $font-size - 4
+  @media #{$tablet}
+    font-size: $font-size - 16
+    line-height: $font-size
+  @media #{$mobile-small}
+    font-size: $font-size - 26
+    line-height: $font-size - 12
+
+h2
+  $font-size: 50px
+  font-size: $font-size
+  font-style: normal
+  font-weight: 400
+  line-height: $font-size - 2
+  letter-spacing: 3.25px
+  text-transform: uppercase
+  @media #{$notebook}
+    font-size: $font-size -8
+  @media #{$tablet}
+    font-size: $font-size - 14
+    line-height: $font-size - 14
+
+
+
+p
+  font-size: 16px
+
+a
+  text-decoration: none
+  font-size: 16px
+
+input
+  font-family: 'Manrope', sans-serif
+  background: none
+  border: none
+  outline: none
+
+button
+  position: relative
+  font-family: 'Manrope', sans-serif
+  cursor: pointer
+  outline: none
+  border: none
+  background: none
+  padding: 0
+  font-size: 16px
+
+img
+  width: 100%
+  height: auto
+  object-fit: cover
+  max-width: fit-content
+
+textarea
+  resize: none
+  background: inherit
+  outline: none
+  border: none
+
+picture
+  display: flex
+
+@mixin normal-title-font
+  font-size: 16px
+  font-style: normal
+  font-weight: 600
+  line-height: 24px
+  letter-spacing: 0.48px
+
+@mixin button-gradient
+  position: relative
+  background-color: inherit
+  text-transform: uppercase
+  background: linear-gradient(224deg, #007DB7 6.77%, #00A4EF 100%)
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+  background-clip: text
+  text-fill-color: transparent
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    border-radius: 10px
+    border: 2px solid transparent
+    background: linear-gradient(224deg, #007DB7 6.77%, #00A4EF 100%) border-box
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)
+    -webkit-mask-composite: destination-out
+  &:before
+    position: absolute
+    content: ''
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M5 12H19' stroke='url(%23paint0_linear_250_1517)' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12 5L19 12L12 19' stroke='url(%23paint1_linear_250_1517)' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_250_1517' x1='18.6486' y1='12' x2='12.0352' y2='19.3394' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0677083' stop-color='%23007DB7'/%3E%3Cstop offset='1' stop-color='%2300A4EF'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear_250_1517' x1='18.8243' y1='5' x2='11.4567' y2='5.29201' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0.0677083' stop-color='%23007DB7'/%3E%3Cstop offset='1' stop-color='%2300A4EF'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E")
+    bottom: calc(50% - 12px)
+    width: 24px
+    height: 24px
+
+@mixin button-fill ($paddingTop: 24px, $paddingSide: 48px)
+  display: flex
+  align-items: center
+  justify-content: center
+  padding: $paddingTop $paddingSide
+  border-radius: 10px
+  background: linear-gradient(224deg, #007DB7 6.77%, #00A4EF 100%)
+  color: #FFF
+  font-size: 16px
+  font-weight: 400
+  line-height: 24px
+  letter-spacing: 1.28px
+  text-transform: uppercase
+  @media #{$tablet-small}
+    font-size: 14px
+
+.logo-picture
+  max-width: 300px
+
+
+.rotate
+  transform-origin: center
+
+.rotate-middle
+  animation: rotate-middle 60s linear infinite
+
+.rotate-top
+  animation: rotate-top 60s linear infinite
+
+.rotate-bottom
+  animation: rotate-bottom 60s linear infinite
+
+
+@keyframes rotate-bottom
+  from
+    transform: rotate(0)
+  to
+    transform: rotate(-360deg)
+
+
+@keyframes rotate-middle
+  from
+    transform: rotate(0)
+  to
+    transform: rotate(360deg)
+
+@keyframes rotate-top
+  from
+    transform: rotate(0)
+  to
+    transform: rotate(-360deg)
+
+.notification
+  position: relative
+  display: flex
+  align-items: center
+  &:hover
+    & .notification__hidden
+      opacity: 1
+      visibility: visible
+      z-index: 10
+      &--touch
+        pointer-events: auto
+
+  &__text
+    @media #{$tablet}
+      font-size: 14px
+    @media #{$tablet-small}
+      font-size: 12px
+
+  &__icon
+    max-width: 24px
+    max-height: 24px
+
+  &__hidden
+    position: absolute
+    width: 270px
+    padding: 18px
+    border-radius: 10px
+    background: #FFF
+    box-shadow: 0px 4px 31px 0px rgba(0, 0, 0, 0.07)
+    left: calc(100% + 10px)
+    opacity: 0
+    visibility: hidden
+    z-index: -1
+    pointer-events: none
+    transition: opacity .4s
+    @media #{$notebook}
+      left: -100px
+      top: 100%
+    @media #{$tablet}
+      left: calc(100% + 10px)
+      top: 0
+    @media #{$mobile}
+      left: -100px
+      top: 100%
+    &--touch
+      @media #{$mobile-small}
+        left: -150px
+      &:before
+        position: absolute
+        display: flex
+        content: ''
+        width: 20px
+        height: 100%
+        top: 0
+        left: -20px
+
+    &--form
+      top: calc(50% - 12px)
+      @media #{$notebook}
+        top: 100%
+      @media #{$tablet}
+        top: calc(50% - 12px)
+      @media #{$mobile}
+        top: 100%
+        left: -50px
+      @media #{$mobile-small}
+        left: -70px
+
+  &__link
+    display: block
+    margin-top: 8px
+    color: #008CCC
+    text-decoration-line: underline
+    @media #{$tablet}
+      font-size: 14px
+    @media #{$tablet-small}
+      font-size: 12px
+
+table
+  width: 100%
+
+th
+  color: #282828
+  font-size: 14px
+  font-weight: 500
+  line-height: 24px
+  letter-spacing: 0.42px
+  padding: 10px
+
+td
+  color: #494949
+  font-size: 16px
+  font-style: normal
+  font-weight: 400
+  line-height: 24px
+  letter-spacing: 0.48px
+  padding: 10px
+
+th, td
+  border: 1px solid rgba(40, 40, 40, 0.15)
+
+table
+  overflow: auto
+
+.product-card-one
+  overflow: hidden
