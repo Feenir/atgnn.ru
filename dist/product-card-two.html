@@ -1,0 +1,1149 @@
+<!doctype html>
+<html lang="ru">
+
+	<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="preload" as="style" href="assets/css/main.min.css" onload="this.rel='stylesheet'">
+			<noscript>
+					<link rel="preload" as="style" href="assets/css/main.min.css">
+			</noscript>
+			<link rel="preconnect" href="//api-maps.yandex.ru">
+			<link rel="dns-prefetch" href="//api-maps.yandex.ru">
+			<link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
+			<link rel="icon" href="../assets/images/favicon/favicon.svg" sizes="any" type="image/x-icon">
+			<link rel="apple-touch-icon" sizes="1024x1024" href="../assets/images/favicon/apple-touch-icon-1024x1024.png">
+			<link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon-180x180.png">
+			<link rel="apple-touch-icon" href="apple-touch-icon.png">
+			<link rel="manifest" href="manifest.json">
+			<meta name="msapplication-TileColor" content="#da532c">
+			<script defer src="assets/js/index.min.js"></script>
+			
+			
+			
+			
+			<meta name="theme-color" content="#ffffff">
+			<title>ATGNN</title>
+	</head>
+
+<body>
+<header class="header">
+  <div class="stocks">
+    <div class="container">
+      <div class="stocks__wrapper">
+        <div class="stocks__inner">
+          <div class="stocks__text">Сэкономьте до 30% запланированного бюджета</div>
+          <a class="stocks__more" href="#">Подробнее
+            <svg class="stocks__more-icon">
+              <use class="stocks__more-color" xlink:href="assets/images/svg/set.svg#stocks-more"></use>
+            </svg>
+          </a>
+        </div>
+        <svg class="stocks__close">
+          <use class="stocks__close-color" xlink:href="assets/images/svg/set.svg#stocks-close"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-wrapper">
+        <span class="header__top-city">
+          Нижний Новгород
+        </span>
+        <nav class="header__top-navigation">
+          <ul class="header__top-list">
+            <li class="header__top-item"><a class="header__top-link" href="#">О компании</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Производство</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Услуги</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Информация</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="header__main">
+    <div class="container">
+      <div class="header__main-wrapper">
+        <picture class="header__logo-picture logo-picture"><source srcset="./assets/images/logo/logo.webp" type="image/webp"><img class="logo" src="./assets/images/logo/logo.png" alt="Логотип" ></picture>
+
+        <div class="header__search-inner">
+          <button class="header__catalog" type="button">
+            <svg class="header__catalog-icon">
+              <use class="header__catalog-color" xlink:href="./assets/images/svg/set.svg#catalog-icon"></use>
+            </svg>
+            Каталог
+          </button>
+          <label class="header__search-label">
+
+            <input class="header__search" type="search" placeholder="Найти">
+            <button class="header__search-button" type="submit"></button>
+          </label>
+        </div>
+        <div class="header__info-inner">
+          <div class="header__info-item">
+            <a class="header__info-link" href="mailto:atgnn@atgnn.ru" ><span data-copy-target>atgnn@atgnn.ru</span></a>
+            <button class="header__info-button header__info-button--mail" data-copy-button>Скопировать почту</button>
+          </div>
+          <div class="header__info-item">
+            <a class="header__info-link" href="tel:+78314290080">8 (831) 429-00-80</a>
+            <button class="header__info-button header__info-button--phone">Заказать звонок</button>
+          </div>
+        </div>
+
+        <div class="header__mobile-menu">
+          <div class="header__mobile-item">
+            <a class="header__mobile-link" href="mailto:+78314290080">
+              <svg class="header__mobile-icon header__mobile-icon--small header__mobile-icon--phone">
+                <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#phone"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__mobile-item">
+            <a class="header__mobile-link" href="mailto:atgnn@atgnn.ru">
+              <svg class="header__mobile-icon header__mobile-icon--small header__mobile-icon--mail">
+                <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#mail"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__mobile-item" data-open-mobile-menu>
+            <svg class="header__mobile-icon">
+              <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#mobile-burger"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu__body">
+    <div class="mobile-menu__title-inner">
+      <h2 class="mobile-menu__title">меню</h2>
+      <div class="mobile-menu__close-inner" data-close-mobile-menu>
+        <svg class="mobile-menu__close">
+          <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#mobile-close"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <h3 class="mobile-menu__list-title">О компании</h3>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Общая информация </a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Организация</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Производство</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Лабаротория</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Гарантии</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Документы</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Политика компании</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <h3 class="mobile-menu__list-title">Клиентам</h3>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Прайс - лист</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Полезная информация</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Партнёрам</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Лабаротория</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <a class="mobile-menu__contacts-link" href="mailto:atgnn@atgnn.ru">atgnn@atgnn.ru</a>
+      <button class="mobile-menu__button mobile-menu__button--email" type="button">Скопировать почту</button>
+      <a class="mobile-menu__contacts-link" href="+78314290080">8 (831) 429-00-80</a>
+      <button class="mobile-menu__button mobile-menu__button--email" type="button">Заказать звонок</button>
+      <p class="mobile-menu__city">Нижний Новгород</p>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <p class="mobile-menu__work-hours">Производим 24/365 <br> Продаём с 08:00 до 18:00 с Пн. по Пт.</p>
+      <button class="mobile-menu__callback-button" type="button">перезвоните мне</button>
+    </div>
+  </div>
+</div>
+
+
+<main class="product-card-one">
+  <div class="container">
+    <ol class="bread-crumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li class="bread-crumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a class="bread-crumbs__link" itemprop="item" href="https://example.com/dresses">
+          <span class="bread-crumbs__text" itemprop="name">Главная</span></a>
+        <meta itemprop="position" content="1"/>
+      </li>
+      <li class="bread-crumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a class="bread-crumbs__link" itemprop="item" href="https://example.com/dresses/catalog">
+          <span class="bread-crumbs__text" itemprop="name">Каталог</span></a>
+        <meta itemprop="position" content="2"/>
+      </li>
+      <li class="bread-crumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a class="bread-crumbs__link" itemprop="item" href="https://example.com/dresses/catalog/vent">
+          <span class="bread-crumbs__text" itemprop="name">Вентиляционные решетки</span></a>
+        <meta itemprop="position" content="3"/>
+      </li>
+      <li class="bread-crumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a class="bread-crumbs__link" itemprop="item" href="https://example.com/dresses/catalog/vent">
+          <span class="bread-crumbs__text" itemprop="name">Наружные решетки для вентиляции</span></a>
+        <meta itemprop="position" content="4"/>
+      </li>
+      <li class="bread-crumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a class="bread-crumbs__link" itemprop="item" href="https://example.com/dresses/catalog/vent">
+          <span class="bread-crumbs__text" itemprop="name">Вентилятор радиальный низкого давления </span></a>
+        <meta itemprop="position" content="5"/>
+      </li>
+      <li class="bread-crumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span class="bread-crumbs__text" itemprop="name">№2,5</span>
+        <meta itemprop="position" content="6"/>
+        <meta itemprop="item"/>
+      </li>
+    </ol>
+  </div>  <section class="product-single">
+    <div class="container">
+      <div class="product-single__wrapper">
+        <div class="product-single__item product-single__item--swiper">
+          <div class="product-single__swiper swiper" data-swiper-big>
+            <div class="product-single__swiper-wrapper swiper-wrapper">
+              <div class="product-single__swiper-slide swiper-slide">
+                <a class="projects__slide-size" data-fancybox="big-slider" data-src="./assets/images/product-single/slider-example.png">
+                  <picture class="product-single__big-slide"><source srcset="./assets/images/product-single/slider-example.webp" type="image/webp"><img src="./assets/images/product-single/slider-example.png" alt="Слайд" width="600" height="600" ></picture>
+                </a>
+        
+              </div>
+              <div class="product-single__swiper-slide swiper-slide">
+                <a class="projects__slide-size" data-fancybox="big-slider" data-src="./assets/images/product-single/slider-example.png">
+                  <picture class="product-single__big-slide"><source srcset="./assets/images/product-single/slider-example.webp" type="image/webp"><img src="./assets/images/product-single/slider-example.png" alt="Слайд" width="600" height="600" ></picture>
+                </a>
+        
+              </div>
+              <div class="product-single__swiper-slide swiper-slide">
+                <a class="projects__slide-size" data-fancybox="big-slider" data-src="./assets/images/product-single/slider-example.png">
+                  <picture class="product-single__big-slide"><source srcset="./assets/images/product-single/slider-example.webp" type="image/webp"><img src="./assets/images/product-single/slider-example.png" alt="Слайд" width="600" height="600" ></picture>
+                </a>
+        
+              </div>
+              <div class="product-single__swiper-slide swiper-slide">
+                <a class="projects__slide-size" data-fancybox="big-slider" data-src="./assets/images/product-single/slider-example.png">
+                  <picture class="product-single__big-slide"><source srcset="./assets/images/product-single/slider-example.webp" type="image/webp"><img src="./assets/images/product-single/slider-example.png" alt="Слайд" width="600" height="600" ></picture>
+                </a>
+        
+              </div>
+              <div class="product-single__swiper-slide swiper-slide">
+                <a class="projects__slide-size" data-fancybox="big-slider" data-src="./assets/images/product-single/slider-example.png">
+                  <picture class="product-single__big-slide"><source srcset="./assets/images/product-single/slider-example.webp" type="image/webp"><img src="./assets/images/product-single/slider-example.png" alt="Слайд" width="600" height="600" ></picture>
+                </a>
+        
+              </div>
+            </div>
+            <div class="product-single__control-inner">
+              <div class="product-single__swiper-button product-single__swiper-button--prev" data-big-prev></div>
+              <div class="product-single__swiper-button product-single__swiper-button--next" data-big-next></div>
+            </div>
+            <span class="product-single__sale">-25%</span>
+          </div>
+          <div class="product-single__thumbs swiper" data-swiper-thumb>
+            <div class="product-single__thumbs-wrapper swiper-wrapper">
+              <div class="product-single__thumbs-slide swiper-slide">
+                <picture><source srcset="./assets/images/product-single/thumb-example.webp" type="image/webp"><img src="./assets/images/product-single/thumb-example.png" alt="Миниатюра"></picture>
+              </div>
+              <div class="product-single__thumbs-slide swiper-slide">
+                <picture><source srcset="./assets/images/product-single/thumb-example.webp" type="image/webp"><img src="./assets/images/product-single/thumb-example.png" alt="Миниатюра"></picture>
+              </div>
+              <div class="product-single__thumbs-slide swiper-slide">
+                <picture><source srcset="./assets/images/product-single/thumb-example.webp" type="image/webp"><img src="./assets/images/product-single/thumb-example.png" alt="Миниатюра"></picture>
+              </div>
+              <div class="product-single__thumbs-slide swiper-slide">
+                <picture><source srcset="./assets/images/product-single/thumb-example.webp" type="image/webp"><img src="./assets/images/product-single/thumb-example.png" alt="Миниатюра"></picture>
+              </div>
+              <div class="product-single__thumbs-slide swiper-slide">
+                <picture><source srcset="./assets/images/product-single/thumb-example.webp" type="image/webp"><img src="./assets/images/product-single/thumb-example.png" alt="Миниатюра"></picture>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        
+        
+        <div class="product-single__item product-single__item--sidebar product-single__item--sidebar-two product-single__sidebar" data-check-select>
+          <div class="product-single__sidebar-promo">
+            <span class="product-single__promo">в наличии</span>
+            <div class="notification notification--one">
+              <svg class="product-single__icon notification__icon">
+                <use xlink:href="./assets/images/svg/set.svg#product-single-sale"></use>
+              </svg>
+              <div class="notification__hidden">
+                  <p class="notification__text">Если нет в наличии то есть стандартные сроки производства, но мы можем сделать экспресс-производство за 5 рабочих дней</p>
+              </div>
+            </div>
+          </div>
+          <h1 class="product-single__title">Вентилятор радиальный низкого давления №2,5</h1>
+          <p class="product-single__choose-text product-single__choose-text--second">Радиальные вентиляторы низкого давления ВР 80-70, ВР 80-75, ВР 86-77, ВЦ 4-40, ВЦ 4-70, ВЦ 4-75</p>
+          <div class="product-single__maker-inner product-single__maker-inner--second">
+            <p class="product-single__info product-single__info--second">Схема исполнения: </p>
+            <div class="notification">
+              <svg class="product-single__icon notification__icon">
+                <use xlink:href="./assets/images/svg/set.svg#product-single-sale"></use>
+              </svg>
+              <div class="notification__hidden notification__hidden--touch">
+                <p class="notification__text">У нас имеется своё производство</p>
+                <a class="notification__link" href="#">Посмотреть сертификат</a>
+        
+              </div>
+            </div>
+          </div>
+          <div class="product-single__scheme-inner">
+            <label class="product-single__scheme-label">
+              <input class="product-single__scheme-radio" form="product-single-form-two" type="radio" value="1" name="scheme" checked>
+              <span class="product-single__scheme-radio-fake">1</span>
+            </label>
+            <label class="product-single__scheme-label">
+              <input class="product-single__scheme-radio" form="product-single-form-two"  type="radio" value="5" name="scheme">
+              <span class="product-single__scheme-radio-fake">5</span>
+            </label>
+          </div>
+        
+        
+          <form class="product-single__form product-single__form--two" id="product-single-form-two">
+            <fieldset class="product-single__select-inner">
+              <p class="product-single__info">Схема исполнения: </p>
+              <div class="product-single__select product-single__select--one  itc-select" data-execution>
+                <button class="itc-select__toggle" type="button" name="" value="" data-select="toggle" data-index="-1">Выбрать</button>
+                <div class="itc-select__dropdown">
+                  <ul class="itc-select__options">
+                    <li class="itc-select__option" data-select="option" data-value="" data-index="0">Общепромышленное, углеродистая сталь</li>
+                    <li class="itc-select__option" data-select="option" data-value="" data-index="1">Общепромышленное коррозионностойкое (К1)</li>
+                    <li class="itc-select__option" data-select="option" data-value="" data-index="2">Взрывозащищенное из разнородных металлов (В)</li>
+                    <li class="itc-select__option" data-select="option" data-value="" data-index="3">Взрывозащищенное, алюминий (ВК3)</li>
+                    <li class="itc-select__option" data-select="option" data-value="" data-index="4">Взрывозащищенное, коррозионностойкое (ВК1)</li>
+                    <li class="itc-select__option" data-select="option" data-value="" data-index="5">Жаростойкое (Ж)</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="product-single__info">Схема исполнения: </p>
+              <div class="product-single__select itc-select" data-electric>
+                <button class="itc-select__toggle" type="button" name="" value="" data-select="toggle" data-index="-1">Выбрать</button>
+                <div class="itc-select__dropdown">
+                  <ul class="itc-select__options">
+                    <li class="itc-select__option" data-select="option" data-value="" data-index="0">Общепромышленное, углеродистая сталь</li>
+                    <li class="itc-select__option" data-select="option" data-value="" data-index="1">Общепромышленное коррозионностойкое (К1)</li>
+                    <li class="itc-select__option" data-select="option" data-value="" data-index="2">Взрывозащищенное из разнородных металлов (В)</li>
+                    <li class="itc-select__option" data-select="option" data-value="" data-index="3">Взрывозащищенное, алюминий (ВК3)</li>
+                    <li class="itc-select__option" data-select="option" data-value="" data-index="4">Взрывозащищенное, коррозионностойкое (ВК1)</li>
+                    <li class="itc-select__option" data-select="option" data-value="" data-index="5">Жаростойкое (Ж)</li>
+                  </ul>
+                </div>
+              </div>
+            </fieldset>
+        
+            <fieldset class="product-single__button-inner">
+              <label class="product-single__price">Цена:
+                <input class="product-single__price-input" data-price name="price" value=""><span class="product-single__price-fake-input">1875</span> руб</label>
+              <button class="product-single__button" type="submit">Оставить заказ</button>
+            </fieldset>
+          </form>
+        </div>      <div class="product-single__item product-single__item--text-block">
+          <p class="product-single__text">С целью обеспечения помещений принудительным воздухообменом, в зданиях разного назначения используется радиальный вентилятор низкого давления. Устройство активно применяется при установке вентиляции в общественном, производственном, административном, складском или другом виде зданий. Часто используется в качестве компонентов вытяжных или приточных канальных и безканальных систем вентиляции. В компании Аэротехногрупп Вы можете заказать вентиляторы низкого давления под любой выпускаемой маркировкой: ВЦ 4-75, 4-70, ВР 80-75, ВР 86-77.</p>
+        </div>    </div>
+    </div>
+  </section>  <section class="tabs tabs--two" data-tabs>
+  
+      <div class="tabs__trigger-inner">
+        <button class="tabs__trigger tabs-active" data-tabs-btn type="button">Описание</button>
+        <button class="tabs__trigger" data-tabs-btn type="button">Характеристики</button>
+        <button class="tabs__trigger" data-tabs-btn type="button">Размеры</button>
+        <button class="tabs__trigger" data-tabs-btn type="button">графика</button>
+        <button class="tabs__trigger" data-tabs-btn type="button">Отзывы</button>
+      </div>
+    <div class="container">
+      <div class="tabs__content-inner tabs__content-inner--description tabs-pane-show" data-tabs-pane>
+        <p>С целью обеспечения помещений принудительным воздухообменом в зданиях разного назначения используется радиальный вентилятор низкого давления. Устройство активно применяется при установке вентиляции в общественном, производственном, административном, складском или другом виде зданий. Часто используется в качестве компонентов вытяжных или приточных канальных и бесканальных систем вентиляции. В компании Аэротехногрупп Вы можете заказать вентиляторы низкого давления под любой выпускаемой маркировкой: ВЦ 4-75, 4-70, ВР 80-75, ВР 86-77.</p>
+        <h3>Применение вентиляторов низкого давления</h3>
+        <p>Использование данного вентиляционного оборудования одностороннего всасывания возможно при условии наличия нормальной рабочей атмосферы. Она считается таковой, если воздух был предварительно очищен, или газовоздушные смеси с температурой не выше +80°С без взрывоопасных, пожароопасных составляющих, химических веществ с агрессивными свойствами. При невозможности соблюдения таких условий оптимальным будет применение специальных вентиляторов. Они должны быть теплостойкими, защищёнными от взрывов, антикоррозийными или использоваться в комбинированных вариантах. Допустимым пределом считается наличие в воздухе пыли, взвешенных включений в количестве 0,1 г/м3.</p>
+        <h3>Конструктивные особенности вентилятора низкого давления</h3>
+        <p>Вентилятор низкого давления представляет собой сварную станину ли сборную с размещённым на ней спирально-поворотным корпусом, во внутренней части которого установлены рабочее колесо с электроприводом. Производитель предлагает покупателям данное оборудование в специальной упаковке, уже подготовленное к монтажу. Вентилятор нужно монтировать на железобетонном основании либо металлической конструкции перекрытия, так как требуется жёсткий фундамент с оптимальной несущей способностью. В качестве элементов крепления используется анкерный крепёж. Чтобы снизить вибрации, которые производит работающий агрегат, специалисты советуют пользоваться виброизоляционными опорами (в базовой комплектации они отсутствуют). Для удобства установку спирально-поворотного корпуса следует выполнять таким образом, чтобы он встал под 45-градусным углом по отношению к выходному воздуховоду. К корпусу воздуховоды подсоединяются с помощью фланцев с отверстиями.</p>
+        <h3>Условия эксплуатации</h3>
+        <p>Устройства данного вида предназначены для использования при температуре -40°С – +40°С в местах, где климат умеренный. При этом должны применяться вторая и третья категория размещения. Возможно функционирование вентилятора и по первой категории, если обеспечена защита привода от негативных атмосферных явлений (дождь, снег, прямое действие ультрафиолета).
+          Существуют 10 типоразмеров данных агрегатов. Для их изготовления в базовой комплектации используется конструкционная низкоуглеродистая сталь.
+          <br>К вентиляторам специального исполнения относятся следующие виды:
+          <br> · теплостойкие (с рабочей температурой в пределах +200°С);
+          <br> · взрывозащитные;
+          <br> · коррозионностойкие;
+          <br> · имеющие комбинацию вышеперечисленных исполнений.
+        </p>
+        <h3>Заказывайте вентиляторы низкого давления у нас</h3>
+        <p>Предлагаем купить вентиляторы низкого давления любого типа в нашей компании по доступной цене. Обращайтесь!</p>
+      </div>
+  
+      <div class="tabs__content-inner tabs__content-inner--specifications" data-tabs-pane>
+        <table>
+        <thead>
+        <tr>
+          <th rowspan="2" style="min-width: 200px">Марка вентилятора</th>
+          <th rowspan="2">Исполнение</th>
+          <th rowspan="2"  style="min-width: 200px">Отн-ый диаметр колеса</th>
+          <th colspan="3">Электродвигатель</th>
+          <th colspan="2">Параметры в рабочей зоне</th>
+          <th rowspan="2" style="min-width: 90px">Масса, кг</th>
+          <th colspan="2">Виброизоляторы</th>
+        </tr>
+        <tr>
+          <th>Частота вращения, об/мин.</th>
+          <th>Мощность, кВт</th>
+          <th>Тип*</th>
+          <th>Производ-сть, 1000хм³/час</th>
+          <th>Полное давление, Па</th>
+          <th>Марка</th>
+          <th>Количество в комплекте</th>
+        </tr>
+        </thead>
+          <tbody>
+            <tr>
+              <td rowspan="10">№2,5</td>
+              <td rowspan="10">1</td>
+              <td rowspan="2">0,9</td>
+              <td>1450</td>
+              <td>0,12</td>
+              <td>56А4</td>
+              <td>0,37-0,88</td>
+              <td>137-55</td>
+              <td>22</td>
+              <td rowspan="10">ДО-38</td>
+              <td rowspan="10">4</td>
+            </tr>
+          <tr>
+            <td>2900</td>
+            <td>0,37</td>
+            <td>63А2</td>
+            <td>0,75-1,77</td>
+            <td>540-230</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td rowspan="2">0.95</td>
+            <td>1450</td>
+            <td>0,12</td>
+            <td>56T4</td>
+            <td>0,53-1,475</td>
+            <td>160-13</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td>1450</td>
+            <td>0,12</td>
+            <td>56T4</td>
+            <td>0,53-1,475</td>
+            <td>160-13</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <td rowspan="2">1</td>
+            <td>1450</td>
+            <td>0,12</td>
+            <td>56T4</td>
+            <td>0,53-1,475</td>
+            <td>160-13</td>
+            <td>22</td>
+          </tr>
+            <tr>
+              <td>1450</td>
+              <td>0,12</td>
+              <td>56T4</td>
+              <td>0,53-1,475</td>
+              <td>160-13</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td rowspan="2">1,05</td>
+              <td>1450</td>
+              <td>0,12</td>
+              <td>56T4</td>
+              <td>0,53-1,475</td>
+              <td>160-13</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>1450</td>
+              <td>0,12</td>
+              <td>56T4</td>
+              <td>0,53-1,475</td>
+              <td>160-13</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td rowspan="2">1,1</td>
+              <td>1450</td>
+              <td>0,12</td>
+              <td>56T4</td>
+              <td>0,53-1,475</td>
+              <td>160-13</td>
+              <td>22</td>
+            </tr>
+            <tr>
+              <td>1450</td>
+              <td>0,12</td>
+              <td>56T4</td>
+              <td>0,53-1,475</td>
+              <td>160-13</td>
+              <td>22</td>
+            </tr>
+          </tbody>
+        </table>    </div>
+  
+      <div class="tabs__content-inner tabs__content-inner--sizes" data-tabs-pane data-horizontal>
+        <div>
+          <picture><source srcset="./assets/images/tabs/sizes/1.webp" type="image/webp"><img src="./assets/images/tabs/sizes/1.png" alt="Производство" width="254" height="264" loading="lazy"></picture>
+          <picture><source srcset="./assets/images/tabs/sizes/2.webp" type="image/webp"><img src="./assets/images/tabs/sizes/2.png" alt="Производство" width="254" height="264" loading="lazy"></picture>
+          <picture><source srcset="./assets/images/tabs/sizes/3.webp" type="image/webp"><img src="./assets/images/tabs/sizes/3.png" alt="Производство" width="254" height="264" loading="lazy"></picture>
+          <picture><source srcset="./assets/images/tabs/sizes/4.webp" type="image/webp"><img src="./assets/images/tabs/sizes/4.png" alt="Производство" width="254" height="264" loading="lazy"></picture>
+        </div>
+        <h3>Габаритные и присоединительные размеры вентиляторов низкого давления исп-1</h3>
+        <table>
+          <thead>
+          <tr>
+            <th>Типоразмер вентилятора</th>
+            <th>А, мм</th>
+            <th>D, мм</th>
+            <th>D1, мм</th>
+            <th>F1, мм</th>
+            <th>F2, мм</th>
+            <th>F5, мм</th>
+            <th>F6, мм</th>
+            <th>H, мм</th>
+            <th>Lmax, мм</th>
+            <th>L, мм</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>2,5</td>
+            <td>162</td>
+            <td>162</td>
+            <td>162</td>
+            <td>162</td>
+            <td>162</td>
+            <td>162</td>
+            <td>162</td>
+            <td>162</td>
+            <td>162</td>
+            <td>162</td>
+          </tr>
+          <tr>
+            <td>3,15</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+          </tr>
+          <tr>
+            <td>3,15</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+          </tr>
+          <tr>
+            <td>3,15</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+          </tr>
+          <tr>
+            <td>3,15</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+          </tr>
+          <tr>
+            <td>3,15</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+          </tr>
+          <tr>
+            <td>3,15</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+          </tr>
+          <tr>
+            <td>3,15</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+          </tr>
+          <tr>
+            <td>3,15</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+          </tr>
+          <tr>
+            <td>3,15</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td>205</td>
+            <td></td>
+          </tr>
+        
+          </tbody>
+        </table>    </div>
+  
+      <div class="tabs__content-inner tabs__content-inner--certificates" data-tabs-pane>
+        <div class="swiper" data-tabs-certificates>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a data-fancybox="tabs-certificates" data-src="./assets/images/tabs/page-0001.jpg">
+                <picture><source srcset="./assets/images/tabs/page-0001.webp" type="image/webp"><img src="./assets/images/tabs/page-0001.jpg" alt="Слайд" width="264" height="374"></picture>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a data-fancybox="tabs-certificates" data-src="./assets/images/tabs/page-0002.jpg">
+                <picture><source srcset="./assets/images/tabs/page-0002.webp" type="image/webp"><img src="./assets/images/tabs/page-0002.jpg" alt="Слайд" width="264" height="374"></picture>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a data-fancybox="tabs-certificates" data-src="./assets/images/tabs/page-0001.jpg">
+                <picture><source srcset="./assets/images/tabs/page-0001.webp" type="image/webp"><img src="./assets/images/tabs/page-0001.jpg" alt="Слайд" width="264" height="374"></picture>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a data-fancybox="tabs-certificates" data-src="./assets/images/tabs/page-0002.jpg">
+                <picture><source srcset="./assets/images/tabs/page-0002.webp" type="image/webp"><img src="./assets/images/tabs/page-0002.jpg" alt="Слайд" width="264" height="374"></picture>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a data-fancybox="tabs-certificates" data-src="./assets/images/tabs/page-0001.jpg">
+                <picture><source srcset="./assets/images/tabs/page-0001.webp" type="image/webp"><img src="./assets/images/tabs/page-0001.jpg" alt="Слайд" width="264" height="374"></picture>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a data-fancybox="tabs-certificates" data-src="./assets/images/tabs/page-0002.jpg">
+                <picture><source srcset="./assets/images/tabs/page-0002.webp" type="image/webp"><img src="./assets/images/tabs/page-0002.jpg" alt="Слайд" width="264" height="374"></picture>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a data-fancybox="tabs-certificates" data-src="./assets/images/tabs/page-0001.jpg">
+                <picture><source srcset="./assets/images/tabs/page-0001.webp" type="image/webp"><img src="./assets/images/tabs/page-0001.jpg" alt="Слайд" width="264" height="374"></picture>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a data-fancybox="tabs-certificates" data-src="./assets/images/tabs/page-0002.jpg">
+                <picture><source srcset="./assets/images/tabs/page-0002.webp" type="image/webp"><img src="./assets/images/tabs/page-0002.jpg" alt="Слайд" width="264" height="374"></picture>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="tabs__swiper-control" data-certificates-control>
+          <div class="tabs__button tabs__button--prev" data-certificates-prev></div>
+          <div class="tabs__swiper-number">
+            <div class="tabs__number tabs__number--current" data-certificates-current></div>
+            <div class="tabs__number-separator"></div>
+            <div class="tabs__number tabs__number--total" data-certificates-total></div>
+          </div>
+          <div class="card__button card__button--next" data-certificates-next></div>
+        </div>
+      </div>
+  
+      <div class="tabs__content-inner tabs__content-inner--reviews" data-tabs-pane>
+  <!--      <p class="tabs__content-reviews">-->
+  <!--        На данный товар пока нет отзывов-->
+  <!--      </p>-->
+  
+        <div class="tabs__reviews-tabs loading">
+          <iframe style="width:100%;height:550px;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box"
+                  data-src-iframe="https://yandex.ru/maps-reviews-widget/1891947544?comments">
+          </iframe>
+        </div>
+  
+      </div>
+    </div>
+  </section>  <section class="card">
+      <div class="container">
+        <div class="card__title-inner-mobile">
+          <h3 class="card__control-title">сопутствующие товары</h3>
+          <a class="card__control-link" href="#">смотреть все</a>
+        </div>
+      </div>
+      <div class="card__wrapper">
+        <div class="card__control">
+          <div class="card__title-inner">
+            <h3 class="card__control-title">сопутствующие товары</h3>
+            <a class="card__control-link" href="#">смотреть все</a>
+          </div>
+          <div class="card__swiper-control" data-card-control>
+              <div class="card__button card__button--prev" data-card-prev></div>
+              <div class="card__swiper-number">
+                <div class="card__number card__number--current" data-card-current></div>
+                <div class="card__number-separator"></div>
+                <div class="card__number card__number--total" data-card-total></div>
+              </div>
+              <div class="card__button card__button--next" data-card-next></div>
+          </div>
+        </div>
+        <div class="card__swiper swiper" data-card-swiper>
+          <div class="card__swiper-wrapper swiper-wrapper">
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>  <section class="questions">
+    <picture class="questions__circle"><source srcset="./assets/images/circle.webp" type="image/webp"><img src="./assets/images/circle.png" alt="" ></picture>
+    <div class="container">
+      <div class="questions__box-wrapper">
+        <div class="questions__box-item">
+          <h2 class="questions__title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+          <div class="questions__wrapper">
+            <div class="questions__item">
+              <p class="questions__quest questions__quest--active" data-trigger>Нужна ли вентиляция для нашего помещения?
+                <svg class="questions__svg">
+                  <use class="questions__svg-fill" xlink:href="./assets/images/svg/set.svg#questions-arrow"></use>
+                </svg>
+              </p>
+              <div class="questions__answer-inner questions__answer-inner--active" data-target>
+                <p class="questions__answer-title">Ответ:</p>
+                <p class="questions__answer-text">Нужно знать назначение и тз по эксплуатации помещения. С помощью этой информации мы предложим варианты от естественного воздухообмена до многофункциональной приточно-вытяжной системы</p>
+              </div>
+            </div>
+            <div class="questions__item">
+              <p class="questions__quest" data-trigger>Нужна ли вентиляция для нашего помещения?
+                <svg class="questions__svg">
+                  <use class="questions__svg-fill" xlink:href="./assets/images/svg/set.svg#questions-arrow"></use>
+                </svg>
+              </p>
+              <div class="questions__answer-inner" data-target>
+                <p class="questions__answer-title">Ответ:</p>
+                <p class="questions__answer-text">Нужно знать назначение и тз по эксплуатации помещения. С помощью этой информации мы предложим варианты от естественного воздухообмена до многофункциональной приточно-вытяжной системы</p>
+              </div>
+            </div>
+            <div class="questions__item">
+              <p class="questions__quest" data-trigger>Нужна ли вентиляция для нашего помещения?
+                <svg class="questions__svg">
+                  <use class="questions__svg-fill" xlink:href="./assets/images/svg/set.svg#questions-arrow"></use>
+                </svg>
+              </p>
+              <div class="questions__answer-inner" data-target>
+                <p class="questions__answer-title">Ответ:</p>
+                <p class="questions__answer-text">Нужно знать назначение и тз по эксплуатации помещения. С помощью этой информации мы предложим варианты от естественного воздухообмена до многофункциональной приточно-вытяжной системы</p>
+              </div>
+            </div>
+            <div class="questions__item">
+              <p class="questions__quest" data-trigger>Нужна ли вентиляция для нашего помещения?
+                <svg class="questions__svg">
+                  <use class="questions__svg-fill" xlink:href="./assets/images/svg/set.svg#questions-arrow"></use>
+                </svg>
+              </p>
+              <div class="questions__answer-inner" data-target>
+                <p class="questions__answer-title">Ответ:</p>
+                <p class="questions__answer-text">Нужно знать назначение и тз по эксплуатации помещения. С помощью этой информации мы предложим варианты от естественного воздухообмена до многофункциональной приточно-вытяжной системы</p>
+              </div>
+            </div>
+            <div class="questions__item">
+              <p class="questions__quest" data-trigger>Нужна ли вентиляция для нашего помещения?
+                <svg class="questions__svg">
+                  <use class="questions__svg-fill" xlink:href="./assets/images/svg/set.svg#questions-arrow"></use>
+                </svg>
+              </p>
+              <div class="questions__answer-inner" data-target>
+                <p class="questions__answer-title">Ответ:</p>
+                <p class="questions__answer-text">Нужно знать назначение и тз по эксплуатации помещения. С помощью этой информации мы предложим варианты от естественного воздухообмена до многофункциональной приточно-вытяжной системы</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="questions__box-item">
+          <form class="form-second">
+            <fieldset class="form-second__inner">
+              <legend class="form-second__title">Вам нужна помощь специалиста?</legend>
+              <p class="form-second__text">Наши специалисты проконсультируют вас в течении 1 <br> минуты и составят смету, а после отправят на почту</p>
+              <fieldset class="form-second__contact-inner">
+                <label class="form-second__label form-second__label--input"> <input type="text" class="form-second__input" placeholder="Ваше имя" name="Имя" required></label> <label class="form-second__label form-second__label--input"> <input type="tel" class="form-second__input" placeholder="Номер телефона" name="Телефон" required></label>
+              </fieldset>
+              <label class="form-second__label form-second__label--textarea"> <textarea class="form-second__input form-second__textarea" placeholder="Комментарий" name="Вопрос" required></textarea> </label>
+              <fieldset class="form-second__button-inner">
+                <button class="form-second__button" type="submit">Получить консультацию</button>
+                <label class="form-second__politic-label"> <input class="form-second__checkbox" type="checkbox" name="принять политику конфиденциальности" checked required>
+                  <span class="form-second__fake-checkbox"></span> <span class="form-second__politic">Я согласен на обработку <a class="form-second__politic-color" href="#">персональных данных</a></span> </label>
+              </fieldset>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</main>
+<footer class="footer">
+  <div class="container">
+    <picture class="footer__logo-picture footer__logo-picture--mobile logo-picture"><source srcset="./assets/images/logo/logo.webp" type="image/webp"><img class="logo" src="./assets/images/logo/logo.png" alt="Логотип" ></picture>
+    <div class="footer__wrapper">
+      <div class="footer__contact-inner">
+        <picture class="footer__logo-picture logo-picture"><source srcset="./assets/images/logo/logo.webp" type="image/webp"><img class="logo" src="./assets/images/logo/logo.png" alt="Логотип" ></picture>
+        <a class="footer__link" href="tel:+78314290080">8 (831) 429-00-80</a>
+        <p class="footer__contact-text footer__contact-text--indent">Бесплатный звонок <br> по России</p>
+        <a class="footer__link" href="mailto:atgnn@atgnn.ru">atgnn@atgnn.ru</a>
+        <p class="footer__contact-text">Напишите нам</p>
+      </div>
+      <div class="footer__list-row">
+        <div class="footer__list-wrapper">
+          <div class="footer__list-inner">
+            <h3 class="footer__list-title">О компании</h3>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__list-link" href="#">Общая информация </a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Организация</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Производство</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Лабаротория</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Гарантии</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Документы</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Политика компании</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__list-wrapper">
+          <div class="footer__list-inner">
+            <h3 class="footer__list-title">Клиентам</h3>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__list-link" href="#">Прайс - лист</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Полезная информация</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Партнёрам</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Карьера</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__list-wrapper">
+          <div class="footer__list-inner">
+            <h3 class="footer__list-title">Каталог товаров</h3>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__list-link" href="#">Промышленные вентиляторы</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Автоматика</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Вентиляционные решетки</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Клапаны и заслонки</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Детали систем вентиляции</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__list-wrapper">
+          <div class="footer__list-inner">
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__list-link" href="#">Тепло-вентиляционное оборудование</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Огнезадерживающие клапаны</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Приточно-вытяжные установки</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Комплектующие для вентиляции</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Комплектующие для кондиционирования</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__callback-inner">
+      <p class="footer__callback-text">Производим 24/365 <br> Продаём с 08:00 до 18:00 с Пн. по Пт.</p>
+      <button class="footer__callback-button">перезвоните мне</button>
+    </div>
+    <div class="footer__bottom">
+      <a class="footer__bottom-info" href="#">Политика конфиденциальности</a> <a class="footer__bottom-info" href="#">Сайт создан и разработан</a>
+    </div>
+  </div>
+</footer></body>
+
+</html>

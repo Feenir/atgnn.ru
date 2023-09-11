@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="ru">
+
+	<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="preload" as="style" href="assets/css/main.min.css" onload="this.rel='stylesheet'">
+			<noscript>
+					<link rel="preload" as="style" href="assets/css/main.min.css">
+			</noscript>
+			<link rel="preconnect" href="//api-maps.yandex.ru">
+			<link rel="dns-prefetch" href="//api-maps.yandex.ru">
+			<link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
+			<link rel="icon" href="../assets/images/favicon/favicon.svg" sizes="any" type="image/x-icon">
+			<link rel="apple-touch-icon" sizes="1024x1024" href="../assets/images/favicon/apple-touch-icon-1024x1024.png">
+			<link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon-180x180.png">
+			<link rel="apple-touch-icon" href="apple-touch-icon.png">
+			<link rel="manifest" href="manifest.json">
+			<meta name="msapplication-TileColor" content="#da532c">
+			<script defer src="assets/js/index.min.js"></script>
+			
+			
+			
+			
+			<meta name="theme-color" content="#ffffff">
+			<title>ATGNN</title>
+	</head>
+
+<body>
+<header class="header">
+  <div class="stocks">
+    <div class="container">
+      <div class="stocks__wrapper">
+        <div class="stocks__inner">
+          <div class="stocks__text">Сэкономьте до 30% запланированного бюджета</div>
+          <a class="stocks__more" href="#">Подробнее
+            <svg class="stocks__more-icon">
+              <use class="stocks__more-color" xlink:href="assets/images/svg/set.svg#stocks-more"></use>
+            </svg>
+          </a>
+        </div>
+        <svg class="stocks__close">
+          <use class="stocks__close-color" xlink:href="assets/images/svg/set.svg#stocks-close"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-wrapper">
+        <span class="header__top-city">
+          Нижний Новгород
+        </span>
+        <nav class="header__top-navigation">
+          <ul class="header__top-list">
+            <li class="header__top-item"><a class="header__top-link" href="#">О компании</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Производство</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Услуги</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Информация</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="header__main">
+    <div class="container">
+      <div class="header__main-wrapper">
+        <picture class="header__logo-picture logo-picture"><source srcset="./assets/images/logo/logo.webp" type="image/webp"><img class="logo" src="./assets/images/logo/logo.png" alt="Логотип" ></picture>
+
+        <div class="header__search-inner">
+          <button class="header__catalog" type="button">
+            <svg class="header__catalog-icon">
+              <use class="header__catalog-color" xlink:href="./assets/images/svg/set.svg#catalog-icon"></use>
+            </svg>
+            Каталог
+          </button>
+          <label class="header__search-label">
+
+            <input class="header__search" type="search" placeholder="Найти">
+            <button class="header__search-button" type="submit"></button>
+          </label>
+        </div>
+        <div class="header__info-inner">
+          <div class="header__info-item">
+            <a class="header__info-link" href="mailto:atgnn@atgnn.ru" ><span data-copy-target>atgnn@atgnn.ru</span></a>
+            <button class="header__info-button header__info-button--mail" data-copy-button>Скопировать почту</button>
+          </div>
+          <div class="header__info-item">
+            <a class="header__info-link" href="tel:+78314290080">8 (831) 429-00-80</a>
+            <button class="header__info-button header__info-button--phone">Заказать звонок</button>
+          </div>
+        </div>
+
+        <div class="header__mobile-menu">
+          <div class="header__mobile-item">
+            <a class="header__mobile-link" href="mailto:+78314290080">
+              <svg class="header__mobile-icon header__mobile-icon--small header__mobile-icon--phone">
+                <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#phone"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__mobile-item">
+            <a class="header__mobile-link" href="mailto:atgnn@atgnn.ru">
+              <svg class="header__mobile-icon header__mobile-icon--small header__mobile-icon--mail">
+                <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#mail"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__mobile-item" data-open-mobile-menu>
+            <svg class="header__mobile-icon">
+              <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#mobile-burger"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu__body">
+    <div class="mobile-menu__title-inner">
+      <h2 class="mobile-menu__title">меню</h2>
+      <div class="mobile-menu__close-inner" data-close-mobile-menu>
+        <svg class="mobile-menu__close">
+          <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#mobile-close"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <h3 class="mobile-menu__list-title">О компании</h3>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Общая информация </a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Организация</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Производство</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Лабаротория</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Гарантии</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Документы</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Политика компании</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <h3 class="mobile-menu__list-title">Клиентам</h3>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Прайс - лист</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Полезная информация</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Партнёрам</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Лабаротория</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <a class="mobile-menu__contacts-link" href="mailto:atgnn@atgnn.ru">atgnn@atgnn.ru</a>
+      <button class="mobile-menu__button mobile-menu__button--email" type="button">Скопировать почту</button>
+      <a class="mobile-menu__contacts-link" href="+78314290080">8 (831) 429-00-80</a>
+      <button class="mobile-menu__button mobile-menu__button--email" type="button">Заказать звонок</button>
+      <p class="mobile-menu__city">Нижний Новгород</p>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <p class="mobile-menu__work-hours">Производим 24/365 <br> Продаём с 08:00 до 18:00 с Пн. по Пт.</p>
+      <button class="mobile-menu__callback-button" type="button">перезвоните мне</button>
+    </div>
+  </div>
+</div>
+
+
+<main class="main">
+  <section class="hero hero--main">
+    <div class="hero__wrapper">
+      <div class="hero__swiper swiper" data-hero-swiper>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <h1 class="hero__title">
+              Дарим скидку <br><span class="hero__title-color">5% на комплект</span>
+            </h1>
+            <p class="hero__text">
+              Промышленный вентилятор + преобразователь частоты
+            </p>
+            <button class="hero__button" type="button">
+              Оставить заявку
+            </button>
+          </div>
+          <div class="swiper-slide">
+            <h1 class="hero__title">
+              Дарим скидку <br><span class="hero__title-color">5% на комплект</span>
+            </h1>
+            <button class="hero__button" type="button">Оставить заявку</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hero__swiper-container">
+        <div class="hero__circle-position">
+          <div class="hero__circle-inner">
+            <svg class="hero__circle" viewBox="0 0 1018 1018" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle class="rotate rotate-bottom" cx="508.5" cy="509.5" r="265" stroke="#4990FF" stroke-opacity="0.2" stroke-width="3"/>
+              <g class="rotate rotate-top">
+                <path d="M126.019 176.698C209.039 81.2848 324.723 20.3464 450.365 5.84408C576.006 -8.65827 702.531 24.3227 805.105 98.3135C907.679 172.304 978.895 281.961 1004.77 405.761C1030.65 529.561 1009.32 658.563 944.978 767.446C880.631 876.329 777.911 957.23 656.981 994.27C536.051 1031.31 405.643 1021.81 291.355 967.645C177.067 913.477 87.1513 818.548 39.2575 701.491C-8.63626 584.434 -11.0496 453.704 32.4911 334.959" stroke="#4990FF" stroke-opacity="0.12" stroke-width="3"/>
+                <g> <circle cx="36" cy="330" r="7" fill="#4990FF" fill-opacity="0.12"/>
+                  <text x="10" y="10">Hello World!</text>
+                </g>
+                <circle opacity="0.12" cx="124" cy="182" r="7" fill="#4990FF"/>
+              </g>
+  
+              <g class="rotate rotate-middle">
+                <path d="M895.66 453.393C913.872 549.842 895.429 649.615 843.941 733.18C792.453 816.744 711.629 878.081 617.292 905.183C522.954 932.284 421.898 923.198 333.908 879.704C245.919 836.209 177.332 761.438 141.575 670.03C105.819 578.622 105.469 477.158 140.594 385.505C175.718 293.852 243.787 218.61 331.475 174.509C419.162 130.408 520.153 120.625 614.675 147.075C709.197 173.525 790.443 234.303 842.507 317.51" stroke="#4990FF" stroke-opacity="0.24" stroke-width="3"/>
+                <circle cx="894.002" cy="447" r="7" transform="rotate(-180 894.002 447)" fill="#4990FF" fill-opacity="0.24"/>
+                <circle cx="846.001" cy="323" r="7" transform="rotate(-180 846.001 323)" fill="#4990FF" fill-opacity="0.24"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+        <div class="swiper" data-hero-image-swiper>
+          <div class="swiper-wrapper">
+            <div class="hero__img-slide swiper-slide">
+              <picture><source srcset="assets/images/hero/hero-img.webp" type="image/webp"><img src="assets/images/hero/hero-img.png" alt="Фото на главной" width="650px" height="650"></picture>
+  
+            </div>
+            <div class="hero__img-slide swiper-slide">
+              <picture><source srcset="assets/images/hero/hero-img.webp" type="image/webp"><img src="assets/images/hero/hero-img.png" alt="Фото на главной" width="650px" height="650"></picture>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="hero__swiper-control-inner">
+        <div class="hero__swiper-button hero__swiper-button--next hero__autoplay autoplay-progress" data-image-next data-image-autoplay>
+          <svg class="hero__autoplay-icon" viewBox="0 0 40 40">
+            <circle cx="20" cy="20" r="20"></circle>
+          </svg>
+        </div>
+        <div class="hero__swiper-button hero__swiper-button--prev" data-image-prev></div>
+  
+      </div>
+  
+    </div>
+    <div class="container">
+  <div class="hero__mobile-swiper" data-mobile-swiper>
+    <div class="hero__info-inner">
+      <div class="hero__info-item hero__info-item--first">
+        <h4 class="hero__info-title">Эффективность</h4>
+        <p class="hero__subtitle">
+          Наш сайт предлагает широкий выбор высококачественных систем вентиляции
+        </p>
+      </div>
+      <div class="hero__info-item hero__info-item--other">
+        <div class="hero__info-svg-wrapper">
+          <svg class="hero__info-svg">
+            <use class="stocks__more-color" xlink:href="assets/images/svg/set.svg#info-1"></use>
+          </svg>
+        </div>
+        <p class="hero__info-text">
+          Надежность
+        </p>
+      </div>
+      <div class="hero__info-item hero__info-item--other">
+        <div class="hero__info-svg-wrapper">
+          <svg class="hero__info-svg">
+            <use class="stocks__more-color" xlink:href="assets/images/svg/set.svg#info-2"></use>
+          </svg>
+        </div>
+        <p class="hero__info-text">
+          Надежность
+        </p>
+      </div>
+      <div class="hero__info-item hero__info-item--other">
+        <div class="hero__info-svg-wrapper">
+          <svg class="hero__info-svg">
+            <use class="stocks__more-color" xlink:href="assets/images/svg/set.svg#info-3"></use>
+          </svg>
+        </div>
+        <p class="hero__info-text">
+          Надежность
+        </p>
+      </div>
+    </div>
+  </div>
+    </div>
+  
+  </section>
+  
+  
+  <section class="catalog">
+  		<div class="container">
+  				<h2 class="catalog__title">Каталог</h2>
+  				<div class="catalog__wrapper">
+  						<a class="catalog__item" href="#">
+  								<h3 class="catalog__item-title">Промышленные <br> вентиляторы</h3>
+  						</a>
+  						<a class="catalog__item" href="#">
+  								<h3 class="catalog__item-title">Приточно-вытяжные <br>  установки</h3>
+  						</a>
+  						<a class="catalog__item" href="#">
+  								<h3 class="catalog__item-title">Огнезадерживающие <br>  клапаны</h3>
+  						</a>
+  						<a class="catalog__item" href="#">
+  								<h3 class="catalog__item-title">Клапаны и заслонки</h3>
+  						</a>
+  						<a class="catalog__item" href="#">
+  								<h3 class="catalog__item-title">Автоматика</h3>
+  						</a>
+  						<a class="catalog__item" href="#">
+  								<h3 class="catalog__item-title">Тепло-вентиляционное <br> оборудование</h3>
+  						</a>
+  						<a class="catalog__item" href="#">
+  								<h3 class="catalog__item-title">Вентиляционные <br> решетки</h3>
+  						</a>
+  						<a class="catalog__item" href="catalog-page.html">
+  								перейти в каталог
+  						</a>
+  
+  				</div>
+  		</div>
+  </section>
+  
+  
+  <section class="about">
+    <div class="container">
+      <h2 class="about__title">
+        О компании
+      </h2>
+      <div class="about__wrapper">
+        <div class="about__item">
+          <p class="about__info-subtitle">AeroTechnoGroup — российский производитель и поставщик промышленного вентиляционного оборудования с 2016-го года. </p>
+          <p class="about__info-text">За 7 лет работы мы создали динамично развивающийся бренд вентиляционных решеток и воздушных клапанов, продуманную систему комплексных поставок и команду профессионалов, способных решать даже самые сложные задачи в кратчайшие сроки.</p>
+          <a class="about__more" href="#">подробнее</a>
+          <div class="about__block-inner">
+            <div class="about__block-item">
+              <h3 class="about__block-title">2500 м²</h3>
+              <p class="about__block-subtitle">Площадь производственных участков</p>
+            </div>
+            <div class="about__block-item">
+              <h3 class="about__block-title">7 Лет </h3>
+              <p class="about__block-subtitle">Работы и тысячи отгрузок в срок</p>
+            </div>
+            <div class="about__block-item">
+              <h3 class="about__block-title">32000 Товаров</h3>
+              <p class="about__block-subtitle">Для комплексного оснащения объектов</p>
+            </div>
+            <div class="about__block-item">
+              <h3 class="about__block-title">700 Решеток</h3>
+              <p class="about__block-subtitle">И воздушных клапанов производится ежедневно</p>
+            </div>
+          </div>
+        </div>
+        <div class="about__item about__item--video">
+          <svg class="about__video-play">
+            <use class="about__video-icon" xlink:href="assets/images/svg/set.svg#about-video-play"></use>
+          </svg>
+          <p class="about__video-text">Посмотрите короткое видео о нашей компании</p>
+        </div>
+        <div class="about__item about__item--partners">
+          <h3 class="about__partners-title">Наши партнёры</h3>
+          <div class="about__partners-wrapper">
+            <div class="about__partners"></div>
+            <div class="about__partners"></div>
+            <div class="about__partners"></div>
+            <div class="about__partners"></div>
+            <div class="about__partners"></div>
+            <div class="about__partners"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="blog">
+    <div class="blog__wrapper">
+      <div class="container">
+        <div class="blog__title-inner">
+          <h2 class="blog__title">Блог</h2>
+          <div class="blog__button-inner">
+            <div class="blog__swiper-button blog__swiper-button--prev" data-blog-prev></div>
+            <div class="blog__swiper-button blog__swiper-button--next" data-blog-next></div>
+          </div>
+        </div>
+      </div>
+      <div class="blog__swiper swiper" data-blog-swiper>
+        <div class="blog__swiper-wrapper swiper-wrapper">
+          <div class="blog__slide blog__slide--big swiper-slide">
+            <div class="blog__item">
+              <div class="blog__item-inner">
+                <div class="blog__item-info-wrapper">
+                  <span class="blog__description">Статья</span>
+                  <time class="blog__date">01.02.2022</time>
+                </div>
+                <h3 class="blog__item-title">
+                  Контроль качества на производстве вентиляционных решеток
+                </h3>
+                <p class="blog__item-text">
+                  Воздуховоды – часть вентиляции, обеспечивающая беспрепятственное движение воздушных потоков и их циркуляцию внутри системы. В зависимости от предназначения и условий эксплуатации эти конструкции подразделяются на несколько типов.
+                </p>
+                <div class="blog__item-button-wrapper">
+                  <a class="blog__item-link" href="#">прочитать статью</a>
+                  <div class="blog__duration-wrapper">
+                    <span class="blog__number blog__number--duration">3 мин</span>
+                    <span class="blog__number blog__number--view">345</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog__slide blog__slide--two swiper-slide">
+            <div class="blog__item-inner">
+              <div class="blog__item">
+                <svg class="blog__play">
+                  <use class="blog__play-icon" xlink:href="assets/images/svg/set.svg#blog-play"></use>
+                </svg>
+                <div class="blog__play-info">
+                    <p class="blog__play-text">
+                      Посмотреть видео о нас
+                    </p>
+                  <time class="blog__play-time">3:24</time>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="blog__slide blog__slide--small swiper-slide">
+            <div class=" blog__item-inner blog__item-inner--horizontal">
+  
+              <div class="blog__item blog__item--small-top">
+                <div class="blog__small-wrapper">
+                  <div class="blog__item-info-wrapper blog__item-info-wrapper--small">
+                    <span class="blog__description blog__description--small">Статья</span>
+                  </div>
+                  <h3 class="blog__item-title blog__item-title--small">Производство <br> воздуховодов</h3>
+                  <p class="blog__item-text blog__item-text--small ">
+                    Среднее по размеру описание новости или статьи
+                  </p>
+                  <div class="blog__item-button-wrapper">
+                    <time class="blog__date">01.02.2022</time>
+                    <div class="blog__duration-wrapper">
+                      <span class="blog__number blog__number--duration">3 мин</span>
+                      <span class="blog__number blog__number--view">345</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="blog__item blog__item--small-bottom">
+                <div class="blog__small-wrapper">
+                  <div class="blog__item-info-wrapper blog__item-info-wrapper--small">
+                    <span class="blog__description blog__description--small">Мнение эксперта</span>
+                  </div>
+                  <h3 class="blog__item-title blog__item-title--small">Слуховые окна и наружные<br>решетки для дома</h3>
+                  <p class="blog__item-text blog__item-text--small ">
+                    Среднее по размеру описание новости или статьи
+                  </p>
+                  <div class="blog__item-button-wrapper">
+                    <time class="blog__date">01.02.2022</time>
+                    <div class="blog__duration-wrapper">
+                      <span class="blog__number blog__number--duration">3 мин</span>
+                      <span class="blog__number blog__number--view">345</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+  
+            </div>
+          </div>
+          <div class="blog__slide blog__slide--big blog__slide--biggest swiper-slide">
+            <div class="blog__item">
+              <div class="blog__item-inner">
+                <div class="blog__item-info-wrapper">
+                  <span class="blog__description">Статья</span>
+                  <time class="blog__date">01.02.2022</time>
+                </div>
+                <h3 class="blog__item-title">
+                  Важность вентиляционных решеток: как они влияют на комфорт и безопасность
+                </h3>
+                <p class="blog__item-text">
+                  ентиляционные решетки играют важную роль в обеспечении комфорта и безопасности в наших домах и офисах. Они предназначены для регулирования потока воздуха, обеспечивают свежий воздух и предотвращают накопление влаги и запаха. Несмотря на свою незаметность, вентиляционные решетки являются неотъемлемой частью л
+                </p>
+                <div class="blog__item-button-wrapper">
+                  <a class="blog__item-link" href="#">прочитать статью</a>
+                  <div class="blog__duration-wrapper">
+                    <span class="blog__number blog__number--duration">3 мин</span>
+                    <span class="blog__number blog__number--view">345</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="blog__sale-wrapper">
+        <div class="blog__sale-inner">
+          <h4 class="blog__sale-title">ОСТАВАЙТЕСЬ В КУРСЕ АКТУАЛЬНЫХ <br>НОВОСТЕЙ, АКЦИЙ И СКИДОК</h4>
+          <form class="blog__sale-form" action="#">
+            <label class="blog__sale-label">
+              <input class="blog__sale-search" type="search" placeholder="Введите свой Email">
+              <button class="blog__sale-button" type="submit">
+                <svg class="blog__sale-icon">
+                  <use xlink:href="./assets/images/svg/set.svg#blog-sale-email"></use>
+                </svg>
+              </button>
+            </label>
+          </form>
+        </div>
+        <a class="blog__sale-link" href="#">перейти в блог</a>
+      </div>
+    </div>
+  
+  </section>  <section class="service">
+    <div class="container">
+      <h2 class="service__title">Услуги</h2>
+      <div class="service__wrapper" data-tabs>
+        <div class="service__tabs-button tabs-active" data-tabs-btn>
+          <div class="service__tabs-tab">
+            <span class="service__tabs-text">Комплексные поставки</span>
+            <span class="service__tabs-text">01</span>
+          </div>
+          <div class="service__tabs-pane tabs-pane-show" data-tabs-pane>
+              <p class="service__tabs-subtitle">По индивидуальному заказу для объектов любой сложности</p>
+              <div class="service__tabs-pane-inner">
+                <ul class="service__tabs-pane-list">
+                  <li class="service__tabs-pane-item">Надежные материалы от проверенных поставщиков </li>
+                  <li class="service__tabs-pane-item">Технический контроль на каждом этапе </li>
+                  <li class="service__tabs-pane-item">Европейское оборудование</li>
+                </ul>
+                <ul class="service__tabs-pane-list">
+                  <li class="service__tabs-pane-item">Квалифицированный персонал</li>
+                  <li class="service__tabs-pane-item">Доступные цены и гарантия качества</li>
+                </ul>
+                <a class="service__tabs-pane-more" href="#">подробнее</a>
+              </div>
+  
+          </div>
+        </div>
+        <div class="service__tabs-button" data-tabs-btn>
+          <div class="service__tabs-tab">
+            <span class="service__tabs-text">Монтаж и шеф-монтаж</span>
+            <span class="service__tabs-text">02</span>
+          </div>
+          <div class="service__tabs-pane" data-tabs-pane>
+            <p class="service__tabs-subtitle">По индивидуальному заказу для объектов любой сложности</p>
+            <div class="service__tabs-pane-inner">
+              <ul class="service__tabs-pane-list">
+                <li class="service__tabs-pane-item">Надежные материалы от проверенных поставщиков </li>
+                <li class="service__tabs-pane-item">Технический контроль на каждом этапе </li>
+                <li class="service__tabs-pane-item">Европейское оборудование</li>
+              </ul>
+              <ul class="service__tabs-pane-list">
+                <li class="service__tabs-pane-item">Квалифицированный персонал</li>
+                <li class="service__tabs-pane-item">Доступные цены и гарантия качества</li>
+              </ul>
+              <a class="service__tabs-pane-more" href="#">подробнее</a>
+            </div>
+  
+          </div>
+        </div>
+        <div class="service__tabs-button" data-tabs-btn >
+          <div class="service__tabs-tab">
+            <span class="service__tabs-text">Услуги порошковой краски</span>
+            <span class="service__tabs-text">03</span>
+          </div>
+          <div class="service__tabs-pane" data-tabs-pane>
+            <p class="service__tabs-subtitle">По индивидуальному заказу для объектов любой сложности</p>
+            <div class="service__tabs-pane-inner">
+              <ul class="service__tabs-pane-list">
+                <li class="service__tabs-pane-item">Надежные материалы от проверенных поставщиков </li>
+                <li class="service__tabs-pane-item">Технический контроль на каждом этапе </li>
+                <li class="service__tabs-pane-item">Европейское оборудование</li>
+              </ul>
+              <ul class="service__tabs-pane-list">
+                <li class="service__tabs-pane-item">Квалифицированный персонал</li>
+                <li class="service__tabs-pane-item">Доступные цены и гарантия качества</li>
+              </ul>
+              <a class="service__tabs-pane-more" href="#">подробнее</a>
+            </div>
+  
+          </div>
+        </div>
+        <div class="service__tabs-button" data-tabs-btn>
+          <div class="service__tabs-tab">
+            <span class="service__tabs-text">Монтаж вентиляции и кондиционеров</span>
+            <span class="service__tabs-text">04</span>
+          </div>
+          <div class="service__tabs-pane" data-tabs-pane>
+            <p class="service__tabs-subtitle">По индивидуальному заказу для объектов любой сложности</p>
+            <div class="service__tabs-pane-inner">
+              <ul class="service__tabs-pane-list">
+                <li class="service__tabs-pane-item">Надежные материалы от проверенных поставщиков </li>
+                <li class="service__tabs-pane-item">Технический контроль на каждом этапе </li>
+                <li class="service__tabs-pane-item">Европейское оборудование</li>
+              </ul>
+              <ul class="service__tabs-pane-list">
+                <li class="service__tabs-pane-item">Квалифицированный персонал</li>
+                <li class="service__tabs-pane-item">Доступные цены и гарантия качества</li>
+              </ul>
+              <a class="service__tabs-pane-more" href="#">подробнее</a>
+            </div>
+  
+          </div>
+        </div>
+        <div class="service__tabs-button" data-tabs-btn>
+          <div class="service__tabs-tab">
+            <span class="service__tabs-text">Производство металлоконструкций</span>
+            <span class="service__tabs-text">05</span>
+          </div>
+          <div class="service__tabs-pane" data-tabs-pane>
+            <p class="service__tabs-subtitle">По индивидуальному заказу для объектов любой сложности</p>
+            <div class="service__tabs-pane-inner">
+              <ul class="service__tabs-pane-list">
+                <li class="service__tabs-pane-item">Надежные материалы от проверенных поставщиков </li>
+                <li class="service__tabs-pane-item">Технический контроль на каждом этапе </li>
+                <li class="service__tabs-pane-item">Европейское оборудование</li>
+              </ul>
+              <ul class="service__tabs-pane-list">
+                <li class="service__tabs-pane-item">Квалифицированный персонал</li>
+                <li class="service__tabs-pane-item">Доступные цены и гарантия качества</li>
+              </ul>
+              <a class="service__tabs-pane-more" href="#">подробнее</a>
+            </div>
+  
+          </div>
+        </div>
+        <div class="service__tabs-button" data-tabs-btn>
+          <div class="service__tabs-tab">
+            <span class="service__tabs-text">Разработка проектной документации</span>
+            <span class="service__tabs-text">06</span>
+          </div>
+          <div class="service__tabs-pane" data-tabs-pane>
+            <p class="service__tabs-subtitle">По индивидуальному заказу для объектов любой сложности</p>
+            <div class="service__tabs-pane-inner">
+              <ul class="service__tabs-pane-list">
+                <li class="service__tabs-pane-item">Надежные материалы от проверенных поставщиков </li>
+                <li class="service__tabs-pane-item">Технический контроль на каждом этапе </li>
+                <li class="service__tabs-pane-item">Европейское оборудование</li>
+              </ul>
+              <ul class="service__tabs-pane-list">
+                <li class="service__tabs-pane-item">Квалифицированный персонал</li>
+                <li class="service__tabs-pane-item">Доступные цены и гарантия качества</li>
+              </ul>
+              <a class="service__tabs-pane-more" href="#">подробнее</a>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="help">
+      <div class="container">
+        <div class="help__wrapper">
+    
+          <form class="form-second help__item help__item--form">
+            <fieldset class="form-second__inner">
+              <legend class="form-second__title">Вам нужна помощь специалиста?</legend>
+              <p class="form-second__text">Наши специалисты проконсультируют вас в течении 1 <br> минуты и составят смету, а после отправят на почту</p>
+              <fieldset class="form-second__contact-inner">
+                <label class="form-second__label form-second__label--input"> <input type="text" class="form-second__input" placeholder="Ваше имя" name="Имя" required></label> <label class="form-second__label form-second__label--input"> <input type="tel" class="form-second__input" placeholder="Номер телефона" name="Телефон" required></label>
+              </fieldset>
+              <label class="form-second__label form-second__label--textarea"> <textarea class="form-second__input form-second__textarea" placeholder="Комментарий" name="Вопрос" required></textarea> </label>
+              <fieldset class="form-second__button-inner">
+                <button class="form-second__button" type="submit">Получить консультацию</button>
+                <label class="form-second__politic-label"> <input class="form-second__checkbox" type="checkbox" name="принять политику конфиденциальности" checked required>
+                  <span class="form-second__fake-checkbox"></span> <span class="form-second__politic">Я согласен на обработку <a class="form-second__politic-color" href="#">персональных данных</a></span> </label>
+              </fieldset>
+            </fieldset>
+          </form>
+    
+    
+          <div class="help__item help__item--image"></div>
+            <svg class="help__circle"><use xlink:href="./assets/images/svg/set.svg#help__circle"></use></svg>
+        </div>
+      </div>
+    </div>
+    
+  
+  </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+      .service__tabs-button.tabs-active:nth-child(1) {
+          background-image: url("../assets/images/tabs/tabs.jpg");
+          @supports (background-image: url("../assets/images/tabs/tabs.webp")) {
+              background-image: url("../assets/images/tabs/tabs.webp");
+          }
+      }
+      .service__tabs-button.tabs-active:nth-child(2) {
+          background-image: url("../assets/images/catalog/1.png");
+          @supports (background-image: url("../assets/images/catalog/1.webp")) {
+              background-image: url("../assets/images/catalog/1.webp");
+          }
+      }
+  
+  </style></main>
+
+<footer class="footer">
+  <div class="container">
+    <picture class="footer__logo-picture footer__logo-picture--mobile logo-picture"><source srcset="./assets/images/logo/logo.webp" type="image/webp"><img class="logo" src="./assets/images/logo/logo.png" alt="Логотип" ></picture>
+    <div class="footer__wrapper">
+      <div class="footer__contact-inner">
+        <picture class="footer__logo-picture logo-picture"><source srcset="./assets/images/logo/logo.webp" type="image/webp"><img class="logo" src="./assets/images/logo/logo.png" alt="Логотип" ></picture>
+        <a class="footer__link" href="tel:+78314290080">8 (831) 429-00-80</a>
+        <p class="footer__contact-text footer__contact-text--indent">Бесплатный звонок <br> по России</p>
+        <a class="footer__link" href="mailto:atgnn@atgnn.ru">atgnn@atgnn.ru</a>
+        <p class="footer__contact-text">Напишите нам</p>
+      </div>
+      <div class="footer__list-row">
+        <div class="footer__list-wrapper">
+          <div class="footer__list-inner">
+            <h3 class="footer__list-title">О компании</h3>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__list-link" href="#">Общая информация </a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Организация</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Производство</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Лабаротория</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Гарантии</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Документы</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Политика компании</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__list-wrapper">
+          <div class="footer__list-inner">
+            <h3 class="footer__list-title">Клиентам</h3>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__list-link" href="#">Прайс - лист</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Полезная информация</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Партнёрам</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Карьера</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__list-wrapper">
+          <div class="footer__list-inner">
+            <h3 class="footer__list-title">Каталог товаров</h3>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__list-link" href="#">Промышленные вентиляторы</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Автоматика</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Вентиляционные решетки</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Клапаны и заслонки</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Детали систем вентиляции</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__list-wrapper">
+          <div class="footer__list-inner">
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__list-link" href="#">Тепло-вентиляционное оборудование</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Огнезадерживающие клапаны</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Приточно-вытяжные установки</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Комплектующие для вентиляции</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Комплектующие для кондиционирования</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__callback-inner">
+      <p class="footer__callback-text">Производим 24/365 <br> Продаём с 08:00 до 18:00 с Пн. по Пт.</p>
+      <button class="footer__callback-button">перезвоните мне</button>
+    </div>
+    <div class="footer__bottom">
+      <a class="footer__bottom-info" href="#">Политика конфиденциальности</a> <a class="footer__bottom-info" href="#">Сайт создан и разработан</a>
+    </div>
+  </div>
+</footer></body>
+
+</html>

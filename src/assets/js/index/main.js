@@ -363,9 +363,7 @@ function initTargets () {
 // ==============================================
 // Загрузка стороннего материала на сайт
 // ==============================================
-
 const placeholder = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
-
 const targetsIframe = document.querySelectorAll('[data-src-iframe]')
 targetsIframe.forEach(function (target) {
     target.src = placeholder
@@ -376,7 +374,6 @@ const options = {
     rootMargin: '0px',
     threshold: 0.9,
 }
-
 const loadIframe = function (entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting && entry.target.parentNode.classList.contains('loading')) {

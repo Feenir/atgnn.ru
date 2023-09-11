@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="ru">
+
+	<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="preload" as="style" href="assets/css/main.min.css" onload="this.rel='stylesheet'">
+			<noscript>
+					<link rel="preload" as="style" href="assets/css/main.min.css">
+			</noscript>
+			<link rel="preconnect" href="//api-maps.yandex.ru">
+			<link rel="dns-prefetch" href="//api-maps.yandex.ru">
+			<link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
+			<link rel="icon" href="../assets/images/favicon/favicon.svg" sizes="any" type="image/x-icon">
+			<link rel="apple-touch-icon" sizes="1024x1024" href="../assets/images/favicon/apple-touch-icon-1024x1024.png">
+			<link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon-180x180.png">
+			<link rel="apple-touch-icon" href="apple-touch-icon.png">
+			<link rel="manifest" href="manifest.json">
+			<meta name="msapplication-TileColor" content="#da532c">
+			<script defer src="assets/js/index.min.js"></script>
+			
+			
+			
+			
+			<meta name="theme-color" content="#ffffff">
+			<title>ATGNN</title>
+	</head>
+
+<body>
+<header class="header">
+  <div class="stocks">
+    <div class="container">
+      <div class="stocks__wrapper">
+        <div class="stocks__inner">
+          <div class="stocks__text">Сэкономьте до 30% запланированного бюджета</div>
+          <a class="stocks__more" href="#">Подробнее
+            <svg class="stocks__more-icon">
+              <use class="stocks__more-color" xlink:href="assets/images/svg/set.svg#stocks-more"></use>
+            </svg>
+          </a>
+        </div>
+        <svg class="stocks__close">
+          <use class="stocks__close-color" xlink:href="assets/images/svg/set.svg#stocks-close"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="header__top">
+    <div class="container">
+      <div class="header__top-wrapper">
+        <span class="header__top-city">
+          Нижний Новгород
+        </span>
+        <nav class="header__top-navigation">
+          <ul class="header__top-list">
+            <li class="header__top-item"><a class="header__top-link" href="#">О компании</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Производство</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Услуги</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Информация</a></li>
+            <li class="header__top-item"><a class="header__top-link" href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="header__main">
+    <div class="container">
+      <div class="header__main-wrapper">
+        <picture class="header__logo-picture logo-picture"><source srcset="./assets/images/logo/logo.webp" type="image/webp"><img class="logo" src="./assets/images/logo/logo.png" alt="Логотип" ></picture>
+
+        <div class="header__search-inner">
+          <button class="header__catalog" type="button">
+            <svg class="header__catalog-icon">
+              <use class="header__catalog-color" xlink:href="./assets/images/svg/set.svg#catalog-icon"></use>
+            </svg>
+            Каталог
+          </button>
+          <label class="header__search-label">
+
+            <input class="header__search" type="search" placeholder="Найти">
+            <button class="header__search-button" type="submit"></button>
+          </label>
+        </div>
+        <div class="header__info-inner">
+          <div class="header__info-item">
+            <a class="header__info-link" href="mailto:atgnn@atgnn.ru" ><span data-copy-target>atgnn@atgnn.ru</span></a>
+            <button class="header__info-button header__info-button--mail" data-copy-button>Скопировать почту</button>
+          </div>
+          <div class="header__info-item">
+            <a class="header__info-link" href="tel:+78314290080">8 (831) 429-00-80</a>
+            <button class="header__info-button header__info-button--phone">Заказать звонок</button>
+          </div>
+        </div>
+
+        <div class="header__mobile-menu">
+          <div class="header__mobile-item">
+            <a class="header__mobile-link" href="mailto:+78314290080">
+              <svg class="header__mobile-icon header__mobile-icon--small header__mobile-icon--phone">
+                <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#phone"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__mobile-item">
+            <a class="header__mobile-link" href="mailto:atgnn@atgnn.ru">
+              <svg class="header__mobile-icon header__mobile-icon--small header__mobile-icon--mail">
+                <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#mail"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="header__mobile-item" data-open-mobile-menu>
+            <svg class="header__mobile-icon">
+              <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#mobile-burger"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" data-mobile-menu>
+  <div class="mobile-menu__body">
+    <div class="mobile-menu__title-inner">
+      <h2 class="mobile-menu__title">меню</h2>
+      <div class="mobile-menu__close-inner" data-close-mobile-menu>
+        <svg class="mobile-menu__close">
+          <use class="header__mobile-icon-fill" xlink:href="./assets/images/svg/set.svg#mobile-close"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <h3 class="mobile-menu__list-title">О компании</h3>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Общая информация </a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Организация</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Производство</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Лабаротория</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Гарантии</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Документы</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Политика компании</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <h3 class="mobile-menu__list-title">Клиентам</h3>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Прайс - лист</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Полезная информация</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Партнёрам</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Лабаротория</a></li>
+        <li class="mobile-menu__item"><a class="mobile-menu__item-link" href="#">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <a class="mobile-menu__contacts-link" href="mailto:atgnn@atgnn.ru">atgnn@atgnn.ru</a>
+      <button class="mobile-menu__button mobile-menu__button--email" type="button">Скопировать почту</button>
+      <a class="mobile-menu__contacts-link" href="+78314290080">8 (831) 429-00-80</a>
+      <button class="mobile-menu__button mobile-menu__button--email" type="button">Заказать звонок</button>
+      <p class="mobile-menu__city">Нижний Новгород</p>
+    </div>
+    <div class="mobile-menu__list-inner">
+      <p class="mobile-menu__work-hours">Производим 24/365 <br> Продаём с 08:00 до 18:00 с Пн. по Пт.</p>
+      <button class="mobile-menu__callback-button" type="button">перезвоните мне</button>
+    </div>
+  </div>
+</div>
+
+
+<main class="product-page">
+  <div class="container">
+    <ol class="bread-crumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li class="bread-crumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a class="bread-crumbs__link" itemprop="item" href="https://example.com/dresses">
+          <span class="bread-crumbs__text" itemprop="name">Главная</span></a>
+        <meta itemprop="position" content="1"/>
+      </li>
+      <li class="bread-crumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a class="bread-crumbs__link" itemprop="item" href="https://example.com/dresses">
+          <span class="bread-crumbs__text" itemprop="name">Каталог</span></a>
+        <meta itemprop="position" content="2"/>
+      </li>
+      <li class="bread-crumbs__item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span class="bread-crumbs__text" itemprop="name">Радиальные вентиляторы</span>
+        <meta itemprop="position" content="3"/>
+        <meta itemprop="item"/>
+      </li>
+    </ol>
+  </div>  <section class="products">
+    <div class="container">
+      <h1 class="products__title">Радиальные вентиляторы</h1>
+      <div class="products__wrapper">
+        <div class="products__sidebar-wrapper">
+          <aside class="products__sidebar">
+            <h2 class="products__sidebar-title">Продукты</h2>
+            <div class="products__sidebar-wrapper">
+              <ul class="products__sidebar__list">
+                <li class="products__sidebar-item">
+                 <span class="products__sidebar-item-inner">
+                  <a class="products__sidebar-link" href="#">Промышленные вентиляторы</a>
+                <svg class="products__more-icon" data-products-more>
+                  <use class="products__icon-fill" xlink:href="./assets/images/svg/set.svg#products-arrow"></use>
+                </svg>
+               </span>
+                  <ul class="products__sidebar-list-hidden products__sidebar-list-hidden--show" data-products-hidden>
+                    <li class="products__sidebar-item-hidden products__sidebar-item-hidden--active"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                  </ul>
+                </li>
+                <li class="products__sidebar-item">
+                 <span class="products__sidebar-item-inner">
+                  <a class="products__sidebar-link" href="#">Промышленные вентиляторы</a>
+                <svg class="products__more-icon" data-products-more>
+                  <use class="products__icon-fill" xlink:href="./assets/images/svg/set.svg#products-arrow"></use>
+                </svg>
+               </span>
+                  <ul class="products__sidebar-list-hidden" data-products-hidden>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                  </ul>
+                </li>
+                <li class="products__sidebar-item">
+                 <span class="products__sidebar-item-inner">
+                  <a class="products__sidebar-link" href="#">Промышленные вентиляторы</a>
+                <svg class="products__more-icon" data-products-more>
+                  <use class="products__icon-fill" xlink:href="./assets/images/svg/set.svg#products-arrow"></use>
+                </svg>
+               </span>
+                  <ul class="products__sidebar-list-hidden" data-products-hidden>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                  </ul>
+                </li>
+                <li class="products__sidebar-item">
+                 <span class="products__sidebar-item-inner">
+                  <a class="products__sidebar-link" href="#">Промышленные вентиляторы</a>
+                <svg class="products__more-icon" data-products-more>
+                  <use class="products__icon-fill" xlink:href="./assets/images/svg/set.svg#products-arrow"></use>
+                </svg>
+               </span>
+                  <ul class="products__sidebar-list-hidden" data-products-hidden>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                  </ul>
+                </li>
+                <li class="products__sidebar-item">
+                 <span class="products__sidebar-item-inner">
+                  <a class="products__sidebar-link" href="#">Промышленные вентиляторы</a>
+                <svg class="products__more-icon" data-products-more>
+                  <use class="products__icon-fill" xlink:href="./assets/images/svg/set.svg#products-arrow"></use>
+                </svg>
+               </span>
+                  <ul class="products__sidebar-list-hidden" data-products-hidden>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                  </ul>
+                </li>
+                <li class="products__sidebar-item">
+                 <span class="products__sidebar-item-inner">
+                  <a class="products__sidebar-link" href="#">Промышленные вентиляторы</a>
+                <svg class="products__more-icon" data-products-more>
+                  <use class="products__icon-fill" xlink:href="./assets/images/svg/set.svg#products-arrow"></use>
+                </svg>
+               </span>
+                  <ul class="products__sidebar-list-hidden" data-products-hidden>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                  </ul>
+                </li>
+                <li class="products__sidebar-item">
+                 <span class="products__sidebar-item-inner">
+                  <a class="products__sidebar-link" href="#">Промышленные вентиляторы</a>
+                <svg class="products__more-icon" data-products-more>
+                  <use class="products__icon-fill" xlink:href="./assets/images/svg/set.svg#products-arrow"></use>
+                </svg>
+               </span>
+                  <ul class="products__sidebar-list-hidden" data-products-hidden>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                  </ul>
+                </li>
+                <li class="products__sidebar-item">
+                 <span class="products__sidebar-item-inner">
+                  <a class="products__sidebar-link" href="#">Промышленные вентиляторы</a>
+                <svg class="products__more-icon" data-products-more>
+                  <use class="products__icon-fill" xlink:href="./assets/images/svg/set.svg#products-arrow"></use>
+                </svg>
+               </span>
+                  <ul class="products__sidebar-list-hidden" data-products-hidden>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                  </ul>
+                </li>
+                <li class="products__sidebar-item">
+                 <span class="products__sidebar-item-inner">
+                  <a class="products__sidebar-link" href="#">Промышленные вентиляторы</a>
+                <svg class="products__more-icon" data-products-more>
+                  <use class="products__icon-fill" xlink:href="./assets/images/svg/set.svg#products-arrow"></use>
+                </svg>
+               </span>
+                  <ul class="products__sidebar-list-hidden" data-products-hidden>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                  </ul>
+                </li>
+                <li class="products__sidebar-item">
+                 <span class="products__sidebar-item-inner">
+                  <a class="products__sidebar-link" href="#">Промышленные вентиляторы</a>
+                <svg class="products__more-icon" data-products-more>
+                  <use class="products__icon-fill" xlink:href="./assets/images/svg/set.svg#products-arrow"></use>
+                </svg>
+               </span>
+                  <ul class="products__sidebar-list-hidden" data-products-hidden>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                  </ul>
+                </li>
+                <li class="products__sidebar-item">
+                 <span class="products__sidebar-item-inner">
+                  <a class="products__sidebar-link" href="#">Промышленные вентиляторы</a>
+                <svg class="products__more-icon" data-products-more>
+                  <use class="products__icon-fill" xlink:href="./assets/images/svg/set.svg#products-arrow"></use>
+                </svg>
+               </span>
+                  <ul class="products__sidebar-list-hidden" data-products-hidden>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                    <li class="products__sidebar-item-hidden"><a class="products__sidebar-link-hidden" href="#">Радиальные вентиляторы</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </aside>
+          <article class="products__stocks">
+            <picture class="products__stocks-img-inner" width="288" height="144"><source srcset="./assets/images/stock.webp" type="image/webp"><img class="products__stocks-img" src="./assets/images/stock.jpg" alt="Фото акции" ></picture>
+            <h3 class="products__stocks-title">Акция на 23 февраля</h3>
+            <p class="products__stocks-text">Сделайте своим мужчинам подарок, который они оценят! Получите скидку на промышленную вентиляцию для вашего бизнеса. Закажите прямо сейчас!</p>
+            <a class="products__stocks-link" href="#">Посмотреть предложение</a>
+          </article>
+        </div>
+  
+        <div class="catalog-common">
+          <button class="catalog-common__mobile-catalog"><svg class="catalog-common__icon"><use class="catalog-common__icon-color" xlink:href="./assets/images/svg/set.svg#catalog-common-mobile"></use></svg>Продукты</button>
+          <div class="catalog-common__inner">
+        
+            <div class="catalog-common__item product" >
+              <div class="product__content">
+                <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                <div class="product__sale">
+                  <svg class="product__sale-icon">
+                    <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                  </svg>
+                  <span class="product__percent">25%</span>
+                </div>
+              </div>
+              <div class="product__aside">
+                <div class="product__price-inner">
+                  <svg class="product__notification">
+                    <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                  </svg>
+                  <p class="product__price">от <span>27 000</span>руб.</p>
+                </div>
+                <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                <p class="product__text">В наличии много</p>
+                <a class="product__aside-button" href="product-card-one.html">заказать</a>
+              </div>
+            </div>
+            <div class="catalog-common__item product" >
+              <div class="product__content">
+                <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                <div class="product__sale">
+                  <svg class="product__sale-icon">
+                    <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                  </svg>
+                  <span class="product__percent">25%</span>
+                </div>
+              </div>
+              <div class="product__aside">
+                <div class="product__price-inner">
+                  <svg class="product__notification">
+                    <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                  </svg>
+                  <p class="product__price">от <span>27 000</span>руб.</p>
+                </div>
+                <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                <p class="product__text">Нет в наличии</p>
+                <a class="product__aside-button" href="product-card-two.html">заказать</a>
+              </div>
+            </div>
+            <div class="catalog-common__item product" >
+              <div class="product__content">
+                <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                <div class="product__sale">
+                  <svg class="product__sale-icon">
+                    <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                  </svg>
+                  <span class="product__percent">25%</span>
+                </div>
+              </div>
+              <div class="product__aside">
+                <div class="product__price-inner">
+                  <svg class="product__notification">
+                    <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                  </svg>
+                  <p class="product__price">от <span>27 000</span>руб.</p>
+                </div>
+                <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                <p class="product__text product__text--color">В наличии <span>3</span>шт</p>
+                <a class="product__aside-button" href="product-card-three.html">заказать</a>
+              </div>
+            </div>
+          </div>
+          <div class="catalog-common__pagination">
+            <div class="catalog-common__pagination-item">1</div>
+            <div class="catalog-common__pagination-item catalog-common__pagination-item--active">2</div>
+            <div class="catalog-common__pagination-item">...</div>
+            <div class="catalog-common__pagination-item">4</div>
+        
+            <div class="catalog-common__pagination-item catalog-common__pagination-arrow catalog-common__pagination-arrow--prev"></div>
+            <div class="catalog-common__pagination-item catalog-common__pagination-arrow catalog-common__pagination-arrow--next"></div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>  <section class="ceo">
+    <div class="container">
+      <h2 class="ceo__title">Заголовок для СЕО</h2>
+      <p class="ceo__text">Промышленная вентиляция является важным компонентом любого производства, обеспечивая комфорт и безопасность работников, а также предотвращая вредное влияние на окружающую среду. Но как выбрать подходящую вентиляционную систему? Как установить ее правильно и обеспечить ее надежное функционирование?
+        На все эти вопросы мы готовы ответить, предлагая вам профессиональную помощь в подборе и установке оптимальной промышленной вентиляции.
+      <span class="ceo__text-hidden" data-show-more>
+        Промышленная вентиляция является важным компонентом любого производства, обеспечивая комфорт и безопасность работников, а также предотвращая вредное влияние на окружающую среду. Но как выбрать подходящую вентиляционную систему? Как установить ее правильно и обеспечить ее надежное функционирование?
+        На все эти вопросы мы готовы ответить, предлагая вам профессиональную помощь в подборе и установке оптимальной промышленной вентиляции.
+      </span>
+      </p>
+      <button class="ceo__read-more" data-more type="button">читать полностью</button>
+  
+    </div>
+  </section>  <section class="card">
+      <div class="container">
+        <div class="card__title-inner-mobile">
+          <h3 class="card__control-title">сопутствующие товары</h3>
+          <a class="card__control-link" href="#">смотреть все</a>
+        </div>
+      </div>
+      <div class="card__wrapper">
+        <div class="card__control">
+          <div class="card__title-inner">
+            <h3 class="card__control-title">сопутствующие товары</h3>
+            <a class="card__control-link" href="#">смотреть все</a>
+          </div>
+          <div class="card__swiper-control" data-card-control>
+              <div class="card__button card__button--prev" data-card-prev></div>
+              <div class="card__swiper-number">
+                <div class="card__number card__number--current" data-card-current></div>
+                <div class="card__number-separator"></div>
+                <div class="card__number card__number--total" data-card-total></div>
+              </div>
+              <div class="card__button card__button--next" data-card-next></div>
+          </div>
+        </div>
+        <div class="card__swiper swiper" data-card-swiper>
+          <div class="card__swiper-wrapper swiper-wrapper">
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+            <div class="card__slide swiper-slide">
+              <div class="card__product product" >
+                <div class="product__content">
+                  <picture><source srcset="./assets/images/catalog-common-content.webp" type="image/webp"><img class="product__img" src="./assets/images/catalog-common-content.png" alt="Фото" width="260" height="218"></picture>
+                  <div class="product__sale">
+                    <svg class="product__sale-icon">
+                      <use xlink:href="./assets/images/svg/set.svg#products-sale"></use>
+                    </svg>
+                    <span class="product__percent">25%</span>
+                  </div>
+                </div>
+                <div class="product__aside">
+                  <div class="product__price-inner">
+                    <svg class="product__notification">
+                      <use xlink:href="./assets/images/svg/set.svg#products-notification"></use>
+                    </svg>
+                    <p class="product__price">от <span>27 000</span>руб.</p>
+                  </div>
+                  <h3 class="product__aside-title">Вентилятор ВЦ 5-35</h3>
+                  <p class="product__text">В наличии много</p>
+                  <a class="product__aside-button" href="#">заказать</a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>  <section class="questions">
+    <picture class="questions__circle"><source srcset="./assets/images/circle.webp" type="image/webp"><img src="./assets/images/circle.png" alt="" ></picture>
+    <div class="container">
+      <div class="questions__box-wrapper">
+        <div class="questions__box-item">
+          <h2 class="questions__title">ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ</h2>
+          <div class="questions__wrapper">
+            <div class="questions__item">
+              <p class="questions__quest questions__quest--active" data-trigger>Нужна ли вентиляция для нашего помещения?
+                <svg class="questions__svg">
+                  <use class="questions__svg-fill" xlink:href="./assets/images/svg/set.svg#questions-arrow"></use>
+                </svg>
+              </p>
+              <div class="questions__answer-inner questions__answer-inner--active" data-target>
+                <p class="questions__answer-title">Ответ:</p>
+                <p class="questions__answer-text">Нужно знать назначение и тз по эксплуатации помещения. С помощью этой информации мы предложим варианты от естественного воздухообмена до многофункциональной приточно-вытяжной системы</p>
+              </div>
+            </div>
+            <div class="questions__item">
+              <p class="questions__quest" data-trigger>Нужна ли вентиляция для нашего помещения?
+                <svg class="questions__svg">
+                  <use class="questions__svg-fill" xlink:href="./assets/images/svg/set.svg#questions-arrow"></use>
+                </svg>
+              </p>
+              <div class="questions__answer-inner" data-target>
+                <p class="questions__answer-title">Ответ:</p>
+                <p class="questions__answer-text">Нужно знать назначение и тз по эксплуатации помещения. С помощью этой информации мы предложим варианты от естественного воздухообмена до многофункциональной приточно-вытяжной системы</p>
+              </div>
+            </div>
+            <div class="questions__item">
+              <p class="questions__quest" data-trigger>Нужна ли вентиляция для нашего помещения?
+                <svg class="questions__svg">
+                  <use class="questions__svg-fill" xlink:href="./assets/images/svg/set.svg#questions-arrow"></use>
+                </svg>
+              </p>
+              <div class="questions__answer-inner" data-target>
+                <p class="questions__answer-title">Ответ:</p>
+                <p class="questions__answer-text">Нужно знать назначение и тз по эксплуатации помещения. С помощью этой информации мы предложим варианты от естественного воздухообмена до многофункциональной приточно-вытяжной системы</p>
+              </div>
+            </div>
+            <div class="questions__item">
+              <p class="questions__quest" data-trigger>Нужна ли вентиляция для нашего помещения?
+                <svg class="questions__svg">
+                  <use class="questions__svg-fill" xlink:href="./assets/images/svg/set.svg#questions-arrow"></use>
+                </svg>
+              </p>
+              <div class="questions__answer-inner" data-target>
+                <p class="questions__answer-title">Ответ:</p>
+                <p class="questions__answer-text">Нужно знать назначение и тз по эксплуатации помещения. С помощью этой информации мы предложим варианты от естественного воздухообмена до многофункциональной приточно-вытяжной системы</p>
+              </div>
+            </div>
+            <div class="questions__item">
+              <p class="questions__quest" data-trigger>Нужна ли вентиляция для нашего помещения?
+                <svg class="questions__svg">
+                  <use class="questions__svg-fill" xlink:href="./assets/images/svg/set.svg#questions-arrow"></use>
+                </svg>
+              </p>
+              <div class="questions__answer-inner" data-target>
+                <p class="questions__answer-title">Ответ:</p>
+                <p class="questions__answer-text">Нужно знать назначение и тз по эксплуатации помещения. С помощью этой информации мы предложим варианты от естественного воздухообмена до многофункциональной приточно-вытяжной системы</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="questions__box-item">
+          <form class="form-second">
+            <fieldset class="form-second__inner">
+              <legend class="form-second__title">Вам нужна помощь специалиста?</legend>
+              <p class="form-second__text">Наши специалисты проконсультируют вас в течении 1 <br> минуты и составят смету, а после отправят на почту</p>
+              <fieldset class="form-second__contact-inner">
+                <label class="form-second__label form-second__label--input"> <input type="text" class="form-second__input" placeholder="Ваше имя" name="Имя" required></label> <label class="form-second__label form-second__label--input"> <input type="tel" class="form-second__input" placeholder="Номер телефона" name="Телефон" required></label>
+              </fieldset>
+              <label class="form-second__label form-second__label--textarea"> <textarea class="form-second__input form-second__textarea" placeholder="Комментарий" name="Вопрос" required></textarea> </label>
+              <fieldset class="form-second__button-inner">
+                <button class="form-second__button" type="submit">Получить консультацию</button>
+                <label class="form-second__politic-label"> <input class="form-second__checkbox" type="checkbox" name="принять политику конфиденциальности" checked required>
+                  <span class="form-second__fake-checkbox"></span> <span class="form-second__politic">Я согласен на обработку <a class="form-second__politic-color" href="#">персональных данных</a></span> </label>
+              </fieldset>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+</main>
+<footer class="footer">
+  <div class="container">
+    <picture class="footer__logo-picture footer__logo-picture--mobile logo-picture"><source srcset="./assets/images/logo/logo.webp" type="image/webp"><img class="logo" src="./assets/images/logo/logo.png" alt="Логотип" ></picture>
+    <div class="footer__wrapper">
+      <div class="footer__contact-inner">
+        <picture class="footer__logo-picture logo-picture"><source srcset="./assets/images/logo/logo.webp" type="image/webp"><img class="logo" src="./assets/images/logo/logo.png" alt="Логотип" ></picture>
+        <a class="footer__link" href="tel:+78314290080">8 (831) 429-00-80</a>
+        <p class="footer__contact-text footer__contact-text--indent">Бесплатный звонок <br> по России</p>
+        <a class="footer__link" href="mailto:atgnn@atgnn.ru">atgnn@atgnn.ru</a>
+        <p class="footer__contact-text">Напишите нам</p>
+      </div>
+      <div class="footer__list-row">
+        <div class="footer__list-wrapper">
+          <div class="footer__list-inner">
+            <h3 class="footer__list-title">О компании</h3>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__list-link" href="#">Общая информация </a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Организация</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Производство</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Лабаротория</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Гарантии</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Документы</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Политика компании</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__list-wrapper">
+          <div class="footer__list-inner">
+            <h3 class="footer__list-title">Клиентам</h3>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__list-link" href="#">Прайс - лист</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Полезная информация</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Партнёрам</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Карьера</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Контакты</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__list-wrapper">
+          <div class="footer__list-inner">
+            <h3 class="footer__list-title">Каталог товаров</h3>
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__list-link" href="#">Промышленные вентиляторы</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Автоматика</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Вентиляционные решетки</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Клапаны и заслонки</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Детали систем вентиляции</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__list-wrapper">
+          <div class="footer__list-inner">
+            <ul class="footer__list">
+              <li class="footer__item"><a class="footer__list-link" href="#">Тепло-вентиляционное оборудование</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Огнезадерживающие клапаны</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Приточно-вытяжные установки</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Комплектующие для вентиляции</a></li>
+              <li class="footer__item"><a class="footer__list-link" href="#">Комплектующие для кондиционирования</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__callback-inner">
+      <p class="footer__callback-text">Производим 24/365 <br> Продаём с 08:00 до 18:00 с Пн. по Пт.</p>
+      <button class="footer__callback-button">перезвоните мне</button>
+    </div>
+    <div class="footer__bottom">
+      <a class="footer__bottom-info" href="#">Политика конфиденциальности</a> <a class="footer__bottom-info" href="#">Сайт создан и разработан</a>
+    </div>
+  </div>
+</footer></body>
+
+</html>
