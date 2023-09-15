@@ -68,7 +68,6 @@
 
   &__text
     font-size: 16px
-    margin-bottom: 24px
     line-height: 24px
     letter-spacing: 0.48px
     color: #494949
@@ -84,7 +83,7 @@
     display: flex
     align-items: flex-start
     flex-direction: column
-    gap: 20px
+    gap: 24px
     @media #{$mobile}
       flex-direction: column
       align-items: flex-start
@@ -174,6 +173,37 @@
     color: #008CCC
     font-size: inherit
 
+  &__problem
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    gap: 24px
+    @media #{$mobile}
+      justify-content: flex-start
+
+  &--problem
+    & .form-second__label--input
+      max-width: 312px
+      width: 100%
+      @media (max-width: 1140px)
+        width: 100%
+        max-width: unset
+
+    & .form-second__label--textarea
+      max-width: 314px
+      @media (max-width: 1140px)
+        max-width: unset
+        width: 50%
+      @media #{$mobile}
+        width: 100%
+
+    & .form-second__text br
+      @media (max-width: 1140px)
+        display: none
+
+    & .form-second__contact-inner
+      @media #{$mobile}
+        flex-direction: column
 .form-second__checkbox:checked + .form-second__fake-checkbox:before
   opacity: 1
 

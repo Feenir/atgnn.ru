@@ -1,0 +1,49 @@
+.actual
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  padding: 20px 24px
+  border-radius: 10px
+  background: #F9F9F9
+  @media #{$tablet-small}
+    flex-direction: column
+    align-items: flex-start
+    gap: 20px
+  
+  &__title
+    color: #282828
+    font-size: 24px
+    font-weight: 400
+    line-height: 28px 
+    letter-spacing: 1.56px
+    max-width: 320px
+    @media #{$tablet-small}
+      max-width: max-content
+
+  &__form
+    @media #{$tablet-small}
+      width: 100%
+
+  &__label
+    display: flex
+    border-radius: 10px
+    border: 1px solid rgba(40, 40, 40, 0.15)
+    overflow: hidden
+
+  &__input
+    padding-left: 12px
+    min-width: 290px
+    @media #{$tablet-small}
+      width: 100%
+      min-width: unset
+
+
+  &__button
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='19' height='20' viewBox='0 0 19 20' fill='none'%3E%3Cpath d='M6.49478 3.75222L12.2803 9.99972L6.49478 16.2472C6.39121 16.3588 6.33322 16.5087 6.33322 16.6647C6.33322 16.8208 6.39121 16.9706 6.49478 17.0822C6.54509 17.1363 6.60514 17.1792 6.67141 17.2085C6.73768 17.2378 6.80884 17.2529 6.88072 17.2529C6.9526 17.2529 7.02376 17.2378 7.09003 17.2085C7.1563 17.1792 7.21635 17.1363 7.26666 17.0822L13.4227 10.436C13.5307 10.3193 13.5912 10.1627 13.5912 9.99972C13.5912 9.83673 13.5307 9.68019 13.4227 9.56347L7.26784 2.91722C7.2175 2.86279 7.1573 2.81953 7.09081 2.78999C7.02432 2.76045 6.95289 2.74523 6.88072 2.74523C6.80855 2.74523 6.73711 2.76045 6.67062 2.78999C6.60413 2.81953 6.54394 2.86279 6.49359 2.91722C6.39002 3.02884 6.33203 3.17869 6.33203 3.33472C6.33203 3.49076 6.39002 3.6406 6.49359 3.75222L6.49478 3.75222Z' fill='white'/%3E%3C/svg%3E")
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 20px
+    min-width: 48px
+    min-height: 48px
+    background-color: #008CCC

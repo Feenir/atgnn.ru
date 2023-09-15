@@ -188,4 +188,23 @@ const photoVideoCurrent = document.querySelector('[data-photo-current]')
 
 sliderNumber(photoVideoTotal, photoVideoCurrent, photoVideoSwiper, photoVideoWrapper)
 
+const swiperPopular = new Swiper("[data-popular-swiper]", {
+    spaceBetween: 10,
+    navigation: {
+        nextEl: "[data-popular-next]",
+        prevEl: "[data-popular-prev]",
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1.1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        991: {
+            slidesPerView: 3,
+        }
+    }
+});
+
 

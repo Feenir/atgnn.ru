@@ -1,0 +1,113 @@
+.blog-inside
+  @include section-indent
+  & h1
+    margin-bottom: 24px
+
+
+  & picture
+    margin-bottom: 24px
+    border-radius: 10px
+    overflow: hidden
+    
+  & p
+    color: #494949
+    font-style: normal
+    font-weight: 300
+    line-height: 24px
+    letter-spacing: 0.64px
+    &:not(:last-child)
+      margin-bottom: 24px
+
+  & hr
+    opacity: .5
+    margin: 0 0 24px 0
+
+  & div:not([class])
+    display: flex
+    flex-wrap: wrap
+    gap: 20px
+    margin-bottom: 24px
+    & picture
+      margin-bottom: 0
+      width: calc(50% - 10px)
+
+  & h2
+    color: #282828
+    font-size: 36px
+    font-style: normal
+    font-weight: 400
+    line-height: 36px 
+    letter-spacing: 2.34px
+    text-transform: uppercase
+    margin-bottom: 24px
+
+  & span
+    display: block
+    max-width: 966px
+    
+  & span, & li
+    color: #494949
+    font-size: 16px
+    font-weight: 300
+    line-height: 24px 
+    letter-spacing: 0.64px
+
+  & ul
+    margin-bottom: 48px
+
+  & li
+    display: flex
+    align-items: center
+    &:before
+      display: block
+      transform: translateY(2px)
+      content: ''
+      width: 3px
+      height: 3px
+      border-radius: 50%
+      margin-right: 8px
+      background-color: #494949
+
+  & div:not(:first-child):has(em)
+    display: block
+    padding: 48px
+    border-radius: 10px
+    border: 1px solid rgba(40, 40, 40, 0.15)
+    margin-top: 48px
+    background: #F9F9F9
+    @media #{$notebook}
+      padding: 36px
+    @media #{$tablet}
+      padding: 24px
+    & p:nth-of-type(1)
+      color: #494949
+      font-weight: 400
+      line-height: 24px 
+      letter-spacing: 0.64px
+    & p:nth-of-type(2)
+      font-size: 14px
+      margin-bottom: 0
+      color: #494949
+      @media #{$tablet}
+        font-size: 12px
+    & p:nth-of-type(3)
+      font-size: 14px
+      opacity: .5
+      @media #{$tablet}
+        font-size: 12px
+    & div:has(svg)
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 186px
+      height: 186px
+      background-color: rgba(219, 236, 244, 1)
+      border-radius: 50%
+      @media #{$tablet}
+        width: 108px
+        height: 108px
+      & svg
+        @media #{$tablet}
+          width: 72px
+          height: 72px
+

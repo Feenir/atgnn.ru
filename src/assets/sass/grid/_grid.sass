@@ -88,10 +88,10 @@ h1
     line-height: $font-size - 4
   @media #{$tablet}
     font-size: $font-size - 16
-    line-height: $font-size
+    line-height: $font-size - 10
   @media #{$mobile-small}
     font-size: $font-size - 26
-    line-height: $font-size - 12
+    line-height: $font-size - 14
 
 h2
   $font-size: 50px
@@ -111,10 +111,14 @@ h2
 
 p
   font-size: 16px
+  @media #{$tablet-small}
+    font-size: 14px
 
 a
   text-decoration: none
   font-size: 16px
+  @media #{$tablet-small}
+    font-size: 14px
 
 input
   font-family: 'Manrope', sans-serif

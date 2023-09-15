@@ -1,0 +1,18 @@
+.problem
+  @include section-indent
+
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    gap: 112px
+  &__item
+    width: calc(50% - 56px)
+    @media (max-width: 1140px)
+      width: 100%
+    &--img
+      @media (max-width: 1140px)
+        display: none
+
+  &__img-inner
+    border-radius: 10px
+    overflow: hidden

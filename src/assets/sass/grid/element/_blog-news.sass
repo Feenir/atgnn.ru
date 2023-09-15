@@ -1,0 +1,81 @@
+.blog-news
+  display: flex
+  flex-direction: column
+  padding: 190px 24px 24px 24px
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+  background-image: url("../images/blog/blog-3.jpg")
+  width: calc(33.33% - 14px)
+  max-width: 454px
+  min-height: 456px
+  @supports (background-image: url("../images/blog/blog-3.webp"))
+    background-image: url("../images/blog/blog-3.webp")
+  position: relative
+  overflow: hidden
+  border-radius: 10px
+  &:before
+    position: absolute
+    content: ''
+    inset: 0
+    pointer-events: none
+    background: linear-gradient(180deg, rgba(23, 38, 70, 0.31) 0%, rgba(23, 38, 70, 0.82) 100%)
+  @media #{$tablet}
+    padding-top: 24px
+    min-height: fit-content
+
+
+  &__description
+    position: relative
+    display: block
+    padding: 4px 8px
+    border-radius: 5px
+    background: #F2F2F2
+    margin-bottom: 12px
+    max-width: fit-content
+
+  &__item-title
+    font-family: 'Manrope', sans-serif
+    position: relative
+    font-size: 24px
+    color: #F2F2F2
+    margin-bottom: 12px
+    @media #{$tablet}
+      font-size: 16px
+
+  &__item-text
+    position: relative
+    font-size: 16px
+    color: #F2F2F2
+    max-width: 280px
+    @media #{$tablet}
+      font-size: 14px
+      margin-bottom: 20px
+
+  &__item-button-wrapper
+    position: relative
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: auto
+
+  &__date
+    font-size: 14px
+    color: #F2F2F2
+    @media #{$tablet}
+      font-size: 12px
+
+  &__duration-wrapper
+    display: flex
+    align-items: center
+    @media #{$tablet}
+      gap: 15px
+
+  &__number
+    @extend .blog__number
+    &--duration
+      @extend .blog__number--duration
+    &--view
+      @extend .blog__number--view
+      @media #{$tablet}
+        margin-top: 0 !important
