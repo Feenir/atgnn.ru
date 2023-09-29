@@ -394,11 +394,6 @@ const filterButtonsBody = document.querySelector('[data-type-body]')
 const filterTargetItems = document.querySelectorAll('[data-filter-target]')
 const caseBlogObject = {
     all: 'все',
-    news: 'новость',
-    aside: 'статья',
-    specialist: 'советспециалиста',
-    review: 'обзор',
-    interview: 'интервью',
 }
 function changeFilter(filterTargetCollection, targetTrigger) {
     filterTargetCollection.forEach(function (filterTargetItem) {
@@ -425,21 +420,10 @@ function filter(buttonsBody,targetFilter, caseObject,buttonClass) {
                             filterTarget.style.display = 'flex'
                         })
                         break
-                    case caseObject.news:
+                    case target:
                         changeFilter(targetFilter, target)
                         break
-                    case caseObject.aside:
-                        changeFilter(targetFilter, target)
-                        break
-                    case caseObject.specialist:
-                        changeFilter(targetFilter, target)
-                        break
-                    case caseObject.review:
-                        changeFilter(targetFilter, target)
-                        break
-                    case caseObject.interview:
-                        changeFilter(targetFilter, target)
-                        break
+
                 }
             }
         }
